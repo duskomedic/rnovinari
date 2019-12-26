@@ -22,4 +22,4 @@ About the Course
 ![Red variant](/general/images/data_image.jpg?width=40pc)
 
 -----------------------------
-© 2019 Tatjana Kecojevic
+© 2019 [Sister Analyst](https://sisteranalyst.org)

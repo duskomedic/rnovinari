@@ -16,7 +16,7 @@ knitr::include_graphics("images/Shiny.png")
 
 **Shiny** is a package from [RStudio](https://www.rstudio.com) that can be used **to build interactive web apps with R**. 
 
-You can host standalone apps on a webpage or embed them in [R Markdown](https://rmarkdown.rstudio.com) documents or build [dashboards](http://rstudio.github.io/shinydashboard/. You can also extend your Shiny apps with [CSS themes](http://rstudio.github.io/shinythemes/), [htmlwidgets](http://www.htmlwidgets.org), and [JavaScript actions](https://github.com/daattali/shinyjs/blob/master/README.md).
+You can host standalone apps on a webpage or embed them in [R Markdown](https://rmarkdown.rstudio.com) documents or build [dashboards](http://rstudio.github.io/shinydashboard/). You can also extend your Shiny apps with [CSS themes](http://rstudio.github.io/shinythemes/), [htmlwidgets](http://www.htmlwidgets.org), and [JavaScript actions](https://github.com/daattali/shinyjs/blob/master/README.md).
 
 Shiny combines the computational power of R with the interactivity of the modern web.
 

@@ -132,9 +132,9 @@ us <- leaflet() %>%
   # add tiles to the leaflet object
   addTiles() %>%  
   # setting the centre of the map and the zoom level
-  setView(lng = 20.41215, lat = 45.93362, zoom = 15) %>%
+  setView(lng = 21.43667, lat = 41.99578, zoom = 15) %>% 
   # add a popup marker 
-  addMarkers(lng = 20.4223, lat = 45.9320, popup = "<b>Ciao!</b><br><a href='https://www.mokrinhouse.com/'>Mokrin House! 😀</a>")
+  addMarkers(lng = 21.43551, lat = 41.99405, popup = "<b>Ciao!</b><br><a href='http://balkansmedia.org/innovation-lab/2nd-media-innovation-lab-master-classes-and-presentations'>2nd Media Innovation Lab! 😀</a>")
 
 us
 ```

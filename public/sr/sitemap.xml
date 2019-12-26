@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/sr/general/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/general/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/general/"
+                />
+  </url>
+  
+  <url>
+    <loc>/sr/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>/sr/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/"
+                />
+  </url>
+  
+  <url>
+    <loc>/sr/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/tags/"
+                />
+  </url>
+  
+</urlset>

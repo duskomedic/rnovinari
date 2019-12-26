@@ -65,4 +65,5 @@ The course will be delivered in English and Serbian!
 
 
 -----------------------------
-© 2019 Tatjana Kecojevic
+© 2019 [Sister Analyst](https://sisteranalyst.org)
+

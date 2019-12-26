@@ -9,8 +9,8 @@ defaultContentLanguageInSubdir= true
 
 [params]
   editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
-  description = "Rtoolbox"
-  author = "Tatjana Kecojevic"
+  description = "RToolbox"
+  author = "Sister Analyst"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
@@ -37,4 +37,14 @@ identifier = "ds"
 url = "https://github.com/TanjaKec"
 weight = 10
 
+[Languages.sr]
+title = "RToolbox"
+weight = 2
+languageName = "Serbian"
+
+[[Languages.sr.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> Repo GitHub"
+identifier = "ds"
+url = "https://github.com/matcornic/hugo-theme-learn"
+weight = 10
 

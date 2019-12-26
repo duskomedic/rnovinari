@@ -54,4 +54,4 @@ In this module you will learn how to turn your analyses into high quality docume
 
 
 -----------------------------
-© 2019 Tatjana Kecojevic
+© 2019 [Sister Analyst](https://sisteranalyst.org)
