@@ -7,9 +7,9 @@ weight: 2
 
 ### Module 1
 
-### RStudio IDE; R language; Data classification and summary statistics; Introduction to Visualization Principles
+#### RStudio IDE; R language; Data classification and summary statistics
 
-##### In this module you will set up the working environment and pass the first big hurdle of importing data and you will learn how to do it in the proper way with a command in <span style="color:orangered">**R**</span>. You will learn how to use <span style="color:orangered">**RStudio**</span> IDE for R from its installation to RStudio customisation and files navigation. You will learn good habits and practice of workflow in an R project. Once you get comfortable with the RStudio working environment you will move on to mastering the key features of R language and you will be introduced to fundamental principles behind effective data visualisation. 
+##### In this module you will set up the working environment and pass the first big hurdle of importing data and you will learn how to do it in the proper way with a command in <span style="color:orangered">**R**</span>. You will learn how to use <span style="color:orangered">**RStudio**</span> IDE for R from its installation to RStudio customisation and files navigation. You will learn good habits and practice of workflow in an R project. Once you get comfortable with the RStudio working environment you will move on to mastering the key features of R language.
 
 #### What you will learn:
 
@@ -19,8 +19,6 @@ weight: 2
 * R environment: record keeping
 * Data classification
 * Descriptive summary statistics
-* Basic principles of effective data visualisation
-
 
 
 -----------------------------

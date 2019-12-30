@@ -34,7 +34,7 @@ languageName = "English"
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i>GitHub"
 identifier = "ds"
-url = "https://github.com/TanjaKec"
+url = "https://github.com/SisterAnalyst"
 weight = 10
 
 [Languages.sr]
