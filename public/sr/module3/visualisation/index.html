@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="sr" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.60.1" />
+    <meta name="description" content="RToolbox">
+<meta name="author" content="Sister Analyst">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    <title>Vizuelizacija podataka :: RToolbox</title>
+
+    
+    <link href="/css/nucleus.css?1583944929" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1583944929" rel="stylesheet">
+    <link href="/css/hybrid.css?1583944929" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1583944929" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1583944929" rel="stylesheet">
+    <link href="/css/auto-complete.css?1583944929" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1583944929" rel="stylesheet">
+    <link href="/css/theme.css?1583944929" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1583944929" rel="stylesheet">
+    
+      <link href="/css/theme-blue.css?1583944929" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1583944929"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/sr/module3/visualisation/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <!DOCTYPE html>
+<html>
+<body>
+<IMG SRC="/images/logo.png" ALT="DataTeka" WIDTH=100 HEIGHT=100>
+
+</body>
+</html>
+
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1583944929"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1583944929"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/sr";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1583944929"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/" title="O Kursu" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/">
+          <b>1. </b>O Kursu
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/whatlearn/" title="Opšti pregled" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/whatlearn/">
+          Opšti pregled
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/instructor/" title="Upoznajte trenere" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/instructor/">
+          Upoznajte trenere
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/syllabus/" title="Indikativan nastavni program" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/syllabus/">
+          Indikativan nastavni program
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/" title="Modul 1" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/">
+          <b>2. </b>Modul 1
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/whatisr/" title="Šta je R?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/whatisr/">
+          Šta je R?
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/installr/" title="Instalacija R/Rstudija" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/installr/">
+          Instalacija R-a
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/git-and-github/" title="Git i GitHub" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/git-and-github/">
+          Git i GitHub
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/rstudioide/" title="RStudio IDE" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/rstudioide/">
+          RStudio IDE
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/user/" title="Kako se R koristi?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/user/">
+          Kako se R koristi?
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/statsconcepts/" title="Osnovni koncepti statistike" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/statsconcepts/">
+          Osnovni koncepti statistike
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/datatypes/" title="Tipovi podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/datatypes/">
+          Tipovi podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/importexport/" title="Učitavanje podataka u R" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/importexport/">
+          Učitavanje podataka u R
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module2/" title="Modul 2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module2/">
+          <b>3. </b>Modul 2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module2/datawrangling/" title="Organizacija podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module2/datawrangling/">
+          Organizacija podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/" title="Modul 3" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/sr/module3/">
+          <b>4. </b>Modul 3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/visualisation/" title="Vizuelizacija podataka" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/sr/module3/visualisation/">
+          Vizuelizacija podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/spatialda/" title="Analiza geo-pozicioniranih podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/spatialda/">
+          Analiza geo-pozicioniranih podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/principlesvisualisation/" title="Uvod u principe vizuelizacije" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/principlesvisualisation/">
+          Principe vizuelizacije
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module4/" title="Modul 4" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module4/">
+          <b>5. </b>Modul 4
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module4/rmarkdown/" title="RMarkdown" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module4/rmarkdown/">
+          RMarkdown
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module5/" title="Modul 5" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module5/">
+          <b>6. </b>Modul 5
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module5/shiny/" title="Shiny" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module5/shiny/">
+          Shiny
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module6/" title="Modul 6" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module6/">
+          <b>7. </b>Modul 6
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module6/blogdown/" title="blogdown" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module6/blogdown/">
+          blogdown
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/our_podcast/" title="Our Stories" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/our_podcast/">
+          <b>8. </b>Our Stories
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/matcornic/hugo-theme-learn"><i class='fab fa-fw fa-github'></i> Repo GitHub</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="/en/module3/visualisation/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="sr" value="/sr/module3/visualisation/" selected>Serbian</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <center>
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn" data-icon="octicon-star" data-show-count="true" aria-label="Star matcornic/hugo-theme-learn on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/module3/Visualisation/_index.sr.markdown" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/sr/'>R Toolbox</a> > <a href='/sr/module3/'>Modul 3</a> > Vizuelizacija podataka
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#gramatika-grafike">Gramatika grafike</a></li>
+        <li><a href="#rad-sa-estetikom-dodajte-jo-slojeva-na-va-span-stylecolorredggplotspan">Rad sa estetikom: dodajte još slojeva na vaš ggplot()</a></li>
+      </ul>
+    </li>
+    <li><a href="#sad-je-red-na-vas-">Sad je red na vas 👇</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Vizuelizacija podataka
+            </h1>
+          
+
+        
+
+
+
+
+	<p>Većina vas ste, ako ne i svi, upoznati sa kreiranjem grafikona u Excelu. Softver poput Excel-a ima predefinisan set opcija za grafičko prikazivanje podataka. Ove opcije date u meniju pretpostavljaju da su podaci već pripremljeni za iscrtavanje, što u slučaju sirovih podataka nije slučaj. Biće neophodno da ovakve podatke morate organizovati i promeniti svoje podatke kako biste bili spremni za efikasnu vizulezaciju.</p>
+<h3 id="gramatika-grafike">Gramatika grafike</h3>
+<p>Gramatika grafike <a href="http://vita.had.co.nz/papers/layered-grammar.html">grammar of graphics</a> omogućava struktuirani način kreiranja grafikona dodavanjem komponenti kao slojeva, i na taj način su grafikoni efektniji i atraktivniji.</p>
+<p>Ona vam omogućava da odredite elemente grafikona i da ih kombinujete kako biste stvorili prikaz koji želite. Postoji osam elemenata:</p>
+<ul>
+<li>
+<p>podaci (data)</p>
+</li>
+<li>
+<p>estetsko mapiranje (aesthetic mapping)</p>
+</li>
+<li>
+<p>geometrijski objekti (geometric object)</p>
+</li>
+<li>
+<p>statstičke transformacije (statistical transformations)</p>
+</li>
+<li>
+<p>skale (scales)</p>
+</li>
+<li>
+<p>koordinatni sistem (coordinate system)</p>
+</li>
+<li>
+<p>podešavanje položaja (position adjustments)</p>
+</li>
+<li>
+<p>oblaganje  (faceting)</p>
+</li>
+</ul>
+<p>Zamislite da pričamo o pečenju torte i dodavanju višnje na njen vrh. 🎂🍒 Ova filozofija ugrađena je u <a href="https://ggplot2.tidyverse.org/reference/"><code>ggplot</code></a> paket koji je razvio <a href="http://hadley.nz">Hadle Wickham</a> za kreiranje elegantnih i kompleksnih grafikona u R-u.</p>
+<h4 id="ggplot2">ggplot2</h4>
+<p>Učenje kako da koristite paket <code>ggplot2</code> može biti izazov, ali će vam se na kraju isplatiti i kao i u R-u, biće vam lakše što ga više budete upotrebljavali.</p>
+
+<div class="notices warning" ><p>Za razliku od osnovne grafike, ggplot radi sa dataframe-ovima, a ne sa pojedinačnim vektorima.</p>
+</div>
+
+<p>Najbolji način da usvojite znanje je da vežbate. Zato napravimo prvi <code>ggplot</code>. 😃
+Ono što potrebno da uradimo je sledeće:</p>
+<ul>
+<li>
+<p>i) Podatke preuredite u format pogodan za vizuelizaciju.</p>
+</li>
+<li>
+<p>ii) “Pokrenite” grafikon sa <code>ggplot()</code>:</p>
+</li>
+</ul>
+<p><strong>ggplot(<!-- raw HTML omitted -->dataframe<!-- raw HTML omitted -->, aes(<!-- raw HTML omitted -->x = explanatory variable<!-- raw HTML omitted -->, <!-- raw HTML omitted -->y = resposne variable<!-- raw HTML omitted -->))</strong></p>
+<p>Ova naredba će iscrtati prazan grafikon (<code>ggplot</code>), iako su postoje x i y vrednosti. Ggplot ne može da iscrta grafikon (na primer xy grafikon) jer ne zna na koji grafikon tačno mislite. U ovom koraku ste samo definisali koji se set podataka koristi i kolone tj. v ariable. Obratite takođe pažnju da se funkcija <code>aes( )</code> koristi za specifikaciju x i y osa..</p>
+<ul>
+<li>iii) Dodajte slojeve sa funkcijom <code>geom_</code>:</li>
+</ul>
+<p><strong>geom_point()</strong></p>
+<p>Dodaćemo tačke na grafikonu uz pomoć <strong>geom sloja</strong> preko funkcije <code>geom_point</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># load the packages</span>
+<span style="color:#a6e22e">suppressPackageStartupMessages</span>(<span style="color:#a6e22e">library</span>(dplyr))
+<span style="color:#a6e22e">suppressPackageStartupMessages</span>(<span style="color:#a6e22e">library</span>(gapminder))
+<span style="color:#a6e22e">suppressPackageStartupMessages</span>(<span style="color:#a6e22e">library</span>(ggplot2))
+</code></pre></div><pre><code>## Warning: package 'ggplot2' was built under R version 3.6.2
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># wrangle the data (Can you remember what this code do?)</span>
+gapminder_pipe <span style="color:#f92672">&lt;-</span> gapminder <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">filter</span>(continent <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Europe&#34;</span> <span style="color:#f92672">&amp;</span> year <span style="color:#f92672">==</span>  <span style="color:#ae81ff">2007</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(pop_e6 <span style="color:#f92672">=</span> pop <span style="color:#f92672">/</span> <span style="color:#ae81ff">1000000</span>)
+
+<span style="color:#75715e"># plot the data</span>
+<span style="color:#a6e22e">ggplot</span>(gapminder_pipe, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> pop_e6, y <span style="color:#f92672">=</span> lifeExp)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>(col <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">red&#34;</span>)
+</code></pre></div><p><!-- raw HTML omitted --></p>
+
+<div class="notices tip" ><p>🤓💡 <strong>Tip</strong>: Za izradu grafova možete koristiti sledeći obrazac koda <strong>ggplot2</strong>:</p>
+</div>
+
+<pre><code>ggplot(data = &lt;DATA&gt;, (mapping = aes(&lt;MAPPINGS&gt;)) + 
+      &lt;GEOM_FUNCTION&gt;()
+</code></pre><h5 id="span-stylecolorredggplotspan-galerija"><!-- raw HTML omitted -->ggplot()<!-- raw HTML omitted --> galerija</h5>
+<p>Pokrenite sledeći kod kako biste videli koji će se grafikoni pokazati.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">ggplot</span>(data <span style="color:#f92672">=</span> gapminder, mapping <span style="color:#f92672">=</span> <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> lifeExp), binwidth <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_histogram</span>()
+<span style="color:#75715e">#</span>
+<span style="color:#a6e22e">ggplot</span>(data <span style="color:#f92672">=</span> gapminder, mapping <span style="color:#f92672">=</span> <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> lifeExp)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_density</span>()
+<span style="color:#75715e">#</span>
+<span style="color:#a6e22e">ggplot</span>(data <span style="color:#f92672">=</span> gapminder, mapping <span style="color:#f92672">=</span> <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> continent, color <span style="color:#f92672">=</span> continent)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_bar</span>()
+<span style="color:#75715e">#</span>
+<span style="color:#a6e22e">ggplot</span>(data <span style="color:#f92672">=</span> gapminder, mapping <span style="color:#f92672">=</span> <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> continent, fill <span style="color:#f92672">=</span> continent)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_bar</span>()
+</code></pre></div><h5 id="-porazgovarajte-sa-osobama-pored-vas">🗣👥 Porazgovarajte sa osobama pored vas:</h5>
+<p>Da li životni vek zavisi od broja stanovnika?</p>
+<p><code>y = b_0 + b_1 x + e</code></p>
+<p>Startujte ovaj kod u konzoli da biste napravili linearni model <code>pop</code> sa <code>lifeExp</code>.</p>
+<p>Obratite pažnju na pravopis, velika i mala slova, i na zagrade!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">m1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(gapminder_pipe<span style="color:#f92672">$</span>lifeExp <span style="color:#f92672">~</span> gapminder_pipe<span style="color:#f92672">$</span>pop_e6)
+<span style="color:#a6e22e">summary</span>(m1)
+</code></pre></div><p><strong>Možete li odgovoriti na pitanje koristeći rezultat postavljenog modela?</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">m1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(gapminder_pipe<span style="color:#f92672">$</span>lifeExp <span style="color:#f92672">~</span> gapminder_pipe<span style="color:#f92672">$</span>pop_e6)
+<span style="color:#a6e22e">summary</span>(m1)
+</code></pre></div><pre><code>## 
+## Call:
+## lm(formula = gapminder_pipe$lifeExp ~ gapminder_pipe$pop_e6)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -6.324 -2.562  1.007  2.245  4.277 
+## 
+## Coefficients:
+##                        Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)           77.477421   0.721723 107.351   &lt;2e-16 ***
+## gapminder_pipe$pop_e6  0.008762   0.023779   0.368    0.715    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 3.025 on 28 degrees of freedom
+## Multiple R-squared:  0.004826,	Adjusted R-squared:  -0.03072 
+## F-statistic: 0.1358 on 1 and 28 DF,  p-value: 0.7153
+</code></pre><h5 id="-vebajte---uskoristite-gapminder-podatke">👉 Vežbajte  ⏰💻: UsKoristite gapminder podatke.</h5>
+<p>Da li životni vek zavisi od bruto nacionalnog dohotka po glavi stanovnika?</p>
+<ol>
+<li>
+<p>Bacite pogled na podatke (tip: <code>sample_n(df, n)</code>)</p>
+</li>
+<li>
+<p>Napravite xy  grafikon: šta vam on govori?</p>
+</li>
+<li>
+<p>Napravite regresioni model: da li tu postoji neka veza? Koliko je jaka? Da li je veza linearna? Šta možemo zaključiti iz grafikona?</p>
+</li>
+<li>
+<p>Koja se još pitanja otvaraju; možete li dati odgovor na njih?</p>
+</li>
+</ol>
+<h5 id="-sreenje-kod-za-prvo-pitanje-primer">😃🙌 SRešenje: kod za prvo pitanje; primer</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">sample_n</span>(gapminder, <span style="color:#ae81ff">30</span>)
+</code></pre></div><pre><code>## # A tibble: 30 x 6
+##    country        continent  year lifeExp       pop gdpPercap
+##    &lt;fct&gt;          &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
+##  1 United States  Americas   1952    68.4 157553000    13990.
+##  2 Honduras       Americas   1997    67.7   5867957     3160.
+##  3 Rwanda         Africa     1962    43     3051242      597.
+##  4 Egypt          Africa     1957    44.4  25009741     1459.
+##  5 Panama         Americas   1952    55.2    940080     2480.
+##  6 United States  Americas   1972    71.3 209896000    21806.
+##  7 United Kingdom Europe     1962    70.8  53292000    12477.
+##  8 Italy          Europe     1997    78.8  57479469    24675.
+##  9 Puerto Rico    Americas   2002    77.8   3859606    18856.
+## 10 Nepal          Asia       1952    36.2   9182536      546.
+## # ... with 20 more rows
+</code></pre><p>Dodaćemo slojeve na ovaj xy grafikon: uporedićemo <code>liveExp</code> sa <code>gdpPercap</code>. Iscrtaćemo regresionu liniju i neparemetarsku lusovu liniju (loess line) koja će nam pokazati moguću vezu između ove dve varijable. Ovo znači da ćemo imati:</p>
+<ul>
+<li>Prvi sloj: <strong>xy grafikon</strong> (scatterplot)</li>
+<li>Drugi sloj: <strong>regresiona linija</strong> koja najpribližnije odgovara podacima</li>
+<li>Treći sloj: <strong>lusova kriva</strong> (loess curve)</li>
+</ul>
+<h5 id="-reenje-kod-za-drugo-pitanje-kreiranje-grafikona-uz-pomo-podataka">😃🙌 Rešenje: kod za drugo pitanje; kreiranje grafikona uz pomoć podataka;</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">ggplot</span>(gapminder, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> gdpPercap, y <span style="color:#f92672">=</span> lifeExp)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>(alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.2</span>, shape <span style="color:#f92672">=</span> <span style="color:#ae81ff">21</span>, fill <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">blue&#34;</span>, colour<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">black&#34;</span>, size <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>) <span style="color:#f92672">+</span> <span style="color:#75715e"># set transparency, shape, colour and size for points</span>
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">lm&#34;</span>, se <span style="color:#f92672">=</span> F, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">maroon3&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#75715e"># change the colour of line</span>
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">loess&#34;</span>, se <span style="color:#f92672">=</span> F, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">limegreen&#34;</span>) <span style="color:#75715e"># change the colour of line</span>
+</code></pre></div><p><!-- raw HTML omitted --></p>
+<h5 id="-sreenje-kod-za-tree-pitanje-jednostavni-regresioni-model">😃🙌 SRešenje: kod za treće pitanje; jednostavni regresioni model</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">my.model <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(gapminder_pipe<span style="color:#f92672">$</span>lifeExp <span style="color:#f92672">~</span> gapminder_pipe<span style="color:#f92672">$</span>gdpPercap)
+<span style="color:#a6e22e">summary</span>(my.model)
+</code></pre></div><pre><code>## 
+## Call:
+## lm(formula = gapminder_pipe$lifeExp ~ gapminder_pipe$gdpPercap)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -2.79839 -1.30472  0.00807  1.33443  2.87766 
+## 
+## Coefficients:
+##                           Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)              7.227e+01  6.942e-01 104.113  &lt; 2e-16 ***
+## gapminder_pipe$gdpPercap 2.146e-04  2.514e-05   8.537  2.8e-09 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 1.598 on 28 degrees of freedom
+## Multiple R-squared:  0.7225,	Adjusted R-squared:  0.7125 
+## F-statistic: 72.88 on 1 and 28 DF,  p-value: 2.795e-09
+</code></pre><h3 id="rad-sa-estetikom-dodajte-jo-slojeva-na-va-span-stylecolorredggplotspan">Rad sa estetikom: dodajte još slojeva na vaš <!-- raw HTML omitted --><code>ggplot()</code><!-- raw HTML omitted --></h3>
+<p>Kadgod je to moguće treba da se trudite da vaš grafikon bude vizuelno privlačan i informativan, kao što je rečeno u prethodnom odeljku <em>Principi vizuelizacije</em>.</p>
+<h4 id="da-biste-promenili-naziv-grafikona-ili-oznake-osa-koristite-sloj-span-stylecolororangeredlayer-labsspan">Da biste promenili naziv grafikona ili oznake osa koristite sloj <!-- raw HTML omitted -->layer <strong>labs</strong><!-- raw HTML omitted --></h4>
+<p><strong>labs(<!-- raw HTML omitted -->title =<!-- raw HTML omitted --> <!-- raw HTML omitted --> “your title”<!-- raw HTML omitted -->, <!-- raw HTML omitted -->subtitle =<!-- raw HTML omitted --> <!-- raw HTML omitted --> “your subtitle”<!-- raw HTML omitted -->, <!-- raw HTML omitted -->y =<!-- raw HTML omitted --> <!-- raw HTML omitted --> “y label”<!-- raw HTML omitted -->, <!-- raw HTML omitted -->x =<!-- raw HTML omitted --> <!-- raw HTML omitted --> “x label”<!-- raw HTML omitted -->, <!-- raw HTML omitted -->caption =<!-- raw HTML omitted --> <!-- raw HTML omitted --> “graph's caption”<!-- raw HTML omitted -->)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">ggplot</span>(gapminder, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> gdpPercap, y <span style="color:#f92672">=</span> lifeExp)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>(alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.2</span>, shape <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">steelblue&#34;</span>, size <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">lm&#34;</span>, se <span style="color:#f92672">=</span> F, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">maroon3&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">loess&#34;</span>, se <span style="color:#f92672">=</span> F, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">limegreen&#34;</span>) <span style="color:#f92672">+</span> 
+ 
+  <span style="color:#75715e"># give a title an label axes</span>
+  <span style="color:#a6e22e">labs</span>(title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Life Exp. vs. Population Size&#34;</span>, 
+        x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">population&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Life Exp.&#34;</span>) <span style="color:#f92672">+</span> 
+  
+  <span style="color:#75715e"># modify the appearance</span>
+  <span style="color:#a6e22e">theme</span>(legend.position <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">none&#34;</span>, 
+        panel.border <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_rect</span>(fill <span style="color:#f92672">=</span> <span style="color:#66d9ef">NA</span>, 
+                                    colour <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">black&#34;</span>,
+                                    size <span style="color:#f92672">=</span> <span style="color:#ae81ff">.75</span>),
+        plot.title<span style="color:#f92672">=</span><span style="color:#a6e22e">element_text</span>(hjust<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>)) <span style="color:#f92672">+</span> 
+  
+  <span style="color:#75715e"># add the description</span>
+  <span style="color:#a6e22e">geom_text</span>(x <span style="color:#f92672">=</span> <span style="color:#ae81ff">80000</span>, y <span style="color:#f92672">=</span> <span style="color:#ae81ff">125</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">regression line&#34;</span>, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">maroon3&#34;</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_text</span>(x <span style="color:#f92672">=</span> <span style="color:#ae81ff">90000</span>, y <span style="color:#f92672">=</span> <span style="color:#ae81ff">75</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">smooth line&#34;</span>, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">limegreen&#34;</span>) 
+</code></pre></div><p><!-- raw HTML omitted --></p>
+<p>Obratite pažnju da smo dodali tekst na grafikon koji označava dve linije i da smo uredili grafikon tako da se legenda ne prikazuje.</p>
+<p>Takođe, mogli smo da dobijemo ovaj tekst na grafikonu i uz pomoć sledeće naredbe:</p>
+<pre><code>annotate(&quot;text&quot;, x = 80000, y = 125 label = &quot;regression line&quot;, color = &quot;maroon3&quot;)
+</code></pre><p>Da biste saznali više o promeni teme grafikona pogledajte sledeću internet stranicu <a href="https://ggplot2.tidyverse.org/reference/theme.html">ggplot’s theme page</a>.</p>
+<h4 id="promenite-boju-taaka-tako-da-odraavaju-trecu-promenljivu">Promenite boju tačaka tako da odražavaju treću promenljivu.</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">ggplot</span>(gapminder, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> gdpPercap, y <span style="color:#f92672">=</span> lifeExp)) <span style="color:#f92672">+</span>
+  
+  <span style="color:#75715e"># change the colour of the points to reflect continent it belongs to; set transparency, shape, and size for points</span>
+  <span style="color:#a6e22e">geom_point</span>(<span style="color:#a6e22e">aes</span>(col <span style="color:#f92672">=</span> continent), alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>, shape <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>, size <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">+</span> 
+  
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">lm&#34;</span>, se <span style="color:#f92672">=</span> F, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">maroon3&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">loess&#34;</span>, se <span style="color:#f92672">=</span> F, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">dodgerblue3&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">labs </span>(title<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Life Exp. vs. Population Size&#34;</span>, 
+        x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">population&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Life Exp.&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">theme</span>(legend.position <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">right&#34;</span>, 
+        panel.border <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_rect</span>(fill <span style="color:#f92672">=</span> <span style="color:#66d9ef">NA</span>, 
+                                    colour <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">black&#34;</span>,
+                                    size <span style="color:#f92672">=</span> <span style="color:#ae81ff">.75</span>),
+        plot.title<span style="color:#f92672">=</span><span style="color:#a6e22e">element_text</span>(hjust<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>)) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_text</span>(x <span style="color:#f92672">=</span> <span style="color:#ae81ff">80000</span>, y <span style="color:#f92672">=</span> <span style="color:#ae81ff">125</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">regression line&#34;</span>, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">maroon3&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_text</span>(x <span style="color:#f92672">=</span> <span style="color:#ae81ff">90000</span>, y <span style="color:#f92672">=</span> <span style="color:#ae81ff">75</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">smooth line&#34;</span>, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">dodgerblue3&#34;</span>)
+</code></pre></div><p><!-- raw HTML omitted --></p>
+
+<div class="notices note" ><p>Imajte na umu da se legenda dodaje automatski. Možete je ukloniti tako što ćete postaviti atribut <code>none</code> na <em>legend.position</em> unutar funkcije <code>theme()</code>.</p>
+</div>
+
+<h4 id="podesite-granice-x-i-y-osa-i-promenite-tekst-x-ose-i-polozaj-crtica-na-x-osi">Podesite granice X i Y osa i promenite tekst X ose i polozaj crtica na x osi</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">  <span style="color:#a6e22e">ggplot</span>(gapminder, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> gdpPercap, y <span style="color:#f92672">=</span> lifeExp)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>(<span style="color:#a6e22e">aes</span>(col <span style="color:#f92672">=</span> continent), alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>, shape <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>, size <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">lm&#34;</span>, se <span style="color:#f92672">=</span> F, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">maroon3&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">loess&#34;</span>, se <span style="color:#f92672">=</span> F, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">dodgerblue3&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">labs </span>(title<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Life Exp. vs. Population Size&#34;</span>, 
+        x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">population&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Life Exp.&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">theme</span>(legend.position <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">right&#34;</span>, 
+        panel.border <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_rect</span>(fill <span style="color:#f92672">=</span> <span style="color:#66d9ef">NA</span>, 
+                                    colour <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">black&#34;</span>,
+                                    size <span style="color:#f92672">=</span> <span style="color:#ae81ff">.75</span>),
+        plot.title<span style="color:#f92672">=</span><span style="color:#a6e22e">element_text</span>(hjust<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>)) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_text</span>(x <span style="color:#f92672">=</span> <span style="color:#ae81ff">48000</span>, y <span style="color:#f92672">=</span> <span style="color:#ae81ff">90</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">regression line&#34;</span>, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">maroon3&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_text</span>(x <span style="color:#f92672">=</span> <span style="color:#ae81ff">70000</span>, y <span style="color:#f92672">=</span> <span style="color:#ae81ff">75</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">smooth line&#34;</span>, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">dodgerblue3&#34;</span>) <span style="color:#f92672">+</span>
+  
+  <span style="color:#75715e"># change the limits of the x &amp; y axis</span>
+  <span style="color:#a6e22e">xlim</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">90000</span>)) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">ylim</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">100</span>)) 
+</code></pre></div><pre><code>## Warning: Removed 5 rows containing non-finite values (stat_smooth).
+
+## Warning: Removed 5 rows containing non-finite values (stat_smooth).
+</code></pre><pre><code>## Warning: Removed 5 rows containing missing values (geom_point).
+</code></pre><pre><code>## Warning: Removed 33 rows containing missing values (geom_smooth).
+</code></pre><p><!-- raw HTML omitted --></p>
+<p>Obratite pažnju da su regresiona linija i kriva promenile svoje oblik 😳…Toliko mnogo upozorenja ste dobili. Šta se desilo?! 😲</p>
+
+<div class="notices warning" ><p>Kada koristite xlim() i ylim(), brišu se tačke izvan navedenog raspona i ne uzimaju se u obzir pri crtanju krive upotrebom <code>geom_smooth()</code>. Ova osobina vam može biti korisna kada želite da saznate da li bi se korelaciona linija  promenila ako bi se uklonile ekstremne vrednosti iz podataka.</p>
+</div>
+
+<p>Srećom, postoji još jedan način da promenite granice na osama a da se ne brišu tačke izvan prikaza, i to tako što ćete zumirati region koji vam je zanimljiv. Ovo možete uraditi upotrebom funkcije <code>coord_cartesian()</code>. Probajte da zamenite komande <code>xlim()</code> i <code>ylim()</code> iz prethodnog koda sa kodom koji je prikazan dole da vidite šta će se desiti.</p>
+<pre><code>coord_cartesian(xlim = c(0, 90000), ylim = c(25, 100))  # zooming in specified limits of the x &amp; y axis
+</code></pre><p>Razmake na x osi možete postaviti i obeležiti upotrebom <code>scale_x_continuous()</code>? Isto to možete uraditi i na y osi?</p>
+<p>Pokušajte da menjate palete boja. Za dodatne opcije pogledajte <a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">Sequential, diverging and qualitative colour scales from colorbrewer.org</a>.</p>
+<p>Ovo su ugrađene teme koje kontrolišu sve prikaze ne-podataka. Treba da koristite <code>theme_bw()</code> da biste imali belu pozadinu ili <code>theme_dark()</code> za tamno sivu. Za više o temama pogledajte <a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">ovde</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">ggplot</span>(gapminder, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> gdpPercap, y <span style="color:#f92672">=</span> lifeExp)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>(<span style="color:#a6e22e">aes</span>(col <span style="color:#f92672">=</span> continent), alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>, shape <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>, size <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">lm&#34;</span>, se <span style="color:#f92672">=</span> F, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">maroon3&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">loess&#34;</span>, se <span style="color:#f92672">=</span> F, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">dodgerblue3&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">labs </span>(title<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Life Exp. vs. Population Size&#34;</span>, 
+        x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">population&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Life Exp.&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">theme</span>(legend.position <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">right&#34;</span>, 
+        panel.border <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_rect</span>(fill <span style="color:#f92672">=</span> <span style="color:#66d9ef">NA</span>, 
+                                    colour <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">black&#34;</span>,
+                                    size <span style="color:#f92672">=</span> <span style="color:#ae81ff">.75</span>),
+        plot.title<span style="color:#f92672">=</span><span style="color:#a6e22e">element_text</span>(hjust<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>)) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_text</span>(x <span style="color:#f92672">=</span> <span style="color:#ae81ff">80000</span>, y <span style="color:#f92672">=</span> <span style="color:#ae81ff">125</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">regression line&#34;</span>, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">maroon3&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_text</span>(x <span style="color:#f92672">=</span> <span style="color:#ae81ff">90000</span>, y <span style="color:#f92672">=</span> <span style="color:#ae81ff">75</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">smooth line&#34;</span>, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">dodgerblue3&#34;</span>) <span style="color:#f92672">+</span>
+  
+  <span style="color:#75715e"># change breaks and label them </span>
+  <span style="color:#a6e22e">scale_x_continuous</span>(breaks <span style="color:#f92672">=</span> <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">120000</span>, <span style="color:#ae81ff">20000</span>), labels <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">0&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">20K&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">40K&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">60K&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">80K&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">10K&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">12K&#34;</span>)) <span style="color:#f92672">+</span>
+
+  <span style="color:#75715e"># change color palette</span>
+  <span style="color:#a6e22e">scale_colour_brewer</span>(palette <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Set1&#34;</span>) <span style="color:#f92672">+</span> 
+
+  <span style="color:#75715e"># white background theme</span>
+  <span style="color:#a6e22e">theme_bw</span>()
+</code></pre></div><p><!-- raw HTML omitted --></p>
+<p>Postoji biblioteka <code>ggthemes</code> koja će vam pomoći da napravite elegantne grafikone koje koriste mediji kao što su Wall Street Journal ili Economist. Pogledajte koje još teme možete koristiti na sledećoj <a href="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/">vebstranici</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">## If you don&#39;t have ggthemes installed yet, uncomment and run the line below</span>
+<span style="color:#75715e">#install.packeges(&#34;ggthemes&#34;)</span>
+<span style="color:#a6e22e">library</span>(ggthemes)
+<span style="color:#a6e22e">ggplot</span>(gapminder, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> gdpPercap, y <span style="color:#f92672">=</span> lifeExp)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>(<span style="color:#a6e22e">aes</span>(col <span style="color:#f92672">=</span> continent), alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>, shape <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>, size <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">lm&#34;</span>, se <span style="color:#f92672">=</span> F, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">darkred&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">loess&#34;</span>, se <span style="color:#f92672">=</span> F, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">darkgreen&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">labs </span>(title<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Life Exp. vs. Population Size&#34;</span>, 
+        x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">population&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Life Exp.&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">theme</span>(legend.position <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">right&#34;</span>, 
+        panel.border <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_rect</span>(fill <span style="color:#f92672">=</span> <span style="color:#66d9ef">NA</span>, 
+                                    colour <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">black&#34;</span>,
+                                    size <span style="color:#f92672">=</span> <span style="color:#ae81ff">.75</span>),
+        plot.title<span style="color:#f92672">=</span><span style="color:#a6e22e">element_text</span>(hjust<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>)) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_text</span>(x <span style="color:#f92672">=</span> <span style="color:#ae81ff">80000</span>, y <span style="color:#f92672">=</span> <span style="color:#ae81ff">125</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">regression line&#34;</span>, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">darkred&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_text</span>(x <span style="color:#f92672">=</span> <span style="color:#ae81ff">90000</span>, y <span style="color:#f92672">=</span> <span style="color:#ae81ff">75</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">smooth line&#34;</span>, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">darkgreen&#34;</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">scale_x_continuous</span>(breaks <span style="color:#f92672">=</span> <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">120000</span>, <span style="color:#ae81ff">20000</span>), labels <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">0&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">20K&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">40K&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">60K&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">80K&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">10K&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">12K&#34;</span>)) <span style="color:#f92672">+</span>
+
+  <span style="color:#75715e"># Wall Street Journal theme</span>
+  <span style="color:#a6e22e">scale_colour_wsj</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">theme_wsj</span>()
+</code></pre></div><p><!-- raw HTML omitted --></p>
+<p>Spremni ste da pravite vizualizacije u R-u koje možete da objavite. 😎 Nastavite da  istražujete i dalje i vidite da li možete da napravite grafikone u stilu BBC-ja. Pogledajte kako BBC uređuje svoje tekstove zasnovane na podacima <a href="https://bbc.github.io/rcookbook/">BBC Visual and Data Journalism cookbook for R graphics</a>.</p>
+<h5 id="postavite-vie-grafikona-na-koordinatnu-mreu">Postavite više grafikona na koordinatnu mrežu</h5>
+<p>Ponekad je teško da vidite sve što je važno na jednom grafikonu, poput ovog koji smo već napravili gde nije najjasnije koja je tačno tačka za koji kontinent. Da biste lakše sagledali i razumeli informacije koje želite da prikažete, nekad je efikasnije da različite kategorije o istoj informaciji predstavite u više grafikona jedan pored drugog. Ovo je vrlo jednostavno uraditi uz pomoć moćnih funkcija <code>ggplot2</code>: <code>facet_wrap()</code> and <code>facet_grid()</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">ggplot</span>(gapminder, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> gdpPercap, y <span style="color:#f92672">=</span> lifeExp)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>(<span style="color:#a6e22e">aes</span>(col <span style="color:#f92672">=</span> continent), alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>, shape <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>, size <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">lm&#34;</span>, se <span style="color:#f92672">=</span> F, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">darkred&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">loess&#34;</span>, se <span style="color:#f92672">=</span> F, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">black&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">labs </span>(title<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Life Exp. vs. Population Size&#34;</span>, 
+        x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">population&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Life Exp.&#34;</span>) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">theme</span>(legend.position <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">right&#34;</span>, 
+        panel.border <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_rect</span>(fill <span style="color:#f92672">=</span> <span style="color:#66d9ef">NA</span>, 
+                                    colour <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">black&#34;</span>,
+                                    size <span style="color:#f92672">=</span> <span style="color:#ae81ff">.75</span>),
+        plot.title<span style="color:#f92672">=</span><span style="color:#a6e22e">element_text</span>(hjust<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>)) <span style="color:#f92672">+</span> 
+  <span style="color:#a6e22e">scale_x_continuous</span>(breaks <span style="color:#f92672">=</span> <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">120000</span>, <span style="color:#ae81ff">20000</span>), labels <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">0&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">20K&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">40K&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">60K&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">80K&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">10K&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">12K&#34;</span>)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">scale_colour_wsj</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">theme_wsj</span>() <span style="color:#f92672">+</span>
+  
+  <span style="color:#75715e"># forms a matrix of scatterplots for each continet</span>
+  <span style="color:#a6e22e">facet_grid</span>(rows <span style="color:#f92672">=</span> <span style="color:#a6e22e">vars</span>(continent))
+</code></pre></div><p><!-- raw HTML omitted --></p>
+<p>Glavna razlika između funkcije <code>facet_wrap()</code> i  <code>facet_grid()</code> je da prva može da spoji grafikone  jedne pored drugih za jednu varijablu, dok druga može to da uradi za više od jedne varijable.</p>
+
+<div class="notices warning" ><p>Pokušajte da istražite ove dve funckije sami i vidite kuda će vas to odvesti.</p>
+</div>
+
+<h4 id="-pokuajte-sledee">💪 Pokušajte sledeće:</h4>
+<ul>
+<li>
+<p><code>Dplyr-ova` </code>group_by()` funkcija vam omogućava da grupišete svoje podatke. Dozvoljava vam da kreirate posebne df koji razdvaja orginalni df po varijabli.</p>
+</li>
+<li>
+<p><code>boxplot()</code> funkcija proizvodi boxplot grafikone od datih (grupisanih) vrednosti.</p>
+</li>
+</ul>
+<p>Pošto znate za funkcije <code>group_by()</code> i <code>boxplot()</code> i već ste koristili <code>gapminder</code> podatke, možete li da izračunate medijanu životnog veka u 2007. godini po kontinentima i da vizuelizujete vaše rezultate?</p>
+<h5 id="-reenje-kod">😃🙌 Rešenje: kod</h5>
+<p>Pogledajmo medijanu životnog veka za svaki kontinent</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">gapminder <span style="color:#f92672">%&gt;%</span>
+    <span style="color:#a6e22e">group_by</span>(continent) <span style="color:#f92672">%&gt;%</span>
+    <span style="color:#a6e22e">summarise</span>(lifeExp <span style="color:#f92672">=</span> <span style="color:#a6e22e">median</span>(lifeExp))
+</code></pre></div><pre><code>## # A tibble: 5 x 2
+##   continent lifeExp
+##   &lt;fct&gt;       &lt;dbl&gt;
+## 1 Africa       47.8
+## 2 Americas     67.0
+## 3 Asia         61.8
+## 4 Europe       72.2
+## 5 Oceania      73.7
+</code></pre><p><strong>Imamo sreće što živimo u Srbiji, tj. u Evropi!!!</strong> 😅</p>
+<h5 id="-sreenje-grafikon">😃🙌 SRešenje: grafikon</h5>
+<p><!-- raw HTML omitted --></p>
+<h5 id="studija-sluaja-no2-2017-">Studija slučaja: NO2 2017 😁</h5>
+<p>Hajde da sad pokušamo da iskombinujemo sve što smo do sada naučili i da vežbamo na već dobro poznatim podacima <a href="http://data.sepa.gov.rs/dataset/ca463c44-fbfa-4de9-9a75-790995bf2830/resource/74516688-5fb5-47b2-becc-6b6e31a24d80/download/2017-no2.csv">2017-NO2.csv</a> data.</p>
+<p>Sećate se ovoga?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(tidyr)
+<span style="color:#a6e22e">library</span>(forcats)
+no2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">http://data.sepa.gov.rs/dataset/ca463c44-fbfa-4de9-9a75-790995bf2830/resource/74516688-5fb5-47b2-becc-6b6e31a24d80/download/2017-no2.csv&#34;</span>,
+                stringsAsFactors <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>, 
+                fileEncoding <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">latin1&#34;</span>)
+</code></pre></div><pre><code>## Warning in read.table(file = file, header = header, sep = sep, quote =
+## quote, : invalid input found on input connection 'http://data.sepa.gov.rs/
+## dataset/ca463c44-fbfa-4de9-9a75-790995bf2830/resource/74516688-5fb5-47b2-
+## becc-6b6e31a24d80/download/2017-no2.csv'
+</code></pre><pre><code>## Warning in read.table(file = file, header = header, sep = sep, quote = quote, :
+## incomplete final line found by readTableHeader on 'http://data.sepa.gov.rs/
+## dataset/ca463c44-fbfa-4de9-9a75-790995bf2830/resource/74516688-5fb5-47b2-
+## becc-6b6e31a24d80/download/2017-no2.csv'
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">new_no2 <span style="color:#f92672">&lt;-</span> no2 <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">gather</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">place&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">no2&#34;</span>, <span style="color:#f92672">-</span>Datum, factor_key <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>) <span style="color:#f92672">%&gt;%</span> <span style="color:#75715e"># stack all columns apart from `Datum`</span>
+  <span style="color:#a6e22e">mutate</span>(place <span style="color:#f92672">=</span> <span style="color:#a6e22e">fct_recode</span>(place, 
+                            <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">NS_Spens&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Novi.Sad.SPENS.NO2&#34;</span>,
+                            <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">BG_Most&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Beograd.Mostar.NO2&#34;</span>,
+                            <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">BG_Vracar&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Beograd.Vraèar.NO2&#34;</span>, 
+                            <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">BG_ZelenoBrdo&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Beograd.Zeleno.brdo.NO2&#34;</span>, 
+                            <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">KG&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Kragujevac..NO2&#34;</span>, 
+                            <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">NI&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Ni..IZJZ.Ni...NO2&#34;</span>,
+                            <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">UZ&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">U.ice..NO2&#34;</span>))
+</code></pre></div><pre><code>## Warning: Unknown levels in `f`: Ni..IZJZ.Ni...NO2, U.ice..NO2
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">glimpse</span>(new_no2)
+</code></pre></div><pre><code>## Observations: 0
+## Variables: 3
+## $ Datum &lt;lgl&gt; 
+## $ place &lt;fct&gt; 
+## $ no2   &lt;lgl&gt;
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">new_no2 <span style="color:#f92672">%&gt;%</span> 
+  <span style="color:#a6e22e">group_by</span>(place) <span style="color:#f92672">%&gt;%</span> 
+  <span style="color:#a6e22e">summarise</span>(mean_no2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">is.na</span>(no2))) <span style="color:#f92672">%&gt;%</span> <span style="color:#75715e"># !is.na(): is not NA; omits the missing values</span>
+  <span style="color:#a6e22e">ggplot</span>(<span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> place, y <span style="color:#f92672">=</span> mean_no2, fill <span style="color:#f92672">=</span> place)) <span style="color:#f92672">+</span> <span style="color:#75715e"># fill: colours each bar differently   </span>
+    <span style="color:#a6e22e">geom_bar</span>(stat <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">identity&#34;</span>) <span style="color:#f92672">+</span>
+    <span style="color:#a6e22e">xlab</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Place&#34;</span>) <span style="color:#f92672">+</span> 
+    <span style="color:#a6e22e">scale_fill_brewer</span>(palette <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Dark2&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#75715e"># colour scheme &#34;Dark2&#34;</span>
+    <span style="color:#a6e22e">theme</span>(legend.position<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">bottom&#34;</span>, 
+          axis.text.x <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_blank</span>(),
+          axis.ticks.x <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_blank</span>()) <span style="color:#75715e"># </span>
+</code></pre></div><pre><code>## Warning: Factor `place` contains implicit NA, consider using
+## `forcats::fct_explicit_na`
+</code></pre><pre><code>## Warning: Removed 1 rows containing missing values (position_stack).
+</code></pre><p><!-- raw HTML omitted --></p>
+<h2 id="sad-je-red-na-vas-">Sad je red na vas 👇</h2>
+<p>Vežbajte na sledećem setu zadataka:</p>
+<ol>
+<li>
+<p>Odaberite podatke koji su vam zanimljivi sa portala otvorenih podataka <a href="https://data.gov.rs">https://data.gov.rs</a>. Učitajte set podataka u R i pregledajte koje sve varijable postoje. Razmislite kakve biste  grafikone koristili da biste te podatke prikazali vašoj publici?</p>
+</li>
+<li>
+<p>Vratite se na studiju slučaja NO2 2017:</p>
+</li>
+</ol>
+<p>i)	Koja sva pitanja možete postaviti na osnovu informacija koje su vam dostupne u ovom setu podataka?</p>
+<p>ii)	Koje biste grafikone predložili kako bi vam pomogli da odgovorite na ova pitanja?</p>
+<p>iii) Kreirajte odgovarajuće vizuelizacije za i) i ii)</p>
+<h5 id="korisni-linkovi">korisni linkovi:</h5>
+<p><a href="https://www.rstudio.com/resources/webinars/tidyverse-visualization-and-manipulation-basics/">tidyverse, visualization, and manipulation basics</a></p>
+<p><a href="http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html#introduction">Introduction to R graphics with ggplot2</a></p>
+<p><a href="https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf"><code>gglopt</code> cheat sheet</a></p>
+<p><a href="https://www.data-to-viz.com/">from Data to Viz</a></p>
+<p><a href="http://johnburnmurdoch.github.io/slides/r-ggplot/#/">An example from the Financial Times</a></p>
+<p><a href="https://bbc.github.io/rcookbook/">BBC Visual and Data Journalism cookbook for R graphics</a></p>
+<p><a href="http://johnburnmurdoch.github.io/slides/r-ggplot/#/">ggplot as a creativity engine</a></p>
+<hr>
+<p>© 2019 <a href="https://sisteranalyst.org">Sister Analyst</a></p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/sr/module3/" title="Modul 3"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/sr/module3/spatialda/" title="Analiza geo-pozicioniranih podataka" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1583944929"></script>
+    <script src="/js/perfect-scrollbar.min.js?1583944929"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1583944929"></script>
+    <script src="/js/jquery.sticky.js?1583944929"></script>
+    <script src="/js/featherlight.min.js?1583944929"></script>
+    <script src="/js/highlight.pack.js?1583944929"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1583944929"></script>
+    <script src="/js/learn.js?1583944929"></script>
+    <script src="/js/hugo-learn.js?1583944929"></script>
+
+    <link href="/mermaid/mermaid.css?1583944929" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1583944929"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105947713-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

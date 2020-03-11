@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html lang="sr" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.60.1" />
+    <meta name="description" content="RToolbox">
+<meta name="author" content="Sister Analyst">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    <title>Osnovni koncepti statistike :: RToolbox</title>
+
+    
+    <link href="/css/nucleus.css?1583944929" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1583944929" rel="stylesheet">
+    <link href="/css/hybrid.css?1583944929" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1583944929" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1583944929" rel="stylesheet">
+    <link href="/css/auto-complete.css?1583944929" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1583944929" rel="stylesheet">
+    <link href="/css/theme.css?1583944929" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1583944929" rel="stylesheet">
+    
+      <link href="/css/theme-blue.css?1583944929" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1583944929"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/sr/module1/statsconcepts/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <!DOCTYPE html>
+<html>
+<body>
+<IMG SRC="/images/logo.png" ALT="DataTeka" WIDTH=100 HEIGHT=100>
+
+</body>
+</html>
+
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1583944929"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1583944929"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/sr";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1583944929"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/" title="O Kursu" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/">
+          <b>1. </b>O Kursu
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/whatlearn/" title="Opšti pregled" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/whatlearn/">
+          Opšti pregled
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/instructor/" title="Upoznajte trenere" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/instructor/">
+          Upoznajte trenere
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/syllabus/" title="Indikativan nastavni program" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/syllabus/">
+          Indikativan nastavni program
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/" title="Modul 1" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/sr/module1/">
+          <b>2. </b>Modul 1
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/whatisr/" title="Šta je R?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/whatisr/">
+          Šta je R?
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/installr/" title="Instalacija R/Rstudija" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/installr/">
+          Instalacija R-a
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/git-and-github/" title="Git i GitHub" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/git-and-github/">
+          Git i GitHub
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/rstudioide/" title="RStudio IDE" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/rstudioide/">
+          RStudio IDE
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/user/" title="Kako se R koristi?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/user/">
+          Kako se R koristi?
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/statsconcepts/" title="Osnovni koncepti statistike" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/sr/module1/statsconcepts/">
+          Osnovni koncepti statistike
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/datatypes/" title="Tipovi podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/datatypes/">
+          Tipovi podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/importexport/" title="Učitavanje podataka u R" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/importexport/">
+          Učitavanje podataka u R
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module2/" title="Modul 2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module2/">
+          <b>3. </b>Modul 2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module2/datawrangling/" title="Organizacija podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module2/datawrangling/">
+          Organizacija podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/" title="Modul 3" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/">
+          <b>4. </b>Modul 3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/visualisation/" title="Vizuelizacija podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/visualisation/">
+          Vizuelizacija podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/spatialda/" title="Analiza geo-pozicioniranih podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/spatialda/">
+          Analiza geo-pozicioniranih podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/principlesvisualisation/" title="Uvod u principe vizuelizacije" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/principlesvisualisation/">
+          Principe vizuelizacije
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module4/" title="Modul 4" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module4/">
+          <b>5. </b>Modul 4
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module4/rmarkdown/" title="RMarkdown" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module4/rmarkdown/">
+          RMarkdown
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module5/" title="Modul 5" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module5/">
+          <b>6. </b>Modul 5
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module5/shiny/" title="Shiny" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module5/shiny/">
+          Shiny
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module6/" title="Modul 6" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module6/">
+          <b>7. </b>Modul 6
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module6/blogdown/" title="blogdown" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module6/blogdown/">
+          blogdown
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/our_podcast/" title="Our Stories" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/our_podcast/">
+          <b>8. </b>Our Stories
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/matcornic/hugo-theme-learn"><i class='fab fa-fw fa-github'></i> Repo GitHub</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="/en/module1/statsconcepts/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="sr" value="/sr/module1/statsconcepts/" selected>Serbian</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <center>
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn" data-icon="octicon-star" data-show-count="true" aria-label="Star matcornic/hugo-theme-learn on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/module1/StatsConcepts/_index.sr.markdown" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/sr/'>R Toolbox</a> > <a href='/sr/module1/'>Modul 1</a> > Osnovni koncepti statistike
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+        <li><a href="#opisivanje-promenjivih-varijabli">Opisivanje promenjivih (varijabli)</a></li>
+        <li><a href="#koncept-statistike-distribucije">Koncept statističke distribucije</a></li>
+        <li><a href="#vana-kljuna-mesta">Važna ključna mesta:</a></li>
+        <li><a href="#istraivanje-odnosa-izmeu-varijabli">Istraživanje odnosa između varijabli</a></li>
+        <li><a href="#metodologija-analize-podataka">Metodologija analize podataka</a></li>
+      </ul>
+    </li>
+    <li><a href="#zadaci-">ZADACI 👇</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Osnovni koncepti statistike
+            </h1>
+          
+
+        
+
+
+
+
+	<p>U ovom odeljku upoznaćemo vas sa nizom važnih koncepata koji vam omogućuju da istražujete svoje podatke sa  <strong>sledećim ciljem</strong></p>
+<ul>
+<li>da sumirate i razumete glavne karakteristike varijabli (promenjivih) koje se nalaze u podacima, i,</li>
+<li>da istražujete prirodu međusobnih odnosa između varijabli (promenjivih) koje postoje.</li>
+</ul>
+<p>Za početak važno je da razumete prirodu podataka, da razumete <strong>šta su podaci</strong>.</p>
+<ul>
+<li>Šta je <strong>populacija</strong>?</li>
+<li>Šta je <strong>uzorak</strong>?</li>
+</ul>
+<p>Znate li koje su definicije populacije i uzorka?  😁</p>
+<p><em>Populacija je skup svih članova koji imaju određenu, zajedničku karakteristiku; skup svih ljudi ili stvari koji su od interesa u određenom istraživanju.</em></p>
+<p>U statistici termin za skup svih podataka naziva se <strong>populacija</strong>. Ovo podrazumeva <strong>“savršenu informaciju”</strong>, tj. da imate informacije o svim članovima skupa koje istražujete, međutim, u stvarnim istraživanjima to gotovo nikad nije slučaj, jer je vrlo teško doći do podataka o celoj populaciji. Zato analitičari uzimaju uzorak iz populacije i istražujući uzorak dolaze do zaključaka (<strong>inferences</strong>) važnih za celu populaciju.</p>
+<p>Ukoliko su rezultati bilo koje analize <strong>zasnovani na uzorku populacije</strong>, onda da bi taj uzorak bio validan, neophodno je da se izabere na korektan način i da reflektuje strukturu populacije.</p>
+<p>Proces uzorkovanja da bi se došlo do reprezentativnog uzorka je veliko područje stastičkog istraživanja. Najjednostavniji model reprezentativnog uzorka je „slučajno uzorkovanje“ (<strong>&ldquo;random sample&rdquo;</strong>):</p>
+<p><em>Uzorak izabran na način da svaki od elemenata u populaciji ima iste šanse da bude uključen u uzorak.</em></p>
+<p>Uzorkovanjem, informacije su <em>“nesavršene”</em> i zavise od pojedinačno odabranog uzorka. <strong>Glavni problem</strong> upotrebe uzoraka je da se donose validni zaključci o samoj populaciji a da se uzme u obzir i sama &lsquo;<em>greška uzorkovanja</em>'.</p>
+<p>Rad sa reprezentativnim uzorcima ne treba da se potcenjuje. Dobar način da se proceni njihov značaj je da se sagledaju posledice upotrebe nereprezentativnih uzoraka. Knjiga autora <a href="https://en.wikipedia.org/wiki/Darrell_Huff">Darrell Huff</a> <a href="https://en.wikipedia.org/wiki/How_to_Lie_with_Statistics">How to Lie with Statistics</a>, koju je objavio <a href="https://www.penguin.co.uk/">Penguin</a> sadrži nekoliko anegdota o nereprezentativnim uzorcima i posledicama ako se oni tretiraju kao reprezentativni.</p>
+<h4 id="data-analiza-na-uzorku-podataka">Data analiza na uzorku podataka</h4>
+<p>Podaci se uobičajeno sakupljaju zato što je prethodno uočen nekakav problem, a u nadi da će sakupljeni podaci biti od koristi u analizi tog problema. Podaci se obično  daju analitičarima na ovaj način sa zahtevom da se oni izuče i analiziraju.</p>
+<p>Na početku svog rada, ili analize bilo kog podatka, analitičari bi trebalo da:</p>
+<p>i)	se uvere da dobro razumeju problem, i da su ciljevi istraživanja jasno postavljeni.</p>
+<p>ii)	se uvere da su pojedinačne promenjive (varijable) jasne, pre bilo kakve analize.</p>
+<p><!-- raw HTML omitted -->Analitičar mora  da razume podatke pre nego što pokuša bilo kakvu analizu.<!-- raw HTML omitted --></p>
+<p>Da sumiramo, kada počinjete sa analizom <!-- raw HTML omitted -->morate upitati sebe<!-- raw HTML omitted -->:</p>
+<p>i) <strong>Da li razumem problem</strong> koji se istražuje i da li su mi ciljevi istraživanja jasni? 
+<em>Jedini način da se uverite da li je to tako jeste da sebi postavljate pitanja i to nastavite da radite sve dok ne dođete do zadovoljavajućeg odgovora koje želite da dobijete.</em></p>
+<p>ii) Da li razumem tačno šta svaka od <strong>varijabli (promenjivih) meri ili beleži?</strong></p>
+<h3 id="opisivanje-promenjivih-varijabli">Opisivanje promenjivih (varijabli)</h3>
+<p>Na početku treba da istražite karakteristike svake pojedinačne varijable u setu podataka.</p>
+<p>Nastavak rada zavisi do tipa varijabli (promenjivih) koje želite da istražite.</p>
+<p><strong>Klasifikacija tipova varijabli</strong></p>
+<p>Varijable (promenjive) mogu se podeliti u sledeće dve široke grupe:</p>
+<ul>
+<li><strong>Kategoričke varijable (Attribute variables)</strong>: sadrže podatke kategorisane u jasno razgraničene grupe po određenoj karakteristici ili osobini (atributu).</li>
+</ul>
+<ul>
+<li>Pol</li>
+<li>Dani u nedelji</li>
+</ul>
+<p>Uobičajeno je da svakoj osobini (atributu) date numerički kod.Zbog toga ih još nazivamo kodirane varijable. S obzirom da ih tako lako možemo upotrebljavati u kodu pripremljenog za njihovo razumevanje. Na primer ukoliko je reč o muškom polu njega ćemo obeležiti na primer sa brojem 1, ženski pol sa brojem 2, itd.</p>
+<ul>
+<li><strong>Numeričke varijable (Measured variables)</strong>: sadrže podatke koji su rezultat merenja ili prebrojavanja, i nalaze se na nekoj numeričkoj skali: prikazuju se kao numerički izrazi.</li>
+</ul>
+<ul>
+<li>Težina,</li>
+<li>Starost u godinama,…</li>
+</ul>
+<p>Postoje dve vrste numeričkih varijabli, kontinuirane promenjive, koje su merene na kontinuiranoj skali, na primer visina neke osobe. Ove varijable zovemo <em>kontinuirane varijable (continuous variable)</em>. Drugu vrstu varijabli zovemo <em>diskretne varijable (discrete variable)</em>. One su rezultat brojanja, na primer, broj putnika u određenom autobusu.</p>
+<h3 id="koncept-statistike-distribucije">Koncept statističke distribucije</h3>
+<p><strong>Koncept statističke distribucije ključan je za svaku statističku analizu.</strong></p>
+<p>Ovaj koncept se odnosi na populaciju i pretpostavlja da imamo savršene informacije, zapravo da je tačan sastav populacije poznat.</p>
+<p>Ideje i koncepti istraživanja podataka o populaciji daju nam okvir kako da istražimo podatke koje imamo iz uzorka. Analitičari klasifikuju varijable (promenjive) ili kao kategoričke (attribute) ili kao numeričke (measured) i proveravaju statističku distribuciju pojedinačnih varijabli  u podacima iz uzorka. 
+U slučaju kategoričkih (attribute) varijabli potrebno je da istražimo broj pojedinačnih pojava svakog atributa, dok kod numeričkih varijabli računamo glavne pokazatelje deskriptivne statistike, srednju vrednost, širinu i simetriju distribucije podataka.</p>
+<p><strong>kategoričke:</strong>
+<!-- raw HTML omitted --></p>
+<p><strong>numeričke:</strong>
+<!-- raw HTML omitted --></p>
+<h4 id="ta-nam-distribucija-pokazuje">Šta nam distribucija pokazuje?</h4>
+<p>Sa kategoričkim varijablama je lako. Posmatramo frekvenciju (učestalost), tj. broj pojavljivanja nekog podatka u svakoj pojedinačnoj varijabli, kao što je prikazano na grafikonu gore.</p>
+<p>Kod numeričkih (merljivih) varijabli površina ispod krive od jedne do druge vrednosti meri relativni udeo podataka populacije koji imaju vrednost rezultata u tom rasponu.</p>
+<p>Statistička distribucija (raspodela) za numeričku varijablu može se sumirati sa sledeća tri ključna opisa:</p>
+<ul>
+<li><!-- raw HTML omitted -->Centar<!-- raw HTML omitted --> distribucije;</li>
+<li><!-- raw HTML omitted -->Širina<!-- raw HTML omitted --> distribucije;</li>
+<li><!-- raw HTML omitted -->Simitrija<!-- raw HTML omitted --> distribucije</li>
+</ul>
+<p><!-- raw HTML omitted --><strong>Uobičajene mere sredine (centra) distribucije</strong><!-- raw HTML omitted --> su <strong>srednja vrednost (aritmetička vrednost)</strong> i <strong>medijana</strong>. Vrednost medijane varijable definiše posebna vrednost raspodele tako da je polovina vrednosti podataka manja od te srednje vrednosti, a polovina veća.</p>
+<p><!-- raw HTML omitted --><strong>Uobičajena mera širine</strong><!-- raw HTML omitted --> distribucije su <strong>standardna devijacija (odstupanje)</strong> i <strong>interkvartalna razlika</strong>. Standardna devijacija je koren srednje vrednosti kvadratnih odstupanja od aritmetičke sredine. Konačno, standardno odstupanje je relativna mera raširenja (širine), što je veće standardno odstupanje, to je distribucija šira. Interkvartalna razlika je opseg u kojem varira srednjih 50% vrednosti podataka.</p>
+<p>Analogno medijani, moguće je definisati sledeće kvartile. Oni dele set merenja u <!-- raw HTML omitted -->četiri grupe<!-- raw HTML omitted -->:</p>
+<ul>
+<li>Q1	je vrednost koja deli dati set tako da se ispod nje nalazi 25%, a iznad nje 75% od ukupnog broja pojedinačnih merenja koja pripadaju tom setu.</li>
+<li>Q2 	je vrednost koja deli dati set tako da se ispod nje nalazi 50%, a iznad nje 50% od ukupnog broja pojedinačnih merenja koja pripadaju tom setu. A to je upravo medijana.</li>
+<li>Q3 	je vrednost koja deli dati set tako da se ispod nje nalazi 75%, a iznad nje 25% od ukupnog broja pojedinačnih merenja koja pripadaju tom setu.</li>
+<li>Interkvartalna razlika je područje omeđeno brojevima Q3-Q1.</li>
+</ul>
+<p>Dijagram ispod prikazuje to slikovito:</p>
+<p><!-- raw HTML omitted --></p>
+<p>🤓💡 Obično su <strong>srednja vrednost i standardna devijacija</strong> date zajedno kao jedan par mera lokacije i širenja, a <strong>medijana i kvartalna razlika</strong> kao drugi par mera.</p>
+<p>Postoji niz mera simetrije; najjednostavniji način za <!-- raw HTML omitted --><strong>merenje simetrije</strong><!-- raw HTML omitted --> je poređenje srednje (aritmetičke) vrednosti i medijane. Za savršeno simetričnu distribuciju srednja vrednost i medijana biće potpuno iste. Ova ideja vodi nas definisanju Pearsonovog koeficijenta zakrivljenosti (Skewness) kao:</p>
+<p><code>Pearson's coefficient of Skewness = 3(mean - median) / standard deviation</code></p>
+<p>Alternativna mera zakrivljenosti (Skewness) je kvartalna mera zakrivljenosti definisana kao:</p>
+<p><code>Quartile Measure of Skewness  = [(Q1 - Q3) - (Q2 - Q1)]/(Q3 - Q1)</code></p>
+<h3 id="vana-kljuna-mesta">Važna ključna mesta:</h3>
+<ul>
+<li>
+<p>Šta su podaci?</p>
+</li>
+<li>
+<p>Varijable</p>
+</li>
+<li>
+<p>Dve vrste varijabli:</p>
+<ul>
+<li>Kategoričke varijable</li>
+<li>Numeričke varijable</li>
+</ul>
+</li>
+<li>
+<p>Koncept statističke distribucije:</p>
+<ul>
+<li>Primenjen na kategoričke varijable</li>
+<li>Primenjen na numeričke varijable</li>
+</ul>
+</li>
+<li>
+<p>Deskriptivna statistika numeričke varijable:</p>
+<ul>
+<li>Mere centra
+<ul>
+<li>Srednja (aritmetička) vrednost, medijana</li>
+</ul>
+</li>
+<li>Mere širine:
+<ul>
+<li>Standardna devijacija</li>
+<li>Interkvartalna razlika</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Deskriptivna statistika omogućava da se numerički izraze ključni parametri distribucije numeričke varijable iz uzorka.</p>
+<h3 id="istraivanje-odnosa-izmeu-varijabli">Istraživanje odnosa između varijabli</h3>
+<p>Jedan od ključnih koraka analize podataka je istraživanje odnosa između varijabli. Da bi to uradili potrebno je da dodatno <strong>klasifikujemo promenjive</strong> sadržane u podacima, da ih klasifikujemo kao <!-- raw HTML omitted --><strong>odzivne</strong><!-- raw HTML omitted --> (response) varijable ili kao <!-- raw HTML omitted --><strong>eksplanatorne</strong><!-- raw HTML omitted -->.</p>
+<p><strong>Odzivna</strong> varijabla je ona koja meri direktno ili inderektno ciljeve analize.</p>
+<p><strong>Eksplanatorna</strong> varijabla je ona koja može da utiče na odzivnu varijablu.</p>
+<h4 id="bivarijatni-odnosi">Bivarijatni odnosi</h4>
+<p>Generalno gledano, postoje četiri različite kombinacije odzivnih i eksplanatornih varijabli. Ove četiri kombinacije su prikazane na slici dole:</p>
+<p><img src="/module1/StatsConcepts/images/RelationshipMatrix.png?width=30pc" alt="Relationship"></p>
+<p>Polazna tačka <!-- raw HTML omitted -->istraživanja odnosa<!-- raw HTML omitted --> između <strong>odzivnih</strong> i <strong>eksplanatornih</strong> varijabli počinje sa istraživanjem samih varijabli, definisanjem odzivne varijable ili odzivnih, i eksplanatornih varijabli.</p>
+<p>🤓💡: U velikim empirijskim istraživanjima može da postoji veći broj ciljeva, i samim tim više odzivnih varijabli.</p>
+<p>Metod za istraživanje odnosa između odzivne varijable i eksplanatorne zavisi od tipa varijabli. Metodologija se razlikuje u zavisnosti od kombinacije ovog odnosa kao što smo već videli na prethodnoj slici. Primena neodgovarajuće metode stvara probleme. 💡⚡️😩</p>
+<h3 id="metodologija-analize-podataka">Metodologija analize podataka</h3>
+<p>Na početku treba da imate jasnu ideju šta je to odnos između odzivne i eksplanatorne varijable. To će vam pomoći da postavite okvir za definisanje procesa analize podataka koji će istražiti vezu i odnos između ove dve varijable, i primeniti ideje koje ste prethodno razvili.</p>
+<p>Sledeći korak je da <!-- raw HTML omitted --><em>upotrebite osnovnu deskriptivnu statistiku kako biste utvrdili prirodu veze između varijabli</em><!-- raw HTML omitted -->. Ovaj jednostavni pristup omogućiće vam da zaključite da li se na osnovu analize uzorka može govoriti o povezanosti, ili o nepovezanosti varijabli, ili da ovaj jednostavni pristup ne daje jasne zaključke pa je potrebna dalja sofisticiranija analiza podataka. Ovaj korak se naziva <!-- raw HTML omitted --><strong>početna analiza podataka (Initial Data Analysis)<strong><!-- raw HTML omitted --> ili ponekad skraćeno <!-- raw HTML omitted --></strong>IDA</strong><!-- raw HTML omitted -->.</p>
+<p>Ukoliko Početna analiza podataka potvrdi da je <!-- raw HTML omitted --><strong>Dalja analiza podataka (Further Data Analysis)<strong><!-- raw HTML omitted --> (<!-- raw HTML omitted --></strong>FDA</strong><!-- raw HTML omitted -->) potrebna, onda ovaj korak iziskuje jedan od sledeća dva zaključka:</p>
+<p>i) Analiza uzorka pokazuje da ne postoji veza između odzivne i eksplanatorne varijable.</p>
+<p>ili</p>
+<p>ii)	Analiza uzorka pokazuje da postoji veza između odzivne i eksplanatorne varijable.</p>
+<p>Rezultat analize je jedna od dve alternative koje su date gore. Ukoliko je rezultat da ne postoji dokaz o povezanosti, onda dalji nastavak nije potreban, s obzirom da je analiza završena.</p>
+<p>Međutim, ukoliko se pokaže suprotno tj. da je rezultat da povezanost ipak postoji, onda priroda te povezanosti između dve varijable treba da bude opisana i objašnjena.</p>
+<p>🤓💡 <!-- raw HTML omitted --><strong>Metodologija analize podataka</strong><!-- raw HTML omitted --> opisana gore zahteva odgovor na sledeća ključna pitanja:</p>
+<p>Da li postoji veza između odzivne i eksplanatorne varijable na osnovu uzorka?</p>
+<p>Odgovor može biti jedan od sledeća dva:</p>
+<p>i)	Nema dokaza o povezanosti</p>
+<p>ii)	Da, postoji povezanost, a ona treba dalje da se opiše.</p>
+<p>Ovaj proces može da se predstavi sledećim dijagramom:</p>
+<p><img src="/module1/StatsConcepts/images/DAMethodology.png?width=40pc" alt="DA Methodology"></p>
+<p>Za bilo koju od četiri navedene situacije, analitičar treba da zna šta će sadržati Početna analiza podataka (IDA) i kako će ona da se sprovede i objasni. Ukoliko je potrebna Dalja analiza podataka, onda analitičar treba da zna kako će sprovesti i opisati Dalju analizu podataka.</p>
+<h4 id="numerike-vs-kategorike-dva-nivoa">Numeričke Vs kategoričke (dva nivoa)</h4>
+<p>Postoji povezanost između numeričke odzivne i kategoričke eksplanatorne varijable ukoliko srednja vrednost odzivne je zavisna od nivoa kategoričke eksplanatorne varijable.</p>
+<p>Dajemo numeričkoj odzivnoj i kategoričkoj eksplanatornoj varijabli dva nivoa, &ldquo;<!-- raw HTML omitted -->crveni<!-- raw HTML omitted -->&rdquo; i &ldquo;<!-- raw HTML omitted -->plavi<!-- raw HTML omitted -->&rdquo;. Ukoliko su statistička distribucija (raspodela) odzivne varijable obojene crvenom i kategoričke obojene plavom potpuno iste onda nivo kategoričke varijable nama uticaj na vrednosti odzivne, i tada nema povezanosti.</p>
+<p>Ovo možemo ilustrovati slikom dole:</p>
+<p><img src="/module1/StatsConcepts/images/MvAMethodology.png?width=40pc" alt="MvA Methodology"></p>
+<h4 id="numerika-vs-numerika">Numerička Vs Numerička</h4>
+<p>Prvi korak je da imamo jasnu ideju šta znači povezanost između numeričke vrednosti odzivne varijable i numeričke vrednosti ekplanatorne varijable. Zamislite da je populacija koju istražujemo sastavljena od velikih brojeva članova populacije, i da su na svakom članu populacije obavljena dva merenja, vrednost Y za odzivnu varijablu i vrednost X za eksplanatornu. Napravićemo grafikon za celu populaciju koji će prikazati vrednosti Y na y-osi i vrednosti X na x-osi.</p>
+<p>Ukoliko se na grafikonu prikaže savršena linija, onda je vrlo jasna povezanost između Y i X. Tada ako znamo vrednost X lako možemo naći vrednost Y na grafikonu. Ovo nije mnogo verovatno da će se desiti u kontekstu analize podataka, s obzirom na prirodu povezanosti koja je zapravo <em>deterministička povezanost</em>. Deterministička znači da ukoliko je vrednost X poznata, onda se Y može precizno utvrditi iz povezanosti Y i X. Ono što će češće biti slučaj jeste da će i druge varijable, a ne samo X, imati uticaj na Y.</p>
+<p>Ukoliko istražujemo prirodu povezanosti između Y i X, onda je možemo predstaviti na sledeći način:</p>
+<p><code>Y = f(X) + efekt</code> svih drugih varijabli [efekti svih ostalih varijabli uobičajeno se obeležavaju skraćeno sa e]</p>
+<p>Razmatrani model:</p>
+<p><code>Y = f(X) + e</code>		[e predstavlja effekat svih ostalih varijabli]</p>
+<p>Uticaj na odzivnu varijablu Y može da se predstavi  kroz sledeće dve komponente:</p>
+<p>i) komponenta Y koja se moze objasniti promenama vrednosti X, [delom i zbog toga što promene X idu preko f(X)]</p>
+<p>ii)	komponenta Y koja se može objasniti promenama vrednosti drugih faktora [deo koji nije objašnjen promenama u X]</p>
+<p>To možemo predstaviti u kraćoj formi kao ‘<!-- raw HTML omitted -->Varijacija u Y koja je objašnjena promenama u X<!-- raw HTML omitted -->’ ili ‘<!-- raw HTML omitted -->Objašnjena varijacija<!-- raw HTML omitted -->’ i ‘<!-- raw HTML omitted -->Varijacija u Y koja nije objašnjena promenama u X<!-- raw HTML omitted -->’ ili ‘<!-- raw HTML omitted -->Neobjašnjena varijacija’<!-- raw HTML omitted -->.</p>
+<p>Na kraju, Ukupna <strong>varijacija u Y</strong> sastoji se od dve komponente:</p>
+<ul>
+<li>Promene u Y objašnjene promenama u X, i</li>
+<li>Promene u Y koje nisu objašnjene promenama u X</li>
+</ul>
+<p>A to se može napasati na sledeći način:</p>
+<pre><code>`'The Total Variation in Y' = 'Explained Variation' + 'Unexplained Variation'`
+</code></pre>
+<p>🤓💡 Diskusija započinjemo sa sledećom idejom:</p>
+<p>Y = f(X) + e</p>
+<p>Potom da bismo kvantifikovali jačinu uticaja na Y podelili smo uticaj na dve komponente:</p>
+<pre><code>'The Total Variation in Y' = 'Explained Variation' + 'Unexplained Variation'
+</code></pre>
+<p>Moramo postaviti sebi sledeća dva pitanja:
+A:	Da li može da se napravi model povezanosti?
+B.	Da li se „Ukupna varijacija u Y“, „Objašnjenja varijacija“ i „Neobjašnjenja varijacija“ mogu izmeriti?</p>
+<p>Šta nam govore ove vrednosti?</p>
+<p>Možda možemo posmatrati proporciju „Objašnjene varijacije u Y“ u „Ukupnoj varijaciji u Y“. Ovaj odnos uvek je na skali od 0 do 1, ali se on uobičajeno iskazuje kao procenat tj. na skali od 0 do 100%. On se naziva „R Squared (R kvadrat)“ i definiše se  na sledeći način:</p>
+<p>R_sq: 0% (ne postoji povezanost) &lt;&mdash;&mdash;&ndash; 50% (statistička povezanost) &mdash;&mdash;&gt; 100% (savršena povezanost)</p>
+<p>Definicija i objašenjenje <code>R_sq</code> je veoma važan alat za analitičare koji prate povezanost između numeričke odzivne i numeričke eksplanatorne varijable.</p>
+<p>Ove ideje možemo postaviti u okvir metodologije analize podataka  kako je prikazano dole.</p>
+<p><img src="/module1/StatsConcepts/images/MvMMethodology.png?width=40pc" alt="MvM Methodology"></p>
+<p>🤓💡 Napomena: Retko ćete biti u situaciji u kojoj je R_sq toliko blizu nuli da ćete u fazi Početne analize (IDA istraživanja moći da zaključite da, na osnovu uzorka, ne postoji povezanosti ove dve varijable. Ukoliko je R_sq veoma mali (na primer oko 2%) onda to treba dodatno da se testira da bi se zaključilo da li je to statistički značajno na osnovu uzorka uz pomoć Dalje analize podataka (FDA)</p>
+<h4 id="dalja-analiza-podataka-fda">Dalja analiza podataka (FDA)</h4>
+<p>Ukoliko <!-- raw HTML omitted -->&rsquo;<strong>početna analiza podataka</strong>&lsquo;<!-- raw HTML omitted --> ne daje jasne <!-- raw HTML omitted --><em>zaključke</em><!-- raw HTML omitted --> tada je potrebno uraditi <!-- raw HTML omitted -->&rsquo;<strong>Dalju analizu podataka</strong>&lsquo;<!-- raw HTML omitted -->.</p>
+<p>„Dalja analiza podataka“ je procedura koja vam omogućava da donesete odluku, na osnovu uzorka, o sledeća dva rezultata:</p>
+<ul>
+<li>Ne postoji povezanost</li>
+<li>Postoji povezanost</li>
+</ul>
+<p>Ove statističke procedure nazivaju se <!-- raw HTML omitted --><strong>testiranje hipoteze</strong><!-- raw HTML omitted -->, koje vam u suštini omogućava da se odlučite između sledeća dva rezultata: “Ne postoji povezanost ” ili “Postoji povezanost” na osnovu uzorka.</p>
+<p>Svi testovi hipoteze sprovode se u četiri faze:</p>
+<ul>
+<li>
+<p>Faza 1:		Određivanje hipoteza.</p>
+</li>
+<li>
+<p>Faza 2:		Definisanje parametara testa i pravila zaključivanja.</p>
+</li>
+<li>
+<p>Faza 3:		Istraživanje uzorka.</p>
+</li>
+<li>
+<p>Faza 4:		Zaključci.</p>
+</li>
+</ul>
+<h5 id="statistiki-modeli-koji-se-upotrebljavaju-u-fda">Statistički modeli koji se upotrebljavaju u FDA</h5>
+<ul>
+<li>
+<p>Numerička odzivna varijabla vs Kategorička eksplanatorna varijabla sa tačno dva nivoa:</p>
+<ul>
+<li>t-test</li>
+</ul>
+</li>
+<li>
+<p>Numerička odzivna varijabla vs Kategorička eksplanatorna varijabla sa više od dva nivoa:</p>
+<ul>
+<li>One-Way ANOVA</li>
+</ul>
+</li>
+<li>
+<p>Numerička odzivna vs Numerička eksplanatorna varijabla</p>
+<ul>
+<li>Jednostavni model regresije (Simple Regression Model)</li>
+</ul>
+</li>
+<li>
+<p>Numerička odzivna vs Numeričke eksplanatorne varijable</p>
+<ul>
+<li>Multifaktorni model regresije (Multifactor Regression Model)</li>
+</ul>
+</li>
+<li>
+<p>Kategorička odzivna varijabla vs Numerička eksplanatorna varijabla</p>
+<ul>
+<li>Chi-sqare test nezavisnosti</li>
+</ul>
+</li>
+</ul>
+<h2 id="zadaci-">ZADACI 👇</h2>
+<p>Proverite vaše znanje tako što ćete odgovoriti na sledeća pitanja:</p>
+<ol>
+<li>
+<p>Koje su osnovne ideje koje omogućavaju da se istraži odnos između dve varijable (promenljive)?</p>
+</li>
+<li>
+<p>Koja je svrha zbrine statistike?</p>
+</li>
+<li>
+<p>Koja metodologija i kako se ona koristi za istraživanje povezanosti između:</p>
+</li>
+</ol>
+<p>i) Numeričke odzivne varijable i kategoričke eksplanatorne varijable?</p>
+<p>i) Numeričke odzivne varijable i numeričke eksplanatorne varijable?</p>
+<hr>
+<p>© 2019 <a href="https://sisteranalyst.org">Sister Analyst</a></p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/sr/module1/user/" title="Kako se R koristi?"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/sr/module1/datatypes/" title="Tipovi podataka" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1583944929"></script>
+    <script src="/js/perfect-scrollbar.min.js?1583944929"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1583944929"></script>
+    <script src="/js/jquery.sticky.js?1583944929"></script>
+    <script src="/js/featherlight.min.js?1583944929"></script>
+    <script src="/js/highlight.pack.js?1583944929"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1583944929"></script>
+    <script src="/js/learn.js?1583944929"></script>
+    <script src="/js/hugo-learn.js?1583944929"></script>
+
+    <link href="/mermaid/mermaid.css?1583944929" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1583944929"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105947713-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

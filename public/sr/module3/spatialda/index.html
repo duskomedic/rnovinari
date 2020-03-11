@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="sr" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.60.1" />
+    <meta name="description" content="RToolbox">
+<meta name="author" content="Sister Analyst">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    <title>Analiza geo-pozicioniranih podataka :: RToolbox</title>
+
+    
+    <link href="/css/nucleus.css?1583944929" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1583944929" rel="stylesheet">
+    <link href="/css/hybrid.css?1583944929" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1583944929" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1583944929" rel="stylesheet">
+    <link href="/css/auto-complete.css?1583944929" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1583944929" rel="stylesheet">
+    <link href="/css/theme.css?1583944929" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1583944929" rel="stylesheet">
+    
+      <link href="/css/theme-blue.css?1583944929" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1583944929"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/sr/module3/spatialda/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <!DOCTYPE html>
+<html>
+<body>
+<IMG SRC="/images/logo.png" ALT="DataTeka" WIDTH=100 HEIGHT=100>
+
+</body>
+</html>
+
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1583944929"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1583944929"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/sr";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1583944929"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/" title="O Kursu" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/">
+          <b>1. </b>O Kursu
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/whatlearn/" title="Opšti pregled" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/whatlearn/">
+          Opšti pregled
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/instructor/" title="Upoznajte trenere" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/instructor/">
+          Upoznajte trenere
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/syllabus/" title="Indikativan nastavni program" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/syllabus/">
+          Indikativan nastavni program
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/" title="Modul 1" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/">
+          <b>2. </b>Modul 1
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/whatisr/" title="Šta je R?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/whatisr/">
+          Šta je R?
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/installr/" title="Instalacija R/Rstudija" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/installr/">
+          Instalacija R-a
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/git-and-github/" title="Git i GitHub" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/git-and-github/">
+          Git i GitHub
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/rstudioide/" title="RStudio IDE" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/rstudioide/">
+          RStudio IDE
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/user/" title="Kako se R koristi?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/user/">
+          Kako se R koristi?
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/statsconcepts/" title="Osnovni koncepti statistike" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/statsconcepts/">
+          Osnovni koncepti statistike
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/datatypes/" title="Tipovi podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/datatypes/">
+          Tipovi podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/importexport/" title="Učitavanje podataka u R" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/importexport/">
+          Učitavanje podataka u R
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module2/" title="Modul 2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module2/">
+          <b>3. </b>Modul 2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module2/datawrangling/" title="Organizacija podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module2/datawrangling/">
+          Organizacija podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/" title="Modul 3" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/sr/module3/">
+          <b>4. </b>Modul 3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/visualisation/" title="Vizuelizacija podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/visualisation/">
+          Vizuelizacija podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/spatialda/" title="Analiza geo-pozicioniranih podataka" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/sr/module3/spatialda/">
+          Analiza geo-pozicioniranih podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/principlesvisualisation/" title="Uvod u principe vizuelizacije" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/principlesvisualisation/">
+          Principe vizuelizacije
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module4/" title="Modul 4" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module4/">
+          <b>5. </b>Modul 4
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module4/rmarkdown/" title="RMarkdown" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module4/rmarkdown/">
+          RMarkdown
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module5/" title="Modul 5" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module5/">
+          <b>6. </b>Modul 5
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module5/shiny/" title="Shiny" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module5/shiny/">
+          Shiny
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module6/" title="Modul 6" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module6/">
+          <b>7. </b>Modul 6
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module6/blogdown/" title="blogdown" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module6/blogdown/">
+          blogdown
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/our_podcast/" title="Our Stories" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/our_podcast/">
+          <b>8. </b>Our Stories
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/matcornic/hugo-theme-learn"><i class='fab fa-fw fa-github'></i> Repo GitHub</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="/en/module3/spatialda/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="sr" value="/sr/module3/spatialda/" selected>Serbian</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <center>
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn" data-icon="octicon-star" data-show-count="true" aria-label="Star matcornic/hugo-theme-learn on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/module3/SpatialDA/_index.sr.html" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/sr/'>R Toolbox</a> > <a href='/sr/module3/'>Modul 3</a> > Analiza geo-pozicioniranih podataka
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Analiza geo-pozicioniranih podataka
+            </h1>
+          
+
+        
+
+
+
+
+	
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/leaflet/leaflet.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet/leaflet.js"></script>
+<link href="/rmarkdown-libs/leafletfix/leafletfix.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js"></script>
+<script src="/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"></script>
+<link href="/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet-binding/leaflet.js"></script>
+
+
+<p>R sadrži spektar paketa koji vam pružaju razne funkcionalnosti kako biste koristili geo-pozicionirane podatke i obavljali kompleksne prostorne analize. Analiza geo-pozicioniranih podataka nije više dostupna samo ekspertima koji rade na skupim kompjuterima i sa skupim softverima. R ima impresivne geografske sposobnosti koje su dostupne svakome ko želi da ih istražuje.</p>
+<p>Pre nego što se upustimo u geo-prostorno mapiranje u R-u, prvo ćemo da se upoznamo sa osnovnim idejama u vezi sa ovakvim vrstama podataka.</p>
+<p>Prostorni podaci sastoje se od:</p>
+<ul>
+<li>Koordinata objekta</li>
+<li>Koordinata koje su u vezi sa fizičkim lokacijama na Zemlji: <strong>koordinatni refentni sistem (coordinate reference system, CRS)</strong></li>
+</ul>
+<p>Postoje dva tipa <strong>CRS-a</strong>:</p>
+<ol style="list-style-type: decimal">
+<li>Geografski</li>
+</ol>
+<ul>
+<li>Posebne lokacije na površini su definisane uz pomoć tridimenzionalnog modela Zemlje.</li>
+<li>Geografska dužina i širina</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Projektovani</li>
+</ol>
+<ul>
+<li>Konverzija trodimenzionalne mreže na dvodimenzionalnu površinu.</li>
+</ul>
+<p>Prema tehnici njihovog čuvanja, prostorni podaci pripadaju jednoj od dve vrste:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Rasterski podaci</strong>: sastavljeni od mreže ćelija koje su indentifikovane redom i kolonom. Celo geografsko područje je podeljeno na grupe individualnih ćelija, koje predstavljaju sliku (satelitske slike)</p></li>
+<li><p><strong>Vektorski podaci</strong> sastavljeni su od tačaka, linija i poligona. Na primer bolnice, kuće itd. predstavljene su tačkama, dok su reke, putevi, itd, predstavljeni linijama. Sela i gradovi su predstavljeni poligonima.</p></li>
+</ol>
+<p>Kada analizirate prostorne podatke takođe ćete raditi i sa kategoričkim podacima koji sadrže relevantne informacija o prostornim podacima. Analize će se zasnivati na kategoričkim podacima koji su povezani sa geo-prostornim. Ovakvi podaci mogu biti:</p>
+<ul>
+<li>nominalni</li>
+<li>redni</li>
+<li>intervali (interval data)</li>
+<li>podaci o odnosu (ratio data),</li>
+</ul>
+<p>tj. kategorički ili merljivi tip podataka.</p>
+<p><strong>Statičke mape: Shape file</strong></p>
+<p>R poseduje impresivne geografske kapacitete i može da obrađuje fajlove različitih vrsta prostornih podataka uključujući geojson i KML. Ilustrovaćemo upotrebu ESRI (shapefile) fajlova formata, koji čuvaju netopološku geometiju i kategoričke informacije za prostorne odlike u setu podataka. Ovi podaci sastavljeni su od glavnog fajla, index fajla i dBASE tabele.</p>
+<ul>
+<li>.shp – lista oblika i verteksa</li>
+<li>.shx – sadrži indeks sa ofsetima</li>
+<li>.dbf – fajl odnosa između geometrije i kategoričkih podataka</li>
+</ul>
+<p>Da biste pravilno uvezli datoteku ESRI oblika u R, sve tri datoteke moraju biti prisutne u direktorijumu i moraju imatu isto ime (osim ekstenzije koja se odnosi na tip fajla).</p>
+<p>Počećemo sa učitavanjem shape file-a regiona Srbije koja je dostupna na <a href="https://gadm.org/download_country_v3.html">GADM maps and data</a>.</p>
+<p>Prvo, preuzmite fajlove koji su nam portrebni sa sledećeg GitHub repozitorija: <a href="https://github.com/TanjaKec/gadm36_SRB_shp" class="uri">https://github.com/TanjaKec/gadm36_SRB_shp</a>. Obavezno sačuvajte fajl u radni direktorijum svoga R-projekta pre nego što zatražite od R da izvrši sledeći kod</p>
+<pre><code>## If you don&#39;t have sf installed yet, uncomment and run the line below
+#install.packeges(&quot;sf&quot;)
+
+library(ggplot2)
+library(sf)
+
+#pointed to the shape file
+serbia_location &lt;- &quot;gadm36_SRB_1.shp&quot;
+
+#used the st_read() function to import it
+serbia_districts &lt;- st_read(serbia_location)
+
+# take a look at the file
+View(serbia_districts)
+
+# plot the disstricts 
+ggplot(serbia_districts) + 
+  geom_sf()</code></pre>
+<p><img src="/day2/SpatialDA/images/serbia.png?width=40pc" /></p>
+<p>Ovo dobro izgleda 😃 Sledeće, što želimo da dodamo su podaci i da ih potom „obojimo“. Dodaćemo podatke o broju stanovnika u Srbiji u 2017. godini koji su nam dostupni preko fajla “Serbian_Pop.csv” file.</p>
+<pre><code>population &lt;- read.csv(&quot;Serbian_Pop.csv&quot;)
+View(population)
+
+library(dplyr)
+
+serbia_pop &lt;- left_join(serbia_districts, population,
+                          by=c(&quot;NAME_1&quot; = &quot;District&quot;))
+
+View(serbia_pop)
+
+
+ncol(serbia_districts)
+
+ncol(population)
+
+ncol(serbia_pop)
+
+names(serbia_pop)
+
+
+ggplot(serbia_pop) +
+  geom_sf(aes(fill=total_pop)) +
+  scale_fill_distiller(direction = 1, name = &quot;Population&quot;) +
+  labs(title=&quot;Population of Serbia for 2017&quot;, caption=&quot;Source: Statisticki Zavod SR&quot;)</code></pre>
+<p><img src="/day2/SpatialDA/images/SR_pop_2017.png?width=40pc" /></p>
+<p>Ponekad biste možda želeli da predstavite regione kao zasebne delove jedan pored drugog. Zapamtite, ovo možete uraditi i upotrebom <code>facet</code> funkcije iz <code>ggplot</code> biblioteke.</p>
+<pre><code>ggplot(serbia_pop) +
+  geom_sf(aes(fill = total_pop)) +
+  scale_fill_distiller(direction = 1, name = &quot;Population&quot;) +
+  labs(title=&quot;Population of Serbia for 2017&quot;, caption=&quot;Source: Statisticki Zavod SR&quot;) +
+  facet_wrap(~NAME_1)</code></pre>
+<p><img src="/day2/SpatialDA/images/facet_sr.png?width=40pc" /></p>
+<p><strong>Interaktivne mape: leaflet</strong></p>
+<p><code>Leaflet</code> je jedan od najpopularnijih JavaScript biblioteka otvorenog koda za interktivne mape koja je integrisana u R, zahvaljući grupi ljudi iz Rstudija. Pokazaćemo kako je jednostavno da se napravi mapa lokacija uz pomoć leaflet paketa, a možete da naučite više o ovom paketu sa stranice <a href="https://rstudio.github.io/leaflet/">Leaflet for R</a> website.</p>
+<pre class="r"><code>## If you don&#39;t have leaflet installed yet, uncomment and run the line below
+#install.packeges(&quot;leaflet&quot;)
+library(leaflet)
+# Initialize and assign us as the leaflet object
+us &lt;- leaflet() %&gt;%
+  # add tiles to the leaflet object
+  addTiles() %&gt;%  
+  # setting the centre of the map and the zoom level
+  setView(lng = 21.43667, lat = 41.99578, zoom = 15) %&gt;% 
+  # add a popup marker 
+  addMarkers(lng = 21.43551, lat = 41.99405, popup = &quot;&lt;b&gt;Ciao!&lt;/b&gt;&lt;br&gt;&lt;a href=&#39;http://balkansmedia.org/innovation-lab/2nd-media-innovation-lab-master-classes-and-presentations&#39;&gt;2nd Media Innovation Lab! 😀&lt;/a&gt;&quot;)
+
+us</code></pre>
+<p>&lt;!iv id="htmlwidget-1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[41.99405,21.43551,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"<b>Ciao!<\/b><br><a href='http://balkansmedia.org/innovation-lab/2nd-media-innovation-lab-master-classes-and-presentations'>2nd Media Innovation Lab! <U+0001F600><\/a>",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[41.99578,21.43667],15,[]],"limits":{"lat":[41.99405,41.99405],"lng":[21.43551,21.43551]}},"evals":[],"jsHooks":[]}</script><!Pogledajte zanimljivu veb stranicu koja vam pokazuje razne mogućnosti da kreirate mapa sa <a href="https://maptimeboston.github.io/leaflet-intro/">‘leaflet’</a>. Dobro pogledajte i nastavite da istražujete sami.</p>
+
+<div class="notices note" ><p>Od svoje orginalne primene kao statističkog programskog jezika, R je prešao dug put i postao vrlo moćan kao podrška za prostorne analize. Svi R paketi uključuju vinjete sa objašnjenjima sintakse funkcija i često sa veoma korisnim mini-tutorijalima koji ilustruju praktičnu upotrebu funkcija na neki zadat problem. <!-- raw HTML omitted -->CRAN Task View for Analysis of Spatial Data<!-- raw HTML omitted --> vam pruža listu dostupnih biblioteka R-u za geografsko mapiranje koje se često koriste u prostornim analizama i projektima mapiranja u R-u.</p>
+</div>
+
+<p><strong>ZADACI 👇</strong></p>
+<p>Vežbajte na sledećem setu zadataka:</p>
+<ol style="list-style-type: decimal">
+<li><p>Učitajte shape file regiona u Srbiji na osnovu <a href="https://gadm.org/download_country_v3.html">GADM maps and data</a> i ucrtajte broj stanovnika po kvadratnom kilometru, uz pomoć podataka koji su dostupni u ‘Serbian_Pop.csv’ koje smo već koristili.</p></li>
+<li><p>Napravite mapu koja će obeležiti vaše omiljeno mesto za druženje tako što ćete koristiti paket leaflet.</p></li>
+</ol>
+<p><strong>Korisni linkovi:</strong></p>
+<p><a href="https://www.r-spatial.org/">R for the analysis of spatial or spatio-temporal data (blog)</a></p>
+<p><a href="https://geocompr.robinlovelace.net/">Geocomputation with R</a>: knjiga o analizi geografskih podataka, vizuelizaciji i modelovanju.</p>
+<p><a href="https://gadm.org/download_country_v3.html">GADM maps and data</a></p>
+<p><a href="https://www.earthdatascience.org/courses/earth-analytics/get-data-using-apis/leaflet-r/">Creating Interactive Spatial Maps in R Using Leaflet</a></p>
+<p><a href="https://map-rfun.library.duke.edu/031_thematic_mapping.html">Thematic Mapping with tmap</a></p>
+<hr />
+<p>© 2019 <a href="https://sisteranalyst.org">Sister Analyst</a></p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/sr/module3/visualisation/" title="Vizuelizacija podataka"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/sr/module3/principlesvisualisation/" title="Uvod u principe vizuelizacije" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1583944929"></script>
+    <script src="/js/perfect-scrollbar.min.js?1583944929"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1583944929"></script>
+    <script src="/js/jquery.sticky.js?1583944929"></script>
+    <script src="/js/featherlight.min.js?1583944929"></script>
+    <script src="/js/highlight.pack.js?1583944929"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1583944929"></script>
+    <script src="/js/learn.js?1583944929"></script>
+    <script src="/js/hugo-learn.js?1583944929"></script>
+
+    <link href="/mermaid/mermaid.css?1583944929" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1583944929"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105947713-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

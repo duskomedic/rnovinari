@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="sr" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.60.1" />
+    <meta name="description" content="RToolbox">
+<meta name="author" content="Sister Analyst">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    <title>Uvod u principe vizuelizacije :: RToolbox</title>
+
+    
+    <link href="/css/nucleus.css?1583944929" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1583944929" rel="stylesheet">
+    <link href="/css/hybrid.css?1583944929" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1583944929" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1583944929" rel="stylesheet">
+    <link href="/css/auto-complete.css?1583944929" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1583944929" rel="stylesheet">
+    <link href="/css/theme.css?1583944929" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1583944929" rel="stylesheet">
+    
+      <link href="/css/theme-blue.css?1583944929" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1583944929"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/sr/module3/principlesvisualisation/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <!DOCTYPE html>
+<html>
+<body>
+<IMG SRC="/images/logo.png" ALT="DataTeka" WIDTH=100 HEIGHT=100>
+
+</body>
+</html>
+
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1583944929"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1583944929"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/sr";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1583944929"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/" title="O Kursu" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/">
+          <b>1. </b>O Kursu
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/whatlearn/" title="Opšti pregled" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/whatlearn/">
+          Opšti pregled
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/instructor/" title="Upoznajte trenere" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/instructor/">
+          Upoznajte trenere
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/syllabus/" title="Indikativan nastavni program" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/syllabus/">
+          Indikativan nastavni program
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/" title="Modul 1" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/">
+          <b>2. </b>Modul 1
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/whatisr/" title="Šta je R?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/whatisr/">
+          Šta je R?
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/installr/" title="Instalacija R/Rstudija" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/installr/">
+          Instalacija R-a
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/git-and-github/" title="Git i GitHub" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/git-and-github/">
+          Git i GitHub
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/rstudioide/" title="RStudio IDE" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/rstudioide/">
+          RStudio IDE
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/user/" title="Kako se R koristi?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/user/">
+          Kako se R koristi?
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/statsconcepts/" title="Osnovni koncepti statistike" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/statsconcepts/">
+          Osnovni koncepti statistike
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/datatypes/" title="Tipovi podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/datatypes/">
+          Tipovi podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/importexport/" title="Učitavanje podataka u R" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/importexport/">
+          Učitavanje podataka u R
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module2/" title="Modul 2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module2/">
+          <b>3. </b>Modul 2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module2/datawrangling/" title="Organizacija podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module2/datawrangling/">
+          Organizacija podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/" title="Modul 3" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/sr/module3/">
+          <b>4. </b>Modul 3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/visualisation/" title="Vizuelizacija podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/visualisation/">
+          Vizuelizacija podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/spatialda/" title="Analiza geo-pozicioniranih podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/spatialda/">
+          Analiza geo-pozicioniranih podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/principlesvisualisation/" title="Uvod u principe vizuelizacije" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/sr/module3/principlesvisualisation/">
+          Principe vizuelizacije
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module4/" title="Modul 4" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module4/">
+          <b>5. </b>Modul 4
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module4/rmarkdown/" title="RMarkdown" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module4/rmarkdown/">
+          RMarkdown
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module5/" title="Modul 5" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module5/">
+          <b>6. </b>Modul 5
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module5/shiny/" title="Shiny" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module5/shiny/">
+          Shiny
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module6/" title="Modul 6" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module6/">
+          <b>7. </b>Modul 6
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module6/blogdown/" title="blogdown" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module6/blogdown/">
+          blogdown
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/our_podcast/" title="Our Stories" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/our_podcast/">
+          <b>8. </b>Our Stories
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/matcornic/hugo-theme-learn"><i class='fab fa-fw fa-github'></i> Repo GitHub</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="/en/module3/principlesvisualisation/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="sr" value="/sr/module3/principlesvisualisation/" selected>Serbian</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <center>
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn" data-icon="octicon-star" data-show-count="true" aria-label="Star matcornic/hugo-theme-learn on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/module3/PrinciplesVisualisation/_index.sr.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/sr/'>R Toolbox</a> > <a href='/sr/module3/'>Modul 3</a> > Uvod u principe vizuelizacije
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#dizajn-koji-vam-omoguava-istraivanje-otkrie-prenoenje-informacije">Dizajn koji vam omogućava: istraživanje, otkriće, prenošenje informacije</a>
+      <ul>
+        <li><a href="#grafiki-obrascikodiranje">Grafički obrasci::kodiranje</a></li>
+        <li><a href="#kompleksnost-efektni-vizuelni-dizajn">Kompleksnost: efektni vizuelni dizajn</a></li>
+        <li><a href="#napredne-tehnike">Napredne tehnike</a></li>
+        <li><a href="#grafiki-prikazi-u-ru-odakle-poeti">Grafički prikazi u R-u: odakle početi?</a></li>
+      </ul>
+    </li>
+    <li><a href="#zadatak-">ZADATAK 👇</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Uvod u principe vizuelizacije
+            </h1>
+          
+
+        
+
+
+
+
+	<h2 id="dizajn-koji-vam-omoguava-istraivanje-otkrie-prenoenje-informacije">Dizajn koji vam omogućava: istraživanje, otkriće, prenošenje informacije</h2>
+<p>Grafički metodi se obično koriste u istraživačkoj fazi analize podataka. Za istraživanje podataka upotrebljavaju se različiti tipovi grafičkih alata: boxplotovi, rasipne matrice, dijagrami stabla i mnogi drugi. U ovom delu kursa upoznaćemo vas sa praktičnim rešenjima izbora najboljih tipova grafikona za izradu dobrih i jasnih vizuelizacija koje će vam služiti da prezentujete vaše nalaze</p>
+<ol>
+<li>ciljanoj publici i za objavljivanje,</li>
+<li>da pomognete vašim čitaocima da jasno vide rezultate vaših istraživanja,</li>
+<li>da je lako razumete i da se ne zbunite</li>
+</ol>
+<h3 id="grafiki-obrascikodiranje">Grafički obrasci::kodiranje</h3>
+<p>Dobri i jasni grafici zasnovani su, pre svega, na pouzdanim podacima. Tako da je prvi princip efektne vizuelizacije prezentacija pouzdanih podataka. Tip informacije koju želite da iskomunicirate i prikažete, diktiraće izbor najprikladnijeg načina kodiranja podataka kako bi obrasci postali uočljiviji. Zato je bitno da razumete problem na koji želite da skrenete pažnju  i koja vam je vrsta podataka potrebna za njegovu prezentaciju sa statističkog stanovišta, tj. da li su podaci numerički, kategorički (ordinalni ili nominalni), vremenski (vremenska dimenzija) ili predstavljaju geografski položaj (prostorne dimenzije) u slučaju vremensko-prostornih podataka?</p>
+<p><a href="http://cartonerd.blogspot.com/2018/03/dotty-election-map.html"><img src="/module1/PrinciplesVisualisation/images/USA2016ElectionMap.jpg?width=30pc" alt="dotty-election-map"></a></p>
+<p>Vizuleno kodiranje setova podataka zavisi od broja i karakteristike raspoloživih atributa tj. varijabli i od analitičkog problema o kojem je reč. <a href="http://albertocairo.com">Alberto Cairo</a> u svom blogu <a href="http://www.thefunctionalart.com/2013/08/in-infographics-steal-what-you-need-but.html">The Functional Art</a> daje listu grafikona koji se koriste u zavisnosti od svrhe prezentacije različitih podataka. Slike gore prikazuju različiti grafički prikaz zadatka u zavisnosti od različite percepcije koju su dobro uočili u svom revolucionarnom radu Kliveland i Mekgil, a koji su objavili <a href="http://euclid.psych.yorku.ca/www/psy6135/papers/ClevelandMcGill1984.pdf">the paper</a>  u časopisu JASA (Journal of the American Statistical Association) <a href="https://amstat.tandfonline.com/toc/uasa20/current">JASA</a> dok su radili u čuvenom AT&amp;T Bell Labs. 
+<img src="/module1/PrinciplesVisualisation/images/FunctionalForms.png?width=30pc" alt="Red variant"></p>
+<p>Slika gore ilustruje redosled grafičkih formi u odnosu na ispravnost zaključaka čitalaca koju mogu da donesu na osnovu podataka koje im te forme prikazuju. Ukoliko je na primer, cilj grafikona da predstavi precizna poređenja, <a href="http://albertocairo.com">Alberto</a> u svojoj knjizi  <a href="http://ptgmedia.pearsoncmg.com/images/9780321834737/samplepages/0321834739.pdf">The Functional Art</a> predstavlja efikasne ilustracije za različite grafičke oblike koje bi mogli da se koriste u tu svrhu.</p>
+<p><img src="/module1/PrinciplesVisualisation/images/choices_graphical_forms.png?width=20pc" alt="graphical_forms"></p>
+<p>Ne postoji posebno razvijena metodologija za izbor najprikladnijeg načina kodiranja podataka. Nikada nećete unapred znati da li će određeni vizuelni obrazac funkcionisati sve dok to ne isprobate. Izbor će najviše zavisiti od toga koji se atributi upotrebljavaju. Međutim, postoje određene smernice nekoliko autora koje vam preporučujemo da pogledate:</p>
+<ul>
+<li><a href="https://datavizcatalogue.com">The Data Visualisation Catalogue</a> autora <a href="http://www.severinoribecca.one">Severino Ribecca</a></li>
+<li><a href="https://depictdatastudio.com/charts/">Chart Chooser</a> autora <a href="https://depictdatastudio.com">Depict Data Studio</a> i</li>
+<li><a href="https://journalismcourses.org/courses/DE0618/Visual-vocabulary.pdf">Visual Vocabulary</a> autora <a href="https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary">by the Financial Times Visual Journalism Team</a></li>
+</ul>
+<p>Kao prvi korak u kreiranju grafikona.</p>
+<p>Često, grafički prikaz informacija koji nam daje odgovor na određeno pitanje sugerisaće nam dalje istraživanje podataka, zbog čega je važno da ih predstavimo na jasan i istinit način. Ne treba da zaboravimo da je jedina svrha analize podataka, pa i vizualizacije, informisanje i unapređenje znanja. Dakle, treba vrlo pažljivo razmotriti estetsku privlačnost i dizajn grafikona koje stvaramo kako bismo što efikasnije angažovali publiku, ali na način da nam je fokus pre svega na tačnosti, dubini i jasnoći informacije koju prenosimo.</p>
+<h4 id="odreivanje-naina-kodiranja">Određivanje načina kodiranja</h4>
+<p>Započnimo igru „određivanje načina kodiranja“. Razgovarajte sa kolegama i napravite listu grafičkih formi i vrstu kodiranja koju biste koristili za svaku od sledećih vizuelizacija:</p>
+<ol>
+<li>Vizualizaciju: <a href="https://ec.europa.eu/digital-single-market/en/desi">DESI</a></li>
+</ol>
+<p><img src="/module1/PrinciplesVisualisation/images/DESI.png?width=40pc" alt="DESI"></p>
+<ol start="2">
+<li>Vizualizaciju: <a href="https://ec.europa.eu/digital-single-market/en/human-capital">DESI Report 2019 - Human Capital</a></li>
+</ol>
+<p><img src="/module1/PrinciplesVisualisation/images/DESI_Internet1.png?width=50pc" alt="DESI_Internet"></p>
+<ol start="3">
+<li>Vizualizaciju: <a href="https://ec.europa.eu/digital-single-market/en/human-capital">DESI Report 2019 - Human Capital</a></li>
+</ol>
+<p><img src="/module1/PrinciplesVisualisation/images/DESI_ICT.png?width=40pc" alt="DESI_ICT"></p>
+<ol start="4">
+<li>Pogledajte vizualizaciju: <a href="https://www.gapminder.org/tools/#$chart-type=bubbles">Gapminder Bubble Chart</a></li>
+</ol>
+<p><a href="https://www.gapminder.org/tools/#$chart-type=bubbles"><img src="/module1/PrinciplesVisualisation/images/Bubble_Chart.png?width=40pc" alt="Bubble_Chart"></a></p>
+<ol start="5">
+<li>Pogledajte vizualizaciju: <a href="https://www.gapminder.org/tools/#$chart-type=map">Gapminder World Population</a></li>
+</ol>
+<p><a href="https://www.gapminder.org/tools/#$chart-type=map"><img src="/module1/PrinciplesVisualisation/images/World_Pop.png?width=40pc" alt="World_Pop"></a></p>
+<ol start="6">
+<li>Pogledajte vizualizaciju: <a href="https://www.rsc.org/periodic-table">Periodic Table</a></li>
+</ol>
+<p><a href="https://www.rsc.org/periodic-table"><img src="/module1/PrinciplesVisualisation/images/PeriodicTable.png?width=30pc" alt="PeriodicTable"></a></p>
+<p>Pogledajte vizualizaciju: <a href="http://www.visual-literacy.org/periodic_table/periodic_table.html">A Periodic Table of visualisation methods</a></p>
+<ol start="7">
+<li>Pogledajte vizualizaciju: <a href="https://rud.is/projects/clinton_emails_01.html">Clinton Email Network</a></li>
+</ol>
+<p><a href="https://rud.is/projects/clinton_emails_01.html"><img src="/module1/PrinciplesVisualisation/images/ClintonEmails.png?width=30pc" alt="ClintonEmails"></a></p>
+<h3 id="kompleksnost-efektni-vizuelni-dizajn">Kompleksnost: efektni vizuelni dizajn</h3>
+<p>Najvažnija stvar koju treba da zapamtite kada kreirate grafičke prezentacije podataka je da one moraju biti jasne i istinite. Izbor adekvatne skale treba da prikaže  razlike u podacima i tačan raspon vrednosti. Bilo koja statistička sumiranja treba da budu jasno prikazana na grafikonu zajedno sa izvorom informacija i statistikom koja je korišćena za izračunavanje kompleksnijih cifara.</p>
+<p>Evo nekih najočiglednijih problema na koje morate obratiti pažnju prilikom kreiranja efektnih grafikona:</p>
+<ol>
+<li><strong>Izaberite odgovarajuću skalu</strong> za svoje grafikone koja će uspostaviti ravnotežu između jasnog prikazivanja trendova i skale orginalnog skupa podataka. Grafikon ne mora da počinje sa nulom da bi se uspostavila smislena osnova ukoliko postoji druga logična početna tačka. 
+<a href="https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf">Dual-Scaled Axes in Graphs</a></li>
+</ol>
+<p><img src="/module1/PrinciplesVisualisation/images/scale1.png?width=25pc" alt="scale1">
+<img src="/module1/PrinciplesVisualisation/images/scale2.png?width=25pc" alt="scale2"></p>
+<p>Izbor skale treba da omogući  da čitalac može da iščita informacije prikazane na grafikonu sa većom tačnošću.</p>
+
+<div class="notices tip" ><p>Pogledajte post <a href="https://blog.datawrapper.de/line-charts/">What to consider when creating a line chart</a> autorke <a href="https://blog.datawrapper.de/">Lisa Charlotte Rost</a>, u kojoj ćete naći još neke interesantne linkove povezane sa ovom temom.</p>
+</div>
+
+<ol start="2">
+<li><strong>Naglasite šta je važno</strong>: Identifikujte ključne informacije koje želite da podelite sa publikom i razmislite o najefikasnijem formatu za to. Imajte na umu da vam grafikoni pomažu da predstavite složene podatke u jednostavnom formatu. Prikazivanje važne stavke u drugoj boji je jednostavan način da skrenete pažnju na tu vrednost.</li>
+</ol>
+<p><img src="/module1/PrinciplesVisualisation/images/scatter.png?width=25pc" alt="scatter"></p>
+<p><img src="/module1/PrinciplesVisualisation/images/growth_chart.png?width=25pc" alt="growth_chart"></p>
+<p>Ponekad bi bilo efektno da ključne podatke iz grafikona izdvojite u zasebne grafikone i predstavite ih jedan do drugog.</p>
+<p><img src="/module1/PrinciplesVisualisation/images/Spaghetti_Lines.png?width=35pc" alt="Spaghetti_Lines"></p>
+
+<div class="notices warning" ><p>Imajte na umu da informacije na grafičkom prikazu ne bi trebalo da zbunjuju.</p>
+</div>
+
+<ol start="3">
+<li><strong>Pojednostavite grafikon</strong> budite jednostavni s obzirom da efektne vizuelizacije omogućavaju da podaci ispričaju priču. Grafikoni ne izgledaju bolje ako gomilaju informacije ili ako osmišljeni uz pomoć fensi “viz” veština. Uspešna vizuelizacija podataka je delikatan čin uspostavljanja ravnoteže između forme i funkcije. Zadržite fokus na važnim tačkama umanjujući nepotrebne vizuelne podražaje.</li>
+</ol>
+<p><img src="/module1/PrinciplesVisualisation/images/3DBar.png?width=30pc" alt="3DBar"></p>
+<p><img src="/module1/PrinciplesVisualisation/images/2Bar.png?width=30pc" alt="2DBar"></p>
+<p>Integrišite tekst sa grafikonima samo ako je to potrebno da biste lakše preneli informacij prikazane na grafikonu.</p>
+<p><img src="/module1/PrinciplesVisualisation/images/Quantile.png?width=25pc" alt="Quantile"></p>
+<p>U <a href="https://ec.europa.eu/eurostat/cros/system/files/Alberto%20Cairo%20BRUSSELS_NEW_VisualizationForEveryone.pdf">prezentaciji</a> <a href="http://albertocairo.com">Alberto Cairo</a> ilustruje važnost dobrog izbora formata kako bi se vizualno objasnila glavna priča: „<strong>Kako</strong> se muzički <strong>ukus</strong> promenio za dve dekade“.</p>
+<p><img src="/module1/PrinciplesVisualisation/images/VisualFormat.png?width=35pc" alt="VisualFormat"></p>
+
+<div class="notices note" ><p>Prilikom kreiranja vizuelizacije podataka razmislite o konkretnim informacijama koje želite da prenesete, ili o rezultatu koji želite da postignete. Budite jednostavni i uklonite sve nepotrebne elemente koji mogu da vam zamagle prezentaciju. Nepotrebni podaci samo će zbuniti vaše čitaoce.</p>
+</div>
+
+<h3 id="napredne-tehnike">Napredne tehnike</h3>
+<p>Kada kreirate grafički prikaz, fokusirajte se na primere dobre prakse i otkrijte svoj lični stil. Naučite kako da istražujete i sumirate vaše podatke kao i kako da identifikujete ključna obeležja koja će vam pomoći da ih prezentujete vizuelno.</p>
+<h5 id="dvoosni-grafici">Dvoosni grafici</h5>
+<p>Postoji uverenje da su grafikoni sa dve različite y-ose komplikovani za čitanje i da će vaši čitaoci teško razaznati ta dva seta informacija. Druga sekundarna y-osa na grafikonu često stvara zabunu i nije jasno koji od podataka se odnosi na koju osu. Glavna odlika dvoosnih grafika je ta da nisu intuitivni. Dosta ljudi smatra da stvaraju konfuziju i da pretpostavljaju da postoji veza između podataka tamo gde ih nema.
+Međutim, <a href="https://www.perceptualedge.com/about.php">Stephen Few</a> je napisao dobro argumentovan <a href="https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf">tekst</a> u kojem pažljivo predstavlja izazove koje treba imati u vidu kod ovakvih grafika. Neophodno je da sami odlučite hoćete li ih koristiti ili ne. Svakako bi ta odluka ipak trebalo da zavisi od vašeg suda da li su oni dobri za vaše vizulene priče kao i bilo koji drugi grafički format.</p>
+<p><img src="/module1/PrinciplesVisualisation/images/DualScaled.png?width=30pc" alt="DualScaled"></p>
+<h5 id="interaktivni-grafikoni">Interaktivni grafikoni</h5>
+<p>Interaktivnost omogućava vašim čitaocima da kreativnije pregledaju vaše podatke, na način na koji to nije moguće sa statičkim grafikonima. Glavna korist interaktivnih vizuelizacija podataka su njihova fleksibilnost koja vam omogućava dalju manipulaciju i istraživanje. „Zoom“ opcija vam uvećava određene podatke koji su manje vidljivi i na taj način ćete omogućiti čitaocima da se dodatno zainteresuju da istraže podatke i postavljaju dodatna pitanja.  Interaktivni način predstavljanja podataka je bogat i snažan alat za prikaz osobina podataka jer pruža čitaocima mogućnost da urone u njih koliko oni žele, u zavisnosti od njihovog nivoa interesovanja.</p>
+<p><a href="https://tatjana.shinyapps.io/TrafficAccidents/"><img src="/module1/PrinciplesVisualisation/images/TrafficAccidentsBG.png?width=45pc" alt="TrafficAccidentsBG"></a></p>
+<h3 id="grafiki-prikazi-u-ru-odakle-poeti">Grafički prikazi u R-u: odakle početi?</h3>
+<p>R je sjajan alat za vizuelizaciju podataka ne samo za ljude koji hoće da razumeju svoje podatke uz pomoć grafikona, već i za sve one koje treba da proizvedu visoko kvalitetne i efikasne grafikone da bi unapredili svoje izveštaje, veb stranice ili druga dokumenta.</p>
+<p>Pogledajte <a href="https://www.r-graph-gallery.com/">R_grafičku_galeriju</a> koja vam daje veliku kolekciju grafikona koji se mogu napraviti u R-u, zajedno sa kodom za njihovu izradu.</p>
+<p>Takođe, postoji i niz knjiga koje vam mogu biti od koristi u kreiranju grafikona u R-u, kao što su:</p>
+<ul>
+<li><a href="http://moderngraphics11.pbworks.com/f/ggplot2-Book09hWickham.pdf">ggplot2</a> [Wickham, 2009]</li>
+<li><a href="https://www.springer.com/gp/book/9780387759685">Lattice</a> [Sarkar, 2008] and</li>
+<li><a href="https://www.e-reading.club/bookreader.php/137370/R_Graphics.pdf">R Graphics</a> [Murrell, 2011].</li>
+</ul>
+<p>Ukoliko želite da ozbiljnije i sistematičnije naučite grafičke analize podataka u R-u, knjiga <a href="http://www.gradaanwr.net/author/">Antony Unwin</a>, <a href="http://www.gradaanwr.net/#a-a">Graphical Data Analysis with R</a>, je odlična za početak. R kod za svaki grafikon i analizu u knjizi dostupna je na samom sajtu knjige.</p>
+<p><a href="https://rkabacoff.github.io/datavis/">Data Visualisation with R</a> by <a href="https://rkabacoff.com/">Rob Kabacoff</a> je još jedna dobra knjiga za grafičke prikaze u R-u. Ona vam daje sistematski pregled za kreiranje grafičkih prikaza u R-u počevši od  osnovnog uvoda u R, sledi iscrpna lista uobičajenih grafičkih podataka u statističkom modelovanju, geopoziciono mapiranje, a završava sa interaktivnim graficima.</p>
+<p>Veoma je interesantna diskusija iz 2012. godine sledećih akademika: <a href="https://en.wikipedia.org/wiki/Andrew_Gelman">Andrew Gelman</a>, <a href="http://rosuda.org/~unwin/">Anthony Unwin</a>, <a href="https://www.stephen-few.com">Stephen Few</a>, <a href="https://www.stat.auckland.ac.nz/~paul/">Paul Murrell</a>, <a href="http://hadley.nz">Hadley Wickham</a> i <a href="https://research.tableau.com/user/robert-kosara">Robert Kosara</a> o vizuelizaciji i infograficima koja je objavljena u postu sledećeg <a href="https://eagereyes.org/blog/2012/responses-gelman-unwin-convenient-posting">bloga post</a>. Zaista vredi da je pročitate.</p>
+
+<div class="notices tip" ><p>Vežbajte! Sticanje iskustva u interpretaciji grafikona i vaših vizuelnih prikaza podataka najbrže će vas pretvoriti u čarobnjaka za prikazivanje podataka (data wiz).</p>
+</div>
+
+<h2 id="zadatak-">ZADATAK 👇</h2>
+<ol>
+<li>Posetite portal otvorenih podataka (svetski: gapminder, ili nacionalni: zavod za statistiku) i pokušajte da nađete podatke koji su vama zanimljivi da ih istražujete. Zapišite interesantne nalaze i šta želite da prikažete i predložite tipove vizuelizacije koje biste koristili da bi ih prikazali.</li>
+</ol>
+<hr>
+<p>© 2019 <a href="https://sisteranalyst.org">Sister Analyst</a></p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/sr/module3/spatialda/" title="Analiza geo-pozicioniranih podataka"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/sr/module4/" title="Modul 4" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1583944929"></script>
+    <script src="/js/perfect-scrollbar.min.js?1583944929"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1583944929"></script>
+    <script src="/js/jquery.sticky.js?1583944929"></script>
+    <script src="/js/featherlight.min.js?1583944929"></script>
+    <script src="/js/highlight.pack.js?1583944929"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1583944929"></script>
+    <script src="/js/learn.js?1583944929"></script>
+    <script src="/js/hugo-learn.js?1583944929"></script>
+
+    <link href="/mermaid/mermaid.css?1583944929" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1583944929"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105947713-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

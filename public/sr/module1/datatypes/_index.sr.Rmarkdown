@@ -1,0 +1,87 @@
+---
+date: "2016-04-09T16:50:16+02:00"
+title: Tipovi podataka
+output: 
+  learnr::tutorial
+weight: 7
+---
+
+U primerima koje smo koristili u poglavlju „Kako da koristimo R“ radili smo samo sa brojevima (kvantitativnim numeričkim podacima). Oni koji imaju iskustva u programiranju znaće da se numerički objekti mogu klasifikovati kao realni (real), celi (integer), dupli (double) ili kompleksni (complex). Da bismo proverili da li je reč o numeričkom objektu i o kom tačno tipu je reč, upotrebićemo funkciju `mode()` i `class()`.
+
+Vratimo se sad našem R projektu i ukucajte sledeće funkcije u otvorenom script file i pokrenite kod.😃
+
+```{r}
+x <- 1:10
+mode(x)
+class(x)
+```
+
+Da biste u R uneli nizove znakova kao objekte treba da ih unesete uz pomoć navodnika. Ukoliko ne koristite navodnike, podrazumevaće se da su svi unosi numerički, i R će vas obavestiti da postoji greška.
+
+```{r}
+x <- c("UK", "Spain", "Serbia", "France", "Germany", "Italy")
+mode(x)
+```
+
+Uobičajeno je da u statističkim podacima imate atribute poznate kao kategoričke varijable. U R-u takve varijable specifikujemo kao **faktore**. Atributske varijable poseduju set nivoa koji ukazuju na moguće rezultate. Dakle, ukoliko želimo da nam x bude atributska varijabla sa pet nivoa, potrebno je da ga predstavimo kao faktor R-u.
+
+```{r}
+x <- c("UK", "Spain", "Serbia", "France", "Germany", "Italy")
+x <- factor(x)
+x
+```
+
+{{% notice note %}}
+💡: Imajte na umu da R određuje nivo faktora prema abecednom redu. Međutim, promenljive atributa se obično kodiraju i obično biste ih uneli na taj način.
+{{% /notice %}}
+
+```{r}
+quality <- factor(c(3, 3, 4, 2, 2, 4, 0, 1))
+levels(quality)
+quality
+```
+
+Ponekad ćete upotrebljavati logičke tipove podataka. Ovo ćete raditi kada nešto želite da zabeležite kao TAČNO (TRUE) ili NETAČNO (FALSE). Najverovantnije je da ćete ovaj tip podataka koristiti kada želite da proverite da li je određena varijabla određeni tip podaka. Na primer:
+
+```{r}
+x <- c("UK", "Spain", "Serbia", "France", "Germany", "Italy")
+is.numeric(x)
+is.factor(x)
+```
+
+### Okviri podataka (Data frame)
+
+Statistički podaci se uobičajeno sastoje od nekoliko vektora iste dužine i različitih tipova koji podsećaju na tabelu. Ovi vektori su međusobno povezani tako da podaci u istoj poziciji dolaze iz iste eksperimentalne jedinice tj. observacije. R koristi okvire podataka (data frame) za beleženje takve vrste tabelarnih podataka i oni se smatraju da su primarne strukture podataka.
+
+Pogledajmo studiju cena akcija kompanija iz tri različita sektora poslovanja. Kao deo studije odabran je slučajan uzorak (n=15) kompanija i prikupljeni su sledeći podaci:
+
+```{r}
+share_price <- c(880, 862, 850, 840, 838, 799, 783, 777, 767, 746, 692, 689, 683, 661, 658)
+profit <- c(161.3, 170.5, 140.7, 115.7, 107.9, 135.2, 142.7, 114.9, 110.4, 98.9, 90.2, 80.6, 85.4, 91.7, 137.8)
+sector <- factor(c(3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 1, 1, 1, + 1, 1)) # 1:IT, 2:Finance, 3:Pharmaceutical
+#
+share_price
+profit
+sector
+```
+
+Umesto da ove setove podataka čuvate kao pojedinačne vektore u R-u, bilo bi bolje da ih sve zajedno čuvate u jednom objektu tj. u data frame-u.
+
+```
+share.data <- data.frame(share_price, profit, sector)
+share.data
+```
+
+Do pojedinačnog vektora iz ovog objekta možete doći upotrebom `$` simbola:
+
+```
+share.data$sector
+```
+
+Sada, pošto smo naučili osnovne stvari o tipovima podaka i njihovoj organiziji možemo preći na deo u kome ćemo govoriti kako ćete pristupati postojećim podacima iz R-a.
+
+
+
+
+-----------------------------
+© 2019 [Sister Analyst](https://sisteranalyst.org)

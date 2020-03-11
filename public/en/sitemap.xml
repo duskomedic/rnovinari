@@ -5,31 +5,91 @@
   <url>
     <loc>/en/module2/datawrangling/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module2/datawrangling/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module2/datawrangling/"
+                />
   </url>
   
   <url>
     <loc>/en/general/whatlearn/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/general/whatlearn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/general/whatlearn/"
+                />
   </url>
   
   <url>
     <loc>/en/module3/principlesvisualisation/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module3/principlesvisualisation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module3/principlesvisualisation/"
+                />
   </url>
   
   <url>
     <loc>/en/module4/rmarkdown/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module4/rmarkdown/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module4/rmarkdown/"
+                />
   </url>
   
   <url>
     <loc>/en/module5/shiny/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module5/shiny/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module5/shiny/"
+                />
   </url>
   
   <url>
     <loc>/en/module1/whatisr/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module1/whatisr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module1/whatisr/"
+                />
   </url>
   
   <url>
@@ -49,89 +109,279 @@
   <url>
     <loc>/en/module1/installr/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module1/installr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module1/installr/"
+                />
   </url>
   
   <url>
     <loc>/en/general/instructor/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/general/instructor/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/general/instructor/"
+                />
   </url>
   
   <url>
     <loc>/en/module1/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module1/"
+                />
   </url>
   
   <url>
     <loc>/en/module6/blogdown/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module6/blogdown/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module6/blogdown/"
+                />
   </url>
   
   <url>
     <loc>/en/module3/visualisation/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module3/visualisation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module3/visualisation/"
+                />
   </url>
   
   <url>
     <loc>/en/module1/git-and-github/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module1/git-and-github/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module1/git-and-github/"
+                />
   </url>
   
   <url>
     <loc>/en/general/syllabus/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/general/syllabus/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/general/syllabus/"
+                />
   </url>
   
   <url>
     <loc>/en/module3/spatialda/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module3/spatialda/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module3/spatialda/"
+                />
   </url>
   
   <url>
     <loc>/en/module2/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module2/"
+                />
   </url>
   
   <url>
     <loc>/en/module1/rstudioide/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module1/rstudioide/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module1/rstudioide/"
+                />
   </url>
   
   <url>
     <loc>/en/module3/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module3/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module3/"
+                />
   </url>
   
   <url>
     <loc>/en/module1/user/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module1/user/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module1/user/"
+                />
   </url>
   
   <url>
     <loc>/en/module4/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module4/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module4/"
+                />
   </url>
   
   <url>
     <loc>/en/module1/statsconcepts/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module1/statsconcepts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module1/statsconcepts/"
+                />
   </url>
   
   <url>
     <loc>/en/module5/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module5/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module5/"
+                />
   </url>
   
   <url>
     <loc>/en/module1/datatypes/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module1/datatypes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module1/datatypes/"
+                />
   </url>
   
   <url>
     <loc>/en/module6/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module6/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module6/"
+                />
   </url>
   
   <url>
     <loc>/en/module1/importexport/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/module1/importexport/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/module1/importexport/"
+                />
   </url>
   
   <url>
     <loc>/en/our_podcast/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="sr"
+                href="/sr/our_podcast/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/our_podcast/"
+                />
   </url>
   
   <url>

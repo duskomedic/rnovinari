@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="sr" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.60.1" />
+    <meta name="description" content="RToolbox">
+<meta name="author" content="Sister Analyst">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    <title>Git i GitHub :: RToolbox</title>
+
+    
+    <link href="/css/nucleus.css?1583944929" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1583944929" rel="stylesheet">
+    <link href="/css/hybrid.css?1583944929" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1583944929" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1583944929" rel="stylesheet">
+    <link href="/css/auto-complete.css?1583944929" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1583944929" rel="stylesheet">
+    <link href="/css/theme.css?1583944929" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1583944929" rel="stylesheet">
+    
+      <link href="/css/theme-blue.css?1583944929" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1583944929"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/sr/module1/git-and-github/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <!DOCTYPE html>
+<html>
+<body>
+<IMG SRC="/images/logo.png" ALT="DataTeka" WIDTH=100 HEIGHT=100>
+
+</body>
+</html>
+
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1583944929"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1583944929"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/sr";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1583944929"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/" title="O Kursu" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/">
+          <b>1. </b>O Kursu
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/whatlearn/" title="Opšti pregled" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/whatlearn/">
+          Opšti pregled
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/instructor/" title="Upoznajte trenere" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/instructor/">
+          Upoznajte trenere
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/syllabus/" title="Indikativan nastavni program" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/syllabus/">
+          Indikativan nastavni program
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/" title="Modul 1" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/sr/module1/">
+          <b>2. </b>Modul 1
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/whatisr/" title="Šta je R?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/whatisr/">
+          Šta je R?
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/installr/" title="Instalacija R/Rstudija" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/installr/">
+          Instalacija R-a
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/git-and-github/" title="Git i GitHub" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/sr/module1/git-and-github/">
+          Git i GitHub
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/rstudioide/" title="RStudio IDE" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/rstudioide/">
+          RStudio IDE
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/user/" title="Kako se R koristi?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/user/">
+          Kako se R koristi?
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/statsconcepts/" title="Osnovni koncepti statistike" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/statsconcepts/">
+          Osnovni koncepti statistike
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/datatypes/" title="Tipovi podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/datatypes/">
+          Tipovi podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/importexport/" title="Učitavanje podataka u R" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/importexport/">
+          Učitavanje podataka u R
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module2/" title="Modul 2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module2/">
+          <b>3. </b>Modul 2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module2/datawrangling/" title="Organizacija podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module2/datawrangling/">
+          Organizacija podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/" title="Modul 3" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/">
+          <b>4. </b>Modul 3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/visualisation/" title="Vizuelizacija podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/visualisation/">
+          Vizuelizacija podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/spatialda/" title="Analiza geo-pozicioniranih podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/spatialda/">
+          Analiza geo-pozicioniranih podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/principlesvisualisation/" title="Uvod u principe vizuelizacije" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/principlesvisualisation/">
+          Principe vizuelizacije
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module4/" title="Modul 4" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module4/">
+          <b>5. </b>Modul 4
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module4/rmarkdown/" title="RMarkdown" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module4/rmarkdown/">
+          RMarkdown
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module5/" title="Modul 5" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module5/">
+          <b>6. </b>Modul 5
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module5/shiny/" title="Shiny" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module5/shiny/">
+          Shiny
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module6/" title="Modul 6" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module6/">
+          <b>7. </b>Modul 6
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module6/blogdown/" title="blogdown" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module6/blogdown/">
+          blogdown
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/our_podcast/" title="Our Stories" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/our_podcast/">
+          <b>8. </b>Our Stories
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/matcornic/hugo-theme-learn"><i class='fab fa-fw fa-github'></i> Repo GitHub</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="/en/module1/git-and-github/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="sr" value="/sr/module1/git-and-github/" selected>Serbian</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <center>
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn" data-icon="octicon-star" data-show-count="true" aria-label="Star matcornic/hugo-theme-learn on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/module1/Git%20and%20GitHub/_index.sr.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/sr/'>R Toolbox</a> > <a href='/sr/module1/'>Modul 1</a> > Git i GitHub
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#zato-su-potrebni-i-ta-je-to-">Zašto su potrebni i šta je to? 🤔</a></li>
+    <li><a href="#setovanje-gita">Setovanje Git-a</a>
+      <ul>
+        <li><a href="#instalacija-gita-na-macu">Instalacija Git-a na Mac-u</a></li>
+        <li><a href="#instalacija-gita-na-pcu">Instalacija Git-a na PC-u</a></li>
+      </ul>
+    </li>
+    <li><a href="#poveite-rstudio-sa-githubom-">Povežite Rstudio sa GitHub-om 🤓</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Git i GitHub
+            </h1>
+          
+
+        
+
+
+
+
+	<h2 id="zato-su-potrebni-i-ta-je-to-">Zašto su potrebni i šta je to? 🤔</h2>
+<p>Kada radite na projektima obrade podataka kreiraćete velik broj dokumenata koje biste voleli da menjate i da ih uredite na određen način. Takođe, može vam biti korisno da drugi koji su zaniteresovani mogu da dodatno doteruju i razvijaju vaš rad.  Da bi im to omogućili neophodno je da on bude negde dostupan. Ovaj posao možete prepustiti besplatnom i otvorenom sistemu za kontrolu verzija vašeg rada (version control system) koji se zove Git. Git je alat koji prati sve vaše verzije rada, promene u njemu, ali vam pruža i mogućnost da delite ove promene sa svima koji su zainteresovani. Ove Git konfigurisane verzije vašeg rada nalaze se u setovima koje nazivamo repozitoriji ili repos, a oni su organizovani na jedan visoko strukturisan način.</p>
+<p>Da bi obezbedili mesto na internetu gde ćete postavljati vaš rad i projekte neohpodno je da ga „hostujete“ (postavite) na veb stranici GitHub. Ta stranica će akumulirati sva vaša dokumenta i fajlove koje razvijate.</p>
+<h2 id="setovanje-gita">Setovanje Git-a</h2>
+<p>Ukoliko niste do sada koristili Git ili GitHub, započećemo sa njihovom instalacijom i otvaranjem naloga na GitHub-u. Zatim ćemo ih povezati.</p>
+<ol>
+<li>
+<p>Prvo, instalirajte Git sa <a href="https://git-scm.com/downloads">git-scm</a>
+Napomena: Git-scm će automatski otkriti vaš operativni sistem i ponudiće vam odgovarajuću verziju za preuzimanje.</p>
+</li>
+<li>
+<p>Recite Git-u svoje ime i email adresu. Tako ćete povezati svoj Git sa GitHub-om što će vam omogućiti da započnete saradnju sa drugima, i svima će biti jasno koje ste promene napravili.</p>
+</li>
+</ol>
+<h3 id="instalacija-gita-na-macu">Instalacija Git-a na Mac-u</h3>
+<p>Pre nego što napravite prvi korak proverite da eventualno već nemate instaliran Git na vašem računaru (Napomena: Git bi trebalo da je već instaliran na Mac uređajima).</p>
+<p>Otvorite vaš terminal i ukucajte</p>
+<pre><code>git --version
+</code></pre><p>Trebao bi dobijete nešto poput ovoga dole</p>
+<pre><code>git version 2.18.0
+</code></pre><p>U slučaju da imate stariju verziju od trenutno dostupne ili nemate git instaliran idite na sledeću veb stranicu: <a href="https://git-scm.com">git-scm.com</a>.</p>
+<p>Kada instalirate poslednju verziju Git-a na svom Mac-u identifikujte se tako što ćete ukucati sledeće komande u svoj terminal:</p>
+<pre><code>git config --global user.email &quot;your@email.com&quot;
+git config --global user.name &quot;your name&quot;
+</code></pre><h3 id="instalacija-gita-na-pcu">Instalacija Git-a na PC-u</h3>
+<p>Pokrenite CMD program tako što ćete ukucati CMD u prozoru za pretragu (search). Tako će se otvoriti command prompt prozor u kojem trebate da ubacite sledeću naredbu, da biste proverili da li Git već postoji na vašem računaru:</p>
+<pre><code>git --version
+</code></pre><p>Ukoliko Git nije prepoznat, to znači da treba da ga instalirate sa sledeće stranice <a href="https://gitforwindows.org">https://gitforwindows.org</a>. Skinite sa sajta neophodan file i započnite instalaciju tako što ćete odabrati osnovnu (default) instalaciju. Zatvorite svoj command prompt prozor da omogućite promenu na vašem sistemu i otvorite ga ponovo. Kada to uradite ponovite gore navedenu komandu, da proverite da li ste ispravno instalirali Git i koja je verzija.</p>
+<p>Pošto ste ispravno instalirali Git potrebno je da registrujete svoju email adresu i vaše ime:</p>
+<pre><code>git config --global user.email &quot;your@email.com&quot;
+git config --global user.name &quot;your name&quot;
+</code></pre><p>U command promt-u ili shell-u, pokrenite:</p>
+<p><a href="http://rstudio-pubs-static.s3.amazonaws.com/272737_7d6178a0e50043528d9ba636fdde209e.html">http://rstudio-pubs-static.s3.amazonaws.com/272737_7d6178a0e50043528d9ba636fdde209e.html</a></p>
+<h2 id="poveite-rstudio-sa-githubom-">Povežite Rstudio sa GitHub-om 🤓</h2>
+<p>RStudio sadrži integrisane mogućnosti da vam obezbedi lakšu upotrebu Git-a. Ovo setovanje treba da prođete samo jednom.</p>
+<p>Kada kreirate u Rstudiju novi projekat, potrebno je da uradite sledeće kako biste omogućili komunikaciju između RStudija i GitHub-a:</p>
+<ul>
+<li>Odredite direktorijum (ili folder) na vašem računaru na kome će se nalaziti projekat.</li>
+<li>Otvorite novi projekat u RStudiju.</li>
+<li>Otvorite novi Git repozitorijum.</li>
+</ul>
+
+<div class="notices note" ><p>Možda će vam biti teško da pravilno koristite Git na početku, ali kao i sa drugim alatima koje budete koristili biće vam mnogo lakše kako budete više vežbali. Vežbom do savršenstva!</p>
+</div>
+
+<p>Više detalja kako da povežete GitHub sa RStudijom možete naći na sledećoj internet stranici <a href="https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN">RStuio's website</a>.</p>
+<p>Prvo ćemo setovati SSH ključ koji će nam omogućiti sigurnu komunikaciju sa GitHub veb stranicom tako da nam neće trebati svaki put lozinka. Da bi ovo uradili pratite instrukcije iz <a href="http://r-pkgs.had.co.nz/git.html"><code>Git and GitHub</code></a> sekcije knjige <a href="http://hadley.nz">Hadle's</a> book <a href="http://r-pkgs.had.co.nz">R Packages</a>.</p>
+<p>Više o detaljima upotrebe GitHub-a i njegovo dalje istraživanje možete naći u poglavlju 9 <a href="https://happygitwithr.com/push-pull-github.html"><code>Chapter 9: Connect to GitHub</code></a> knjige <a href="https://jennybryan.org">Jenny's</a> book <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the useR</a>.</p>
+
+<div class="notices tip" ><p>Možda možete da zabeležite (bookmarkujete) sledeći link <a href="https://education.github.com/git-cheat-sheet-education.pdf">GitHub Cheet Sheet</a>!</p>
+</div>
+
+<hr>
+<p>© 2019 <a href="https://sisteranalyst.org">Sister Analyst</a></p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/sr/module1/installr/" title="Instalacija R/Rstudija"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/sr/module1/rstudioide/" title="RStudio IDE" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1583944929"></script>
+    <script src="/js/perfect-scrollbar.min.js?1583944929"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1583944929"></script>
+    <script src="/js/jquery.sticky.js?1583944929"></script>
+    <script src="/js/featherlight.min.js?1583944929"></script>
+    <script src="/js/highlight.pack.js?1583944929"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1583944929"></script>
+    <script src="/js/learn.js?1583944929"></script>
+    <script src="/js/hugo-learn.js?1583944929"></script>
+
+    <link href="/mermaid/mermaid.css?1583944929" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1583944929"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105947713-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

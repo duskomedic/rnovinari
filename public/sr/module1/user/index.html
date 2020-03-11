@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+<html lang="sr" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.60.1" />
+    <meta name="description" content="RToolbox">
+<meta name="author" content="Sister Analyst">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    <title>Kako se R koristi? :: RToolbox</title>
+
+    
+    <link href="/css/nucleus.css?1583944929" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1583944929" rel="stylesheet">
+    <link href="/css/hybrid.css?1583944929" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1583944929" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1583944929" rel="stylesheet">
+    <link href="/css/auto-complete.css?1583944929" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1583944929" rel="stylesheet">
+    <link href="/css/theme.css?1583944929" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1583944929" rel="stylesheet">
+    
+      <link href="/css/theme-blue.css?1583944929" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1583944929"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/sr/module1/user/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <!DOCTYPE html>
+<html>
+<body>
+<IMG SRC="/images/logo.png" ALT="DataTeka" WIDTH=100 HEIGHT=100>
+
+</body>
+</html>
+
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1583944929"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1583944929"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/sr";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1583944929"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/" title="O Kursu" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/">
+          <b>1. </b>O Kursu
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/whatlearn/" title="Opšti pregled" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/whatlearn/">
+          Opšti pregled
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/instructor/" title="Upoznajte trenere" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/instructor/">
+          Upoznajte trenere
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/syllabus/" title="Indikativan nastavni program" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/syllabus/">
+          Indikativan nastavni program
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/" title="Modul 1" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/sr/module1/">
+          <b>2. </b>Modul 1
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/whatisr/" title="Šta je R?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/whatisr/">
+          Šta je R?
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/installr/" title="Instalacija R/Rstudija" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/installr/">
+          Instalacija R-a
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/git-and-github/" title="Git i GitHub" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/git-and-github/">
+          Git i GitHub
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/rstudioide/" title="RStudio IDE" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/rstudioide/">
+          RStudio IDE
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/user/" title="Kako se R koristi?" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/sr/module1/user/">
+          Kako se R koristi?
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/statsconcepts/" title="Osnovni koncepti statistike" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/statsconcepts/">
+          Osnovni koncepti statistike
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/datatypes/" title="Tipovi podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/datatypes/">
+          Tipovi podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/importexport/" title="Učitavanje podataka u R" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/importexport/">
+          Učitavanje podataka u R
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module2/" title="Modul 2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module2/">
+          <b>3. </b>Modul 2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module2/datawrangling/" title="Organizacija podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module2/datawrangling/">
+          Organizacija podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/" title="Modul 3" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/">
+          <b>4. </b>Modul 3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/visualisation/" title="Vizuelizacija podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/visualisation/">
+          Vizuelizacija podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/spatialda/" title="Analiza geo-pozicioniranih podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/spatialda/">
+          Analiza geo-pozicioniranih podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/principlesvisualisation/" title="Uvod u principe vizuelizacije" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/principlesvisualisation/">
+          Principe vizuelizacije
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module4/" title="Modul 4" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module4/">
+          <b>5. </b>Modul 4
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module4/rmarkdown/" title="RMarkdown" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module4/rmarkdown/">
+          RMarkdown
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module5/" title="Modul 5" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module5/">
+          <b>6. </b>Modul 5
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module5/shiny/" title="Shiny" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module5/shiny/">
+          Shiny
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module6/" title="Modul 6" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module6/">
+          <b>7. </b>Modul 6
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module6/blogdown/" title="blogdown" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module6/blogdown/">
+          blogdown
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/our_podcast/" title="Our Stories" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/our_podcast/">
+          <b>8. </b>Our Stories
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/matcornic/hugo-theme-learn"><i class='fab fa-fw fa-github'></i> Repo GitHub</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="/en/module1/user/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="sr" value="/sr/module1/user/" selected>Serbian</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <center>
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn" data-icon="octicon-star" data-show-count="true" aria-label="Star matcornic/hugo-theme-learn on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/module1/UseR/_index.sr.markdown" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/sr/'>R Toolbox</a> > <a href='/sr/module1/'>Modul 1</a> > Kako se R koristi?
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#hajde-da-koristimo-r">Hajde da koristimo R!</a></li>
+    <li><a href="#postavljanje-radnog-direktorijuma">Postavljanje radnog direktorijuma</a></li>
+    <li><a href="#r-paketi">R paketi</a></li>
+    <li><a href="#kalkulacije-u-ru">Kalkulacije u R-u</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#zadaci-">ZADACI 👇</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Kako se R koristi?
+            </h1>
+          
+
+        
+
+
+
+
+	<p>R studio prozor ima više panela (podprozora). <a href="https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf">RStudio IDE Cheet Sheet</a>:</p>
+<p><img src="/module1/UseR/images/RStudio1.png?width=40pc" alt="RStudio"></p>
+<p><strong>Gornji levo -</strong> <!-- raw HTML omitted -->je Editor koda<!-- raw HTML omitted -->: u njemu pišete kod koji hoćete da pokrenete ili u delovima ili kao celinu;</p>
+<p><strong>Donji levo -</strong> &lt;span style=&quot;color:blue&quot;je R konzola<!-- raw HTML omitted -->: Ovde takođe možete pisati R komande i videti rezultate;</p>
+<p><strong>Gornji desno -</strong> <!-- raw HTML omitted -->je Okruženje<!-- raw HTML omitted -->: ovde se nalazi lista objekata koje stvarate, poput setova podataka;</p>
+<p><strong>Donji desno -</strong> <!-- raw HTML omitted -->je Pomoć<!-- raw HTML omitted -->: ovde se možete informisati o funkcijama ili paketima. U istom panelu postoji i tab u kojem će se <em>prikazivati grafikoni</em> koje budete pravili, u kojem možete da <em>vidite aplikacije</em> i dokumenta koja razvijate, <em>fajlove</em> i foldere vašeg projekta ali i <em>pakete</em> koje koristite.</p>
+<p>R je skriptni jezik, što znači da podseća na strukturu vašeg teksta ili eseja, ili matematički dokaz. Pišemo skript koji treba da uradi specifičan zadatak, a koji možemo stalno ponavljati, ili ga dati nekom drugom da ga on sam koristi.</p>
+<p>Potrebno je da zapamtite sledeće činjenice:</p>
+<ul>
+<li>U R-u budite precizni kod korišćenja velikih i malih slova i u ovom jeziku se funkcije izvršavaju direktno;</li>
+<li>Komande se upisuju sa desne strane oznake <code>&gt;</code></li>
+<li>Komande su pojedinačni iskazi koji mogu stajati u jednoj liniji ako su odvojeni tačka zarezom <code>;</code></li>
+<li>Same komande i izjave mogu se komentarisati upotrebom <code>#</code> taga. Komentari mogu stajati iza izjava i u jednoj liniji ili u više linija ali je potrebno da stoji # tag u svakoj novoj liniji.</li>
+</ul>
+
+<div class="notices tip" ><p>💡 Najbolji način učenja je učenje kroz rad. Zbog toga, preporučujemo vam da komande ukucavate sami a ne da ih kopirate i umećete naredbama copy/paste. Pored toga bilo bi dobro da u okviru svog projekta otvorite i pojedinačan R script fajl i da u njemu unosite komande koje posle možete snimiti i kasnije ih koristiti da se podsetite šta ste naučili.</p>
+</div>
+
+<h2 id="hajde-da-koristimo-r">Hajde da koristimo R!</h2>
+<ul>
+<li><em>Otvorite RStudio</em></li>
+<li><em>Kreirajte novi projekat u kojem ćete raditi. Na desnoj strani prozora nalazi se mala plava komanda koja sadrži drop-down meni. U njemu možete selektovati Novi projekat, zatim Novi direktorijum koji ćete zadati da, na primer, bude na vašem desktopu, i daćete ime projektu Moj_prvi_R. Ovako ćete kreirati folder sa ovim imenom na vašem desktopu. Ovo će biti okruženje vašeg novog projekta.</em> 😇</li>
+</ul>
+<h2 id="postavljanje-radnog-direktorijuma">Postavljanje radnog direktorijuma</h2>
+<p>Ukoliko želite da čitate i snimate fajlove na svom kompujteru na specifičnoj za to predviđenoj lokaciji (koju sami odabirate) neophodno je da postavite svoj radni direktorijum u R-u. Da bi postavili svoj radni direktorijum koji se nalazi u specifičnom folderu na vašem računaru vi ćete uraditi sledeće:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># On a pc, you would set working directory like this</span>
+<span style="color:#a6e22e">setwd</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C:/Documents/MyR_Project&#34;</span>)
+
+<span style="color:#75715e"># On a mac, you would set working directory like this</span>
+<span style="color:#a6e22e">setwd</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">~/documents/MyR_Project&#34;</span>)
+</code></pre></div>
+<div class="notices warning" ><p>🤓💡: Obavezno koristite ispravnu sintaksu u pogledu crta i navodnika.</p>
+</div>
+
+<p>Napomena: Trenutni radni direktorijum prikazan vam je na vrhu panela za konzolu. Radni direktorijum možete takođe postaviti:</p>
+<ul>
+<li>selekcijom iz glavnog menija R studija.</li>
+</ul>
+<p>Za to je potrebno da pronađete <strong>Tools | Change Working Dir&hellip;</strong> meni, a zatim (<strong>Session | Set Working Directory</strong>).</p>
+<p><img src="/module1/UseR/images/SetWD.png?width=50pc" alt="RStudio menu"></p>
+<ul>
+<li>Radni direktorijum možete promeniti i opcijom iz panela za fajlove, u donjem desnom uglu.</li>
+</ul>
+<p>Kliknite na <strong>More | Set As Working Directory</strong> meni</p>
+<p><img src="/module1/UseR/images/SetWD1.png?width=20pc" alt="Set WD"></p>
+<p>Međutim, najbolje je da svaki vaš novi projekat započinjete tako što ćete to uraditi preko (<strong>File | New Project&hellip;</strong>). Tako ćete automatski postaviti svoj radni direktorijum bez dodatne potrebe da dodatno definišete gde se nalazi vaš script fajl. Više informacija o postavljanju radnog okruženja možete pročitati u članku <a href="https://www.tidyverse.org/articles/2017/12/workflow-vs-script/">Project-oriented workflow 💻🔥</a> autora <a href="https://jennybryan.org/">Jenny Bryan</a> kako biste se uverili da je započinjanje svakog novog rada sa projektom dobra navika koju trebate da usvojite.</p>
+<h2 id="r-paketi">R paketi</h2>
+<p><em>&ldquo;Osnovna jedinica R koda je paket.&quot;</em> <a href="http://r-pkgs.had.co.nz/intro.html">Hadley Wickham, <em>R packages</em></a></p>
+<p>R paketi su kolekcije funkcija, koda, setova podataka, dokumentacije i testova koje razvija zajednica, i u najvećom broju slučajeva oni su dostupni preko CRAN-a (Sveobuhvatne mreže R arhive - Comprehensive R Archive Network), mreže koja se brine za standarde R paketa. Ove pakete razvijaju brojni eksperti iz račitih naučnih oblasti i trenutno njihov broj je preko 14000. Mnoge od analiza koje oni nude nisu dostupni ni u jednom standardnom setu softverskih paketa, a to je razlog zašto je R uspešan.</p>
+<p>Kada startujete R vi automatski pozivate <a href="https://www.rstudio.com/wp-content/uploads/2016/05/base-r.pdf"><code>package:base</code></a>, koji je sistemska biblioteka, tj. paket u kojem su sve standardne funkcije definisane. Ostali paketi koji se zovu base packages sadrže osnovne statističke rutine. Ukoliko ste povezani na internet, pakete možete lako instalirati upotrebom <code>install.packages()</code> komande. To možete uraditi i preko glavnog menija tako što ćete selektovati meni <strong>Tools | Install Packages&hellip;</strong>. Kad to uradite potrebno je i da unesete ime željenog paketa u dijalog boks da bi on bio instaliran.</p>
+<p><img src="/module1/UseR/images/InstallPckg.png?width=20pc" alt="Install Package"></p>
+<p>Jednom kada instalirate neki paket, on će biti vidljiv u listi instaliranih paketa koja se nalazi u delu za pakete (tab Packages) u donjem desnom panelu R studija. Ako hoćete da koristite paket u projektu potrebno je da ga pozovete u samom projektu, a  to ćete jednostavno uraditi tako što unesete ime paketa u <code>library()</code> funkciju. Drugi način  da to uradite je da čekirate kvadratić koji se nalazi neposredno uz ime paketa a koji se nalazi u <strong>tabulatoru Packages</strong>.</p>
+<p><img src="/module1/UseR/images/Packages.png?width=20pc" alt="Package"></p>
+
+<div class="notices note" ><p>💡: Napomena: Imajte na umu da instalaciju paketa možete uraditi i iz <strong>Packages taba</strong>! Da li ste primetili da u okviru ovog taba postoji komanda <em>Install</em> koja se nalazi gore levo u tom tabu?</p>
+</div>
+
+<h2 id="kalkulacije-u-ru">Kalkulacije u R-u</h2>
+<p>Za početak, R može da se koristi kao kalkulator. 😁</p>
+<p>U vašoj konzoli ukucajte <code>2 + 2</code> i pritisnite enter. Kao što možete da primetite nije potrebno da kucate znak jednakosti kao i da vaš odgovor počinje jedinicom [1]. Jedinica [1] ukazuje da je u odgovoru jedan broj. Ukoliko, na primer, odgovor sadrži više brojeva,  broj u zagradi zapravo pokazuje gde se u okviru “grupe“ taj broj nalazi.</p>
+<p>Vidite?! R je jedan veliki kalkulator! 😲</p>
+<h4 id="aritmetike-i-logike-operacije">Aritmetičke i logičke operacije</h4>
+<p>R-ovi binarni i logički operatori izgledaće veoma slično onome što ste već iskusili ako ste radili bilo kakvo prethodno programiranje.</p>
+<h5 id="aritmetiki-operatori">Aritmetički operatori</h5>
+<p><img src="/module1/UseR/images/ArithmeticOp.png?width=20pc" alt="Arithmetic"></p>
+<h5 id="logiki-operatori">Logički operatori</h5>
+<p><img src="/module1/UseR/images/LogicalOp.png?width=20pc" alt="Logical"></p>
+<p>Probajte sada da uradite i druge matematičke operacije u R-u, na primer sabiranje, množenje, deljenje, stepenovanje, i druge. Na primer, probajte sledeće:</p>
+<pre><code>2 + 5
+3 - 2
+18 / 6
+4 * 7
+(5 - 3)^2 / 4
+9^(1/2) * 4
+</code></pre><h4 id="sauvajte-va-skript-da-biste-mogli-da-ga-reprodukujete">Sačuvajte vaš skript da biste mogli da ga reprodukujete</h4>
+<p>Kod koji upravo kucate i koji želite da izračunate može biti snimljen u R skript ili R Markdown fajlu. Te fajlove možete u okviru svog projekta otvoriti tako sto selektujete File, pa zatim New File opcije iz menija. R skript fajl ima nastavak .R dok R Markdown fajl koji kombinuje R kod i Markdown code u jednom fajlu završava se nastavkom .Rmd.</p>
+
+<div class="notices note" ><p>🤓💡: Kod koji koristite samo da bi nešto brzo proverili ili istražili možete ukucati u konzoli. Ali kada želimo da kod koji pišemo ponovo upotrebimo neophodno je da ga sačuvamo kao skript fajl.</p>
+</div>
+
+<p>Da biste napravili novi skript fajl potrebno je da potražite meni <strong>File | New File | R Script</strong> ili možete to isto uraditi preko male ikonice koja se nalazi u gornjem levu uglu R studija na kojoj se nalazi zeleni krstić.</p>
+<p><img src="/module1/UseR/images/NewScript.png?width=15pc" alt="New Script"></p>
+<p>Kod koji kucate u R skript fajlu može se pokrenuti i izvršiti u konzoli. Komandom <strong>Run</strong> koju možete pokrenuti pomoću ikonice koja se nalazi u desnom gornjem delu vašeg R skripta pokrenuće se linija koda na kojoj se vaš kursor nalazi.</p>
+<p>Ako želite da pokrenete više linija vašeg koda treba da ih selektujete i da onda startujete <strong>Run</strong> komandu.</p>
+<p><img src="/module1/UseR/images/RunScript.png?width=30pc" alt="Run Script"></p>
+
+<div class="notices tip" ><p>💡: Naviknite se da odmah snimite vaš skript svaki put kada ga kreirate. Takođe, snimite ga i pre nego što startujete vaš kod zbog slučajeva da vam zbog koda koji pokrećete podaci ne nestanu ako se R sruši što se nekada dešava. 😣 &amp;@#$!?#%</p>
+</div>
+
+<p><a href="https://www.rstudio.com/products/rstudio/features/">https://www.rstudio.com/products/rstudio/features/</a></p>
+<h4 id="r-objekti">R objekti</h4>
+<p>R vam pruža izvestan broj specijalizovanih struktura podataka koje ćemo uopšteno nazivati <!-- raw HTML omitted -->objektima<!-- raw HTML omitted --> Da biste ih referisali kao objekte treba da koristite simbol dodele <!-- raw HTML omitted -->&lt;-<!-- raw HTML omitted -->, koji se sastoji od znaka „manje od“ i znaka „minusa“, bez razmaka između njih. Tako stvaramo skalarne konstante, koje nazivamo varijablama, i na kojima kasnije možemo primenjivati matematičke operacije.</p>
+<pre><code>x &lt;- 5
+y &lt;- 6
+</code></pre><p>Ove objekte možete koristiti u kalkulacijama na isti način na koji ste već koristili brojeve:</p>
+<pre><code>x + y
+</code></pre><p>U varijabli možete sačuvati i rezultat kalkulacije tako što ćete napraviti novi objekat koji će sadržati druge objekte:</p>
+<pre><code>z &lt;- x * y
+z
+</code></pre>
+<div class="notices warning" ><p>🤓💡 ZAPAMTITE!!! <!-- raw HTML omitted -->Operator <strong>&lt;-</strong> sastavljen je od znaka „manje od“ i minusa, ali <strong>bez razmaka između njih</strong>!!!!<!-- raw HTML omitted --></p>
+</div>
+
+<p>Ukucajte sledeće komande</p>
+<pre><code>x&lt; -5
+y&lt; -6
+</code></pre><p>i vidite šta će se desiti.</p>
+<p>Nakon što ste u R-u kreirali neke objekte, možete ih izlistati upotrebom <code>ls()</code> funkcije:</p>
+<pre><code>ls()
+</code></pre><p>R studio vam obezbeđuje vrlo komotno radno okruženje u kojem možete pratiti listu kreiranih objekata u panelu <strong>Environment (okruženje)</strong> koji se nalazi u gornjem desnom uglu R studija.</p>
+<p><img src="/module1/UseR/images/Environment_Panel.png?width=20pc" alt="Red variant"></p>
+<h4 id="ugraene-funkcije">Ugrađene funkcije</h4>
+<p>R nije poput konvencionalnih statističkih paketa kao što su na primer SAS, Minitab, SPSS. On je više programski jezik dizajniran za analize podataka. Dolazi sa velikim brojem već gotovih blokova koda koji vam omogućavaju rukovanje podacima, da obavljate matematičke kalkulacije, da izvedete niz statističkih analiza od najjednostavnijih preko složenih, do ekstremno složenih i da kreirate fantastične grafikone. Ove prethodno napravljene blokove koda nazivamo <!-- raw HTML omitted --><strong>funkcijama</strong><!-- raw HTML omitted -->.</p>
+<p>Pored toga, R poseduje i set standardnih matematičkih funkcija koje možda nikada nećete upotrebljavati: <code>sin</code>, <code>cos</code>, <code>tan</code>, <code>asin</code>, <code>atan</code>, <code>log</code>, <code>log10</code>, <code>exp</code>, <code>abs</code>, <code>sqrt</code>, <code>factorial</code>… Da bi ih koristili, sve što treba da uradite je da ukucate tip funkcije i da u nju stavite bilo šta što želite da izračunate kao objekat (argument). Objekat (argument) stavljate u zagradu odmah iza funkcije.</p>
+<p>Isprobajte neke od njih. 😃</p>
+<pre><code>sqrt(144)
+log10(8)
+log10(100)
+log(100)
+exp(1)
+pi
+sin(pi/2)
+abs(-7)
+factorial(3)
+exp(x)
+log(y, 2)
+</code></pre><p>Neki određeni izraz može biti argument funkcije:</p>
+<pre><code>z &lt;- x * y
+trunc(x^2 + z / y)
+log((100 * x - y^2) / z)
+</code></pre><p>Takođe, možete ugnjezditi funkcije unutar drugih funkcija:</p>
+<pre><code>round(exp(x), 2)
+p &lt;- abs(floor(log((100*x - y^2) / exp(z))))
+p
+</code></pre>
+<div class="notices info" ><p>🤓💡 <!-- raw HTML omitted -->Da biste saznali nešto više o funkciji koju želite da koristite, neophodno je da ukucate znak upitnika <!-- raw HTML omitted -->**?**<!-- raw HTML omitted -->, ispred imena funkcije koja vas zanima. Ovo vam može biti posebno korisno kada budete koristili komplikovanije funkcije. Help (pomoć) vam daje ne samo detaljan opis funkcije i njene strukture, ulaznih i izlaznih argumenata, već i praktične primere upotrebe te funkcije. Probajte da zatražite od R-a pomoć za funkciju <code>lm()</code> da vidite čemu ona služi</p>
+</div>
+
+<h4 id="vektori">Vektori</h4>
+<p>Kada analizirate podatke radićete sa velikim brojem varijabli i brojeva. Upravo zbog toga treba da ih čuvate u objektima. Varijable mogu biti različitog tipa: logički, prirodni brojevi (integer), realni brojevi (double), tekst (string) su samo neke od njih. <!-- raw HTML omitted -->Varijable sa jednom ili više vrednosti istog tipa nazivaju se <strong>vektori</strong><!-- raw HTML omitted -->. Takođe, <!-- raw HTML omitted -->varijabla sa jednom vrednošću<!-- raw HTML omitted --> (poznata kao <!-- raw HTML omitted --><strong>scalar</strong><!-- raw HTML omitted -->) isto je vektor ali dužine 1. Dodavanje vrednosti vektorima može se raditi na različite načine:</p>
+<ul>
+<li>Vrednosti možete dodavati upotrebom simbola dvotačka (<code>:</code>) koja će vam generisati vrednosti od do ili ih možete graditi pomoću funkcije <code>rep()</code> da biste ponovili određenu vrednost određen broj puta.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>
+x
+</code></pre></div><pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">10</span>)
+x
+</code></pre></div><pre><code>##  [1] 1 1 1 1 1 1 1 1 1 1
+</code></pre><ul>
+<li>Vektor možete generisati upotrebom <!-- raw HTML omitted -->funkcije spajanja <strong>c</strong><!-- raw HTML omitted --> koja omogućava unos vrednosti u vektor na način kako je to prikazano dole</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>)
+x
+</code></pre></div><pre><code>##  [1] 2 6 4 2 3 7 1 5 9 8
+</code></pre><ul>
+<li>Možete kreirati vektor definisanjem opsega brojeva i priraštaja (inkriment). Na primer, u slučaju koji je prikazan dole opseg je od 1 do 10, a priraštaj 0.2</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">0.2</span>)
+</code></pre></div><pre><code>##  [1]  1.0  1.2  1.4  1.6  1.8  2.0  2.2  2.4  2.6  2.8  3.0  3.2  3.4  3.6  3.8
+## [16]  4.0  4.2  4.4  4.6  4.8  5.0  5.2  5.4  5.6  5.8  6.0  6.2  6.4  6.6  6.8
+## [31]  7.0  7.2  7.4  7.6  7.8  8.0  8.2  8.4  8.6  8.8  9.0  9.2  9.4  9.6  9.8
+## [46] 10.0
+</code></pre>
+<div class="notices note" ><p>💡: R vrlo lako vrši aritmetičke operacije na vektorima, jednako brzo kao i na skalarima. Matematičke operacije na vektorima funkcionišu isto kao što smo već videli, kada smo radili sa skalarima.</p>
+</div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">10</span>)
+y <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>
+x
+</code></pre></div><pre><code>##  [1] 1 1 1 1 1 1 1 1 1 1
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">y
+</code></pre></div><pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">c</span>(x, y)
+</code></pre></div><pre><code>##  [1]  1  1  1  1  1  1  1  1  1  1  1  2  3  4  5  6  7  8  9 10
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x <span style="color:#f92672">+</span> y
+</code></pre></div><pre><code>##  [1]  2  3  4  5  6  7  8  9 10 11
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> y
+</code></pre></div><pre><code>##  [1]  3  5  7  9 11 13 15 17 19 21
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x^2 <span style="color:#f92672">/</span> y
+</code></pre></div><pre><code>##  [1] 1.0000000 0.5000000 0.3333333 0.2500000 0.2000000 0.1666667 0.1428571
+##  [8] 0.1250000 0.1111111 0.1000000
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">z <span style="color:#f92672">&lt;-</span> (x<span style="color:#f92672">+</span>y)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>
+z
+</code></pre></div><pre><code>##  [1] 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0 5.5
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">z <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(z, <span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>), <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">300</span>))<span style="color:#ae81ff">+1</span>
+z
+</code></pre></div><pre><code>##  [1]   2.0   2.5   3.0   3.5   4.0   4.5   5.0   5.5   6.0   6.5   2.0   2.0
+## [13]   2.0 101.0 201.0 301.0
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">p <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">2.5</span>
+z<span style="color:#f92672">*</span>p
+</code></pre></div><pre><code>##  [1]   5.00   6.25   7.50   8.75  10.00  11.25  12.50  13.75  15.00  16.25
+## [11]   5.00   5.00   5.00 252.50 502.50 752.50
+</code></pre><h5 id="pristupanje-elementima-vektora">Pristupanje elementima vektora</h5>
+<p>Da biste pristupili određenom elementu vektora, potrebno je da <!-- raw HTML omitted -->upotrebite indeks vektora i to tako što ga unosite u uglaste zagrade **[]**<!-- raw HTML omitted -->. ledeći primer pokazuje kako se to radi. Indeks vektora baziran je na jedinici, tj. prvi član u vektoru ima indeks 1, tako da ako tražite četvrtu poziciju koristite indeks 4 da biste pristupili ovom elementu.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">6</span>)
+x
+</code></pre></div><pre><code>##  [1] 9 3 7 2 9 2 1 5 4 6
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x[4]
+</code></pre></div><pre><code>## [1] 2
+</code></pre>
+<div class="notices note" ><p>💡: U R-u možete primeniti funkcije na celom vektoru, što vam pomaže s obzirom da ne treba da koristite za taj posao lupove (looping).</p>
+</div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">1</span>, x)
+<span style="color:#a6e22e">max</span>(y)
+</code></pre></div><pre><code>## [1] 9
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">range</span>(y)
+</code></pre></div><pre><code>## [1] 0 9
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">mean</span>(y)
+</code></pre></div><pre><code>## [1] 4.133333
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">var</span>(y)
+</code></pre></div><pre><code>## [1] 9.409524
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">sort</span>(y)
+</code></pre></div><pre><code>##  [1] 0 1 1 1 2 2 3 4 4 5 6 7 8 9 9
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">cumsum</span>(y)
+</code></pre></div><pre><code>##  [1]  4  5  5 13 14 23 26 33 35 44 46 47 52 56 62
+</code></pre>
+<div class="notices note" ><p>💡:Napomena:  <!-- raw HTML omitted -->Nedostajuće vrednosti u R-u<!-- raw HTML omitted --> predstavljene su simbolom  <!-- raw HTML omitted --><strong>NA</strong> (nije dostupno)<!-- raw HTML omitted --> ili <!-- raw HTML omitted --><strong>NaN</strong> (nije broj)<!-- raw HTML omitted --> za nedefinsane matematičke operacije.</p>
+</div>
+
+<p>Ako je indeks van dometa prikazuje se NA, kao na slici dole.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">z <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">2</span>)
+z[10]
+</code></pre></div><pre><code>## [1] NA
+</code></pre><p>Možete dobiti željeni izbor elemenata vektora tako što ćete navesta <strong>specifying a query within the index brackets <code>[]</code></strong>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">6</span>)
+y[y <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span>]
+</code></pre></div><pre><code>## [1] 9 7 9 6
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">y[y <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>]
+</code></pre></div><pre><code>## numeric(0)
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">y[y <span style="color:#f92672">!=</span> <span style="color:#ae81ff">2</span>]
+</code></pre></div><pre><code>## [1] 9 3 7 9 1 5 4 6
+</code></pre><h4 id="matrice">Matrice</h4>
+<p><!-- raw HTML omitted -->Kada su podaci raspoređeni u dve dimenzije, a ne u jednoj, imamo <!-- raw HTML omitted --><strong>matrice</strong><!-- raw HTML omitted -->. U R-u matrice se kreiraju uz pomoć funkcije <code>matrix()</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">ma1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">-20</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">-15</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">-1</span>, <span style="color:#ae81ff">0</span>),
+              nrow <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>, ncol <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>, 
+              byrow <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+ma1
+</code></pre></div><pre><code>##      [,1] [,2] [,3]
+## [1,]    1    0  -20
+## [2,]    0    1  -15
+## [3,]    1   -1    0
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">dim</span>(ma1)
+</code></pre></div><pre><code>## [1] 3 3
+</code></pre><p>Pojedinačni broj u matrici naziva se element matrice. Svaki element matrice jedinstveno je definisan brojem kolone i brojem reda u kojoj se nalazi. Dimenziju matrice možete proveriti funkcijom <code>dim()</code>.</p>
+<p>Elementu matrice <code>i</code>-tog reda, <code>j</code>-te kolone pristupate indeksom koji unosite u uglaste zagradu <code>[i, j]</code>. Čitav <code>i</code>-ti red ili čitava <code>j</code>-ta kolonu možete izdvojiti iz matrice na način prikazan u kodu dole.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">ma1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">130</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">-7</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">-2</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">-5</span>, <span style="color:#ae81ff">4</span>),
+              nrow <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>, ncol <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>)
+ma1
+</code></pre></div><pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    4    0    9    7
+## [2,]   10    8   11   -5
+## [3,]  130   -7   -2    4
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">ma1[2, <span style="color:#ae81ff">3</span>]
+</code></pre></div><pre><code>## [1] 11
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">ma1[1, ]
+</code></pre></div><pre><code>## [1] 4 0 9 7
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">ma1[ , <span style="color:#ae81ff">4</span>]
+</code></pre></div><pre><code>## [1]  7 -5  4
+</code></pre><p>Standardna skalarna algebra, koja se bavi operacijama na pojedinačnim brojevima, ima skup dobro utvrđenih pravila za upravljanje koje uključuju sabiranje, oduzimanje, množenje i deljenje. Na sličan način razvijen je skup pravila koja nam omogućavaju da upravljamo matricama. Međutim, uvođenje ovih pravila je izvan obima ovog kursa, ali su dobro pokrivena na <a href="http://www.statisticshowto.com/matrices-and-matrix-algebra/"><a href="http://www.statisticshowto.com">www.statisticshowto.com</a></a> veb lokaciji.</p>
+<h2 id="zadaci-">ZADACI 👇</h2>
+<p>Vežbajte tako što ćete proći kroz sledeći niz zadataka:</p>
+<ol>
+<li>
+<p>Kreirajte vektore <code>x1</code> i <code>x2</code>, gde je vektor <code>x1</code> sastavljen od brojeva: <code>1, 4, 7, 9, 11, 12, 13, 15</code> i <code>18</code> a vektor <code>x2</code> brojeva: <code>1, 1, 1, 2, 2, 2, 3, 3, 3</code>.</p>
+</li>
+<li>
+<p>Oduzmite vektor <code>x2</code> od vektora <code>x1</code>.</p>
+</li>
+<li>
+<p>Kreirajte novi vektor <code>x3</code> tako da sadrži i članove vektora <code>x1</code> i <code>x2</code>.</p>
+</li>
+<li>
+<p>Izračunajte srednju vrednost i varijansu vektora <code>x3</code>.</p>
+</li>
+<li>
+<p>Izračunajte medijanu sva tri vektora.</p>
+</li>
+<li>
+<p>Napravite matricu <code>m1</code> sa sledećim elementima:
+<code>matrix(c(1, 5, 9, 2, 6, 10, 3, 7, 11, 4, 8, 12), nrow = 4,  ncol = 3, byrow = TRUE)</code></p>
+</li>
+<li>
+<p>Napravite kod koji će pronaći <code>2</code>-gi broj u vektorima <code>x1</code> i <code>x2</code> a potom i <code>2</code>-gi red i <code>3</code>-ću kolonu u matrici <code>m1</code>.</p>
+</li>
+<li>
+<p>Dodajte <code>5</code>-i broj iz vektora <code>x1</code> matrici <code>m1</code> tako da bude u <code>1</code>-om redu i <code>1</code>-oj koloni.</p>
+</li>
+<li>
+<p>Izračunajte srednju vrednost svih brojeva vektora <code>x3</code> koji su manji od broja 13.</p>
+</li>
+</ol>
+<hr>
+<p>© 2019 <a href="https://sisteranalyst.org">Sister Analyst</a></p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/sr/module1/rstudioide/" title="RStudio IDE"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/sr/module1/statsconcepts/" title="Osnovni koncepti statistike" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1583944929"></script>
+    <script src="/js/perfect-scrollbar.min.js?1583944929"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1583944929"></script>
+    <script src="/js/jquery.sticky.js?1583944929"></script>
+    <script src="/js/featherlight.min.js?1583944929"></script>
+    <script src="/js/highlight.pack.js?1583944929"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1583944929"></script>
+    <script src="/js/learn.js?1583944929"></script>
+    <script src="/js/hugo-learn.js?1583944929"></script>
+
+    <link href="/mermaid/mermaid.css?1583944929" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1583944929"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105947713-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

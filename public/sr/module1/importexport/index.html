@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="sr" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.60.1" />
+    <meta name="description" content="RToolbox">
+<meta name="author" content="Sister Analyst">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    <title>Učitavanje podataka u R :: RToolbox</title>
+
+    
+    <link href="/css/nucleus.css?1583944929" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1583944929" rel="stylesheet">
+    <link href="/css/hybrid.css?1583944929" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1583944929" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1583944929" rel="stylesheet">
+    <link href="/css/auto-complete.css?1583944929" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1583944929" rel="stylesheet">
+    <link href="/css/theme.css?1583944929" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1583944929" rel="stylesheet">
+    
+      <link href="/css/theme-blue.css?1583944929" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1583944929"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/sr/module1/importexport/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <!DOCTYPE html>
+<html>
+<body>
+<IMG SRC="/images/logo.png" ALT="DataTeka" WIDTH=100 HEIGHT=100>
+
+</body>
+</html>
+
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1583944929"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1583944929"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/sr";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1583944929"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/" title="O Kursu" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/">
+          <b>1. </b>O Kursu
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/whatlearn/" title="Opšti pregled" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/whatlearn/">
+          Opšti pregled
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/instructor/" title="Upoznajte trenere" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/instructor/">
+          Upoznajte trenere
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/general/syllabus/" title="Indikativan nastavni program" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/general/syllabus/">
+          Indikativan nastavni program
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/" title="Modul 1" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/sr/module1/">
+          <b>2. </b>Modul 1
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/whatisr/" title="Šta je R?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/whatisr/">
+          Šta je R?
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/installr/" title="Instalacija R/Rstudija" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/installr/">
+          Instalacija R-a
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/git-and-github/" title="Git i GitHub" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/git-and-github/">
+          Git i GitHub
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/rstudioide/" title="RStudio IDE" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/rstudioide/">
+          RStudio IDE
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/user/" title="Kako se R koristi?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/user/">
+          Kako se R koristi?
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/statsconcepts/" title="Osnovni koncepti statistike" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/statsconcepts/">
+          Osnovni koncepti statistike
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/datatypes/" title="Tipovi podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module1/datatypes/">
+          Tipovi podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module1/importexport/" title="Učitavanje podataka u R" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/sr/module1/importexport/">
+          Učitavanje podataka u R
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module2/" title="Modul 2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module2/">
+          <b>3. </b>Modul 2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module2/datawrangling/" title="Organizacija podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module2/datawrangling/">
+          Organizacija podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/" title="Modul 3" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/">
+          <b>4. </b>Modul 3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/visualisation/" title="Vizuelizacija podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/visualisation/">
+          Vizuelizacija podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/spatialda/" title="Analiza geo-pozicioniranih podataka" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/spatialda/">
+          Analiza geo-pozicioniranih podataka
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module3/principlesvisualisation/" title="Uvod u principe vizuelizacije" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module3/principlesvisualisation/">
+          Principe vizuelizacije
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module4/" title="Modul 4" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module4/">
+          <b>5. </b>Modul 4
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module4/rmarkdown/" title="RMarkdown" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module4/rmarkdown/">
+          RMarkdown
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module5/" title="Modul 5" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module5/">
+          <b>6. </b>Modul 5
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module5/shiny/" title="Shiny" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module5/shiny/">
+          Shiny
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module6/" title="Modul 6" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module6/">
+          <b>7. </b>Modul 6
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/module6/blogdown/" title="blogdown" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/module6/blogdown/">
+          blogdown
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sr/our_podcast/" title="Our Stories" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sr/our_podcast/">
+          <b>8. </b>Our Stories
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/matcornic/hugo-theme-learn"><i class='fab fa-fw fa-github'></i> Repo GitHub</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="/en/module1/importexport/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="sr" value="/sr/module1/importexport/" selected>Serbian</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <center>
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn" data-icon="octicon-star" data-show-count="true" aria-label="Star matcornic/hugo-theme-learn on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/module1/ImportExport/_index.sr.markdown" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/sr/'>R Toolbox</a> > <a href='/sr/module1/'>Modul 1</a> > Učitavanje podataka u R
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#osnovne-funkcije-u-ru-base-r">Osnovne funkcije u R-u (Base R)</a></li>
+        <li><a href="#uitavanje-excel-fajlova-sa-readxl">Učitavanje excel fajlova sa readxl</a></li>
+        <li><a href="#uitavanje-podataka-upotrebom-jsonlite">Učitavanje podataka upotrebom jsonlite</a></li>
+        <li><a href="#drugi-formati-podataka">Drugi formati podataka</a></li>
+      </ul>
+    </li>
+    <li><a href="#zadaci-">ZADACI 👇</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Učitavanje podataka u R
+            </h1>
+          
+
+        
+
+
+
+
+	<p>Učitavanje podataka je prva velika stvar u upravljanju podacima u R-u.</p>
+<p>Najverovatnije je da već imate iskustvo u pregledanju, organizovanju i istraživanju podataka u Excel-u.</p>
+<p>Otvaranje podataka u R-u je prilično jednostavno, ali njihova priprema za analizu  iziskuje više truda i promišljanja. Dobro pretpostavljate da pomoću komandi iz glavnog menija <strong>File | Import Dataset</strong>  u R studiju možete učitati vaše podatke (za više pogledajte <a href="https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio">Importing Data with RStudio</a>), međutim mi ćemo to uraditi na pravi način upotrebom komande.</p>
+<p>U R možete učitati sledeće tipove podataka:</p>
+<ul>
+<li>(Tab, Blank space) Delimited Text</li>
+<li>CSV fajlove</li>
+<li>Excel fajlove</li>
+<li>JSON</li>
+<li>SAS</li>
+<li>STATA</li>
+<li>MiniTab</li>
+<li>SPSS&hellip;</li>
+</ul>
+<p>U ovom poglavlju, pokazaćemo vam kako da pristupite uobičajenim tipovima podataka. Jednom kada počnete da se igrate sa podacima i da ih menjate na način koji vam odgovara za vašu analizu, biće vam takođe zanimljivo da istražite mogućnost da sami kreirate različite tipove podataka. Ovde, ćemo se ipak fokusirati na osnovnu funkcionalnost funkcije <code>read</code> u R-u.</p>
+<h3 id="osnovne-funkcije-u-ru-base-r">Osnovne funkcije u R-u (Base R)</h3>
+<p>Najednostavnija forma podataka je <a href="https://en.wikipedia.org/wiki/Text_file">text file</a>. Text fajl može da pročita bilo koji operativni sistem kao i veliki broj različitih statističkih programa. Čuvanje vaših podataka u tekst fajlu čini vaše podatke lako dostupnim svima. Ukoliko imate tekst fajl sa podacima koje želite da koristite, možete ih jednostavno učitati uz pomoć osnovne funkcije iz **baze R ** - <code>read.table()</code></p>
+<p>Sledeća naredba čita fajl u tabelarnom formatu i kreira data frame:</p>
+<pre><code># Read tabular data into R
+df_txt &lt;- read.table(file_name.txt, header = FALSE)
+</code></pre><p>Postoji mnogo paketa koji vam omogućavaju učitavanje podataka u R, a mi ćemo početi od <code>CSV</code> fajlova, jer su oni najčešći.</p>
+<p>Zarezom odvojeni fajlovi je najčešći način snimanja podataka u tabelama, jer oni nisu zaštićeni i ne traže licencirane programe za njihovo otvaranje. Uvoz <code>CSV</code> fajla je deo osnovnih funkcija u R-u  i to je funkcija <code>read.csv()</code>.</p>
+<h5 id="readcsv"><code>read.csv()</code></h5>
+<p>Idite na internet stranicu <a href="https://data.gov.rs/">https://data.gov.rs/</a> otvorenih podataka Srbije. Obratićemo posebnu pažnju na fajl <a href="https://data.gov.rs/sr/datasets/kvalitet-vazduha-2017/">Kvalitet vazduha 2017: pm2.5_2017.csv</a> i njega ćemo učitati u R.</p>
+<p>Ovaj fajl nećemo snimiti na naše računare, već ćemo ga učitati u R direktno sa interneta koristeći sledeći link.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">df_csv <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">http://data.sepa.gov.rs/dataset/ca463c44-fbfa-4de9-9a75-790995bf2830/resource/62983880-6fcd-4c65-b57c-fd4de5c367c8/download/pm2.5_2017.csv&#34;</span>, stringsAsFactors <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
+<span style="color:#a6e22e">head</span>(df_csv, <span style="color:#ae81ff">10</span>)
+</code></pre></div><pre><code>##        Datum Nis_IZJZ.Nis
+## 1   1.1.2017    132.04583
+## 2   2.1.2017    124.95417
+## 3   3.1.2017     79.92500
+## 4   4.1.2017    107.22500
+## 5   5.1.2017     42.14583
+## 6   6.1.2017     18.12500
+## 7   7.1.2017     25.14167
+## 8   8.1.2017     67.86667
+## 9   9.1.2017     41.41667
+## 10 10.1.2017     55.75417
+</code></pre><p>Možete uvesti ove podatke i na drugi način, tako što ćete ih snimiti u svoj radni direktorijum.</p>
+<p>Preuzećemo fajl <a href="https://data.gov.rs/sr/datasets/r/f425e6a5-95ae-4e2b-ab73-1d0b293b4522">&ldquo;Kvalitet vazduha 2017-SO2: 2017-SO2.csv&rdquo;</a>
+Vodite računa da snimite fajl u radni direktorijum vašeg R projekta pre nego što izvršite sledeći kod:</p>
+<pre><code>df_csv &lt;- read.csv(&quot;2017-so2.csv&quot;, stringsAsFactors = FALSE, fileEncoding = &quot;latin1&quot;)
+</code></pre>
+<div class="notices info" ><p>Ponovo pokrenite kod prikazan gore, ali ovog puta bez argumenta <code>stringsAsFactors</code> tako što ćete ga ukloniti ili staviti posle znaka jednakosti TRUE. Recite nam kakva je razlika pre i posle? Šta mislite zašto koristimo argument <code>fileEncoding</code>?</p>
+</div>
+
+<p>Šta mislite o setu podataka koji ste učitali? 🤔</p>
+<h4 id="upotreba-readrreadcsv">Upotreba readr::read_csv()</h4>
+<p><code>readr</code> je paket koji čita pravougaone podatke znatno brže od <code>read.csv()</code> funkcije u base R-u. Druga razlika u odnosu na <code>read.csv()</code> funkciju je da učitava karaktere kao stringove, a ne kao faktore.</p>
+<p>Da biste videli kako je lako koristiti druge pakete za učitavanje podataka u R-u, ilustrovaćemo to upotrebom read_csv() funkcije.</p>
+<pre><code>## If you don't have readr installed yet, uncomment and run the line below
+# install.packages(&quot;readr&quot;)
+library(readr)
+df_csv &lt;- read_csv(&quot;air_quality_by_station.csv&quot;)
+df_csv
+</code></pre>
+<div class="notices note" ><p>Proverite <code>readr::read_delim()</code> funkciju za efikasnije ograđivanje podataka iz fajlova.</p>
+</div>
+
+<h3 id="uitavanje-excel-fajlova-sa-readxl">Učitavanje excel fajlova sa <code>readxl</code></h3>
+<p>Učitavanje podataka iz Excel fajlova nije tako jednostavno, s obzirom da ti fajlovi mogu sadržati više šitova (sheets). Fokusiraćemo se na upotrebu readxl paketa s obzirom da se on do sada pokazao kao najefikasniji.</p>
+
+<div class="notices warning" ><p>Da biste pristupili podacima iz Excel shita ne možete jednostavno samo kopirati i umetnuti URL tog fajla. Taj fajl morate prethodno snimiti.</p>
+</div>
+
+<p>Sada ćemo snimiti podatke iz Excel fajla sa stranice otvorenih podataka <a href="https://data.gov.rs/">data.gov.rs</a> o saobraćajnim nesrećama <a href="https://data.gov.rs/sr/datasets/r/134b2867-8a35-4f00-ac48-1610dca177ec">Подаци о саобраћајним незгодама до 31.08.2019. године за територију свих ПОЛИЦИЈСКИХ УПРАВА и ОПШТИНА</a>.</p>
+<p>Ukoliko ne možete da otvorite fajl u Excelu da vidite koliko šitova ima taj fajl, pokušajte pročitati fajl iz R-a tako što ćete pristupiti prvom šitu uz pomoć funkcije <code>read_excel()</code>. Pre toga, proverite da li ste snimili taj fajl u radni direktorijum vašeg R projekta, i to pre nego što izvršite sledeći kod:</p>
+<pre><code>## If you don't have readxl installed yet, uncomment the line below and run it 
+#install.packages(&quot;readxl&quot;)
+library(readxl)
+df_xl &lt;- read_excel(&quot;nez-opendata-20199-20190925.xlsx&quot;, sheet = 1)
+</code></pre><p>Kako vam se čini?</p>
+
+<div class="notices warning" ><p>Ljudi obično ulepšavaju i formatiraju svoje excel fajlove, a to može prouzrokovati probleme kada se učitavaju u R.</p>
+</div>
+
+<p>Istražite argumente funkcije <code>read_excel()</code> poput <code>skip</code> argumenta sa kojim možete da specifikujete minimalni broj redova koje ne želite da učitate iz fajla.</p>
+<h3 id="uitavanje-podataka-upotrebom-jsonlite">Učitavanje podataka upotrebom <code>jsonlite</code></h3>
+<p>Ukoliko želite da učitate JSON fajl u R koristićete <code>jsonlite</code> paket. Potrebno je da ovoj funkciji obezbedite lokalnu putanju do fajla, ukoliko se on već nalazi na vašem računaru ili jednostavno koristeći URL ukoliko želite da ga učitate sa interneta.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">## If you don&#39;t have readxl installed yet, uncomment the line below and run it </span>
+<span style="color:#75715e">#install.packages(&#34;jsonlite&#34;)</span>
+<span style="color:#a6e22e">library</span>(jsonlite)
+my_url <span style="color:#f92672">&lt;-</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://data.gov.rs/sr/datasets/r/41c2fe91-4ea1-4a64-b33c-183665ea6ab3&#34;</span>
+polen <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">fromJSON</span>(my_url)
+</code></pre></div><p>Pogledajte sad strukturu <code>polen</code>! 😰</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">str</span>(polen)
+</code></pre></div><pre><code>## List of 4
+##  $ count   : int 26541
+##  $ next    : chr &quot;http://polen.sepa.gov.rs/api/opendata/pollens/?page=2&quot;
+##  $ previous: NULL
+##  $ results :'data.frame':	500 obs. of  4 variables:
+##   ..$ id            : int [1:500] 539 805 1078 1351 1624 1897 2170 2686 2965 3238 ...
+##   ..$ location      : int [1:500] 12 3 4 20 5 10 14 13 17 9 ...
+##   ..$ date          : chr [1:500] &quot;2016-02-01&quot; &quot;2016-02-01&quot; &quot;2016-02-01&quot; &quot;2016-02-01&quot; ...
+##   ..$ concentrations:List of 500
+##   .. ..$ : int [1:4] 3002 3003 3004 3005
+##   .. ..$ : int [1:3] 4649 4650 4651
+##   .. ..$ : int [1:3] 6126 6127 6128
+##   .. ..$ : int(0) 
+##   .. ..$ : int(0) 
+##   .. ..$ : int [1:2] 10767 10768
+##   .. ..$ : int [1:3] 12370 12371 12372
+##   .. ..$ : int [1:2] 15518 15519
+##   .. ..$ : int [1:4] 17422 17423 17424 17425
+##   .. ..$ : int [1:2] 19339 19340
+##   .. ..$ : int [1:4] 21104 21105 21106 21107
+##   .. ..$ : int [1:3] 24123 24124 24125
+##   .. ..$ : int [1:2] 26010 26011
+##   .. ..$ : int 29460
+##   .. ..$ : int [1:2] 1480 1481
+##   .. ..$ : int [1:4] 3006 3007 3008 3009
+##   .. ..$ : int 4652
+##   .. ..$ : int [1:2] 6129 6130
+##   .. ..$ : int(0) 
+##   .. ..$ : int(0) 
+##   .. ..$ : int [1:4] 10769 10770 10771 10772
+##   .. ..$ : int [1:3] 12373 12374 12375
+##   .. ..$ : int [1:5] 15520 15521 15522 15523 15524
+##   .. ..$ : int [1:5] 17426 17427 17428 17429 17430
+##   .. ..$ : int [1:3] 19341 19342 19343
+##   .. ..$ : int [1:3] 21108 21109 21110
+##   .. ..$ : int [1:3] 24126 24127 24128
+##   .. ..$ : int [1:3] 26012 26013 26014
+##   .. ..$ : int [1:3] 29461 29462 29463
+##   .. ..$ : int [1:5] 1482 1483 1484 1485 1486
+##   .. ..$ : int [1:3] 3010 3011 3012
+##   .. ..$ : int [1:3] 4653 4654 4655
+##   .. ..$ : int [1:2] 6131 6132
+##   .. ..$ : int(0) 
+##   .. ..$ : int(0) 
+##   .. ..$ : int [1:3] 10773 10774 10775
+##   .. ..$ : int [1:3] 12376 12377 12378
+##   .. ..$ : int [1:3] 15525 15526 15527
+##   .. ..$ : int [1:4] 17431 17432 17433 17434
+##   .. ..$ : int [1:3] 19344 19345 19346
+##   .. ..$ : int [1:5] 21111 21112 21113 21114 21115
+##   .. ..$ : int [1:6] 24129 24130 24131 24132 24133 24134
+##   .. ..$ : int [1:4] 26015 26016 26017 26018
+##   .. ..$ : int [1:3] 29464 29465 29466
+##   .. ..$ : int [1:3] 1487 1488 1489
+##   .. ..$ : int 3013
+##   .. ..$ : int [1:3] 4656 4657 4658
+##   .. ..$ : int [1:3] 6133 6134 6135
+##   .. ..$ : int(0) 
+##   .. ..$ : int 9357
+##   .. ..$ : int [1:5] 10776 10777 10778 10779 10780
+##   .. ..$ : int [1:3] 12379 12380 12381
+##   .. ..$ : int [1:3] 15528 15529 15530
+##   .. ..$ : int [1:2] 17435 17436
+##   .. ..$ : int [1:3] 19347 19348 19349
+##   .. ..$ : int [1:2] 21116 21117
+##   .. ..$ : int [1:3] 24135 24136 24137
+##   .. ..$ : int [1:3] 26019 26020 26021
+##   .. ..$ : int [1:3] 29467 29468 29469
+##   .. ..$ : int [1:3] 1490 1491 1492
+##   .. ..$ : int 3014
+##   .. ..$ : int [1:2] 4659 4660
+##   .. ..$ : int [1:3] 6136 6137 6138
+##   .. ..$ : int(0) 
+##   .. ..$ : int 9358
+##   .. ..$ : int [1:3] 10781 10782 10783
+##   .. ..$ : int [1:3] 12382 12383 12384
+##   .. ..$ : int 15531
+##   .. ..$ : int [1:3] 17437 17438 17439
+##   .. ..$ : int [1:2] 19350 19351
+##   .. ..$ : int [1:5] 21118 21119 21120 21121 21122
+##   .. ..$ : int [1:3] 24138 24139 24140
+##   .. ..$ : int [1:3] 26022 26023 26024
+##   .. ..$ : int [1:4] 29470 29471 29472 29473
+##   .. ..$ : int [1:3] 1493 1494 1495
+##   .. ..$ : int [1:2] 3015 3016
+##   .. ..$ : int 4661
+##   .. ..$ : int [1:3] 6139 6140 6141
+##   .. ..$ : int 7747
+##   .. ..$ : int 9359
+##   .. ..$ : int [1:3] 10784 10785 10786
+##   .. ..$ : int [1:3] 12385 12386 12387
+##   .. ..$ : int [1:3] 15532 15533 15534
+##   .. ..$ : int [1:3] 17440 17441 17442
+##   .. ..$ : int [1:3] 19352 19353 19354
+##   .. ..$ : int [1:3] 21123 21124 21125
+##   .. ..$ : int [1:4] 24141 24142 24143 24144
+##   .. ..$ : int [1:3] 26025 26026 26027
+##   .. ..$ : int [1:3] 29474 29475 29476
+##   .. ..$ : int [1:5] 1496 1497 1498 1499 1500
+##   .. ..$ : int [1:2] 3017 3018
+##   .. ..$ : int 4662
+##   .. ..$ : int [1:3] 6142 6143 6144
+##   .. ..$ : int(0) 
+##   .. ..$ : int [1:2] 9360 9361
+##   .. ..$ : int [1:3] 10787 10788 10789
+##   .. ..$ : int 12388
+##   .. ..$ : int [1:5] 15535 15536 15537 15538 15539
+##   .. ..$ : int [1:3] 17443 17444 17445
+##   .. .. [list output truncated]
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">names</span>(polen)
+</code></pre></div><pre><code>## [1] &quot;count&quot;    &quot;next&quot;     &quot;previous&quot; &quot;results&quot;
+</code></pre><p>Napomena: komanda <code>polen$results</code> je data frame koji sadrži listu koncentracija (concentrations) kao svoj element.</p>
+<p>Uf! 😳 JSON fajlovi nisu baš uredni 😱 Oni su često ugnježdeni, povezani -&gt; Shvatili ste: Ovo je vrlo neuredno! 😫 Dakle, ostavićemo ih takve kakvi jesu. 😬 IAko vam je potrebno da saznate više o učitavanju JSON fajlova u R to možete dodatno da istražite preko funckionalnosti paketa jsonlite ili da pronađete stranicu <a href="https://cran.r-project.org/web/packages/jsonlite/vignettes/json-aaquickstart.html">Getting started with JSON and jsonlite</a>. Blog post <a href="https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89">Working with JSON data in very simple way</a> autora <a href="https://blog.exploratory.io/@kanaugust">Kan Nishida</a> ima odlične primere kako možete da koristite ovaj format u R-u.</p>
+<h3 id="drugi-formati-podataka">Drugi formati podataka</h3>
+<p>Da biste ubrzali proces učitavanja txt, csv fajlova možete da koristite <code>data.table::fread()</code> funkciju. Potrebno je da za ovu funkciju samo unesete ime fajla u kome se nalaze podaci koje želite da učitate, a  <code>fread()</code> će pokušati da ih učita na odgovarajući način. Pogledajte ovaj blog <a href="https://www.r-bloggers.com/getting-data-from-an-online-source/">Getting Data From An Online Source</a> da biste videli još neke ideje za učitavanje podataka.</p>
+<p>R zajedno sa odgovarajućim paketima možete koristiti i za učitavanje drugih formata podataka. Paket haven ima funkcije za učitavanje SAS, SPSS i Stata fajlova ili možete da koristite foreign paket za MiniTab fajlove. Pregledajte help sekciju paketa koje smo pominjali da biste više saznali o njima i o drugim opcijama.</p>
+<h2 id="zadaci-">ZADACI 👇</h2>
+<ol>
+<li>
+<p>Pregledajte stranicu otvorenih podataka <a href="https://data.gov.rs/">https://data.gov.rs/</a> i pronađite temu koja vas zanima.</p>
+</li>
+<li>
+<p>Pogledajte setove podataka na ovoj stranici koja se nalazi u odeljku: <a href="https://data.gov.rs/sr/datasets/podatsi-o-saobratshajnim-nezgodama-po-politsijskim-upravama-i-opshtinama/">saobracaj</a>. Razmislite koja pitanja možete postaviti na osnovu ovih podataka.</p>
+</li>
+</ol>
+<hr>
+<p>© 2019 <a href="https://sisteranalyst.org">Siste Analyst</a></p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/sr/module1/datatypes/" title="Tipovi podataka"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/sr/module2/" title="Modul 2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1583944929"></script>
+    <script src="/js/perfect-scrollbar.min.js?1583944929"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1583944929"></script>
+    <script src="/js/jquery.sticky.js?1583944929"></script>
+    <script src="/js/featherlight.min.js?1583944929"></script>
+    <script src="/js/highlight.pack.js?1583944929"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1583944929"></script>
+    <script src="/js/learn.js?1583944929"></script>
+    <script src="/js/hugo-learn.js?1583944929"></script>
+
+    <link href="/mermaid/mermaid.css?1583944929" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1583944929"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105947713-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
