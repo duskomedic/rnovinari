@@ -6,14 +6,14 @@ output:
 weight: 1
 ---
 
-### How do we do it? 🤔
+**How do we do it?** 🤔
 
-![Red variant](/day2/DataWrangling/images/Program_HW.png?width=40pc)
+![](/day2/DataWrangling/images/Program_HW.png?width=40pc)
 
 This diagram is taken from the [R for Data Science](https://r4ds.had.co.nz/) book by [Garrett Grolemund](https://twitter.com/statgarrett
 ) and [Hadley Wickham](https://twitter.com/hadleywickham), which it is a great resource for learning R. There is a whole community built around it and you could join it and start learning together: [R4DS online learning community](https://www.rfordatasci.com/).
 
-### Dataset
+**Dataset**
 
 To learn and practise how to organise data we will use a `gapminder` data set available from the `gapminder` package in R. This dataset is put into R by [Jennifer Bryan](https://jennybryan.org/) from a tank of data sets available from [Gapminder](https://www.gapminder.org).
 
@@ -21,7 +21,7 @@ To learn and practise how to organise data we will use a `gapminder` data set av
 
 You can see Hans in action in this [BBC documentary](https://www.bbc.co.uk/programmes/p02q33dg) [The joy of Stats](https://www.youtube.com/watch?v=cdf0k545yDA) available on [YouTube](https://www.youtube.com).
 
-##### Gapminder Data
+**Gapminder Data**
 
 For each of 142 countries, the package provides values for life expectancy, GDP per capita, and population, every five years, from 1952 to 2007.
 
@@ -65,7 +65,7 @@ dim(gapminder)
 head(gapminder, n=10)
 ```
 
-Can you tell what each of the two functions does⁉️
+Can you tell what each of the two functions does?! 
 
 Do we have the information about the structure of the data? 🤔 We can examine the structure using <span style="color:red">`str()`</span> function, but the **output could look messy** and hard to follow if the data set is big. 🤪
 
@@ -73,7 +73,9 @@ Do we have the information about the structure of the data? 🤔 We can examine 
 str(gapminder) 
 ```
 
-#### The `dplyr` Package
+---
+
+**The `dplyr` Package**
 
 The <span style="color:red">**`dplyr`**</span> provides a “grammar” (the verbs) for data manipulation and for operating on data frames in a tidy way. The key operator and the essential verbs are:
 
@@ -102,7 +104,9 @@ glimpse(gapminder)
 
 Now we have the `dplyr` package uploaded, let us learn its verbs. 😇
 
-#### The pipeline operater: <span style="color:red">`%>%`</span>
+---
+
+**The pipeline operater:** <span style="color:red">`%>%`</span>
 
 **Left Hand Side (LHS)**   <span style="color:red">`%>%`</span>    **Right Hand Side (RHS)**
 
@@ -118,7 +122,9 @@ The "pipe" **passes the result of the *LHS as the 1st operator argument of the f
 
 <span style="color:red">`%>%`</span> is very practical for chaining together multiple <span style="color:red">`dplyr`</span> functions in a sequence of operations.
 
-#### Pick variables by their names: <span style="color:red">`select()`</span>,
+---
+
+**Pick variables by their names:** <span style="color:red">`select()`</span>,
 
 ```{r, out.width = "450px", echo=FALSE}
 knitr::include_graphics("images/select().png")
@@ -136,13 +142,15 @@ knitr::include_graphics("images/select().png")
 
 - <span style="color:red">`one_of(x)`</span> => every name that appears in x, which should be a character vector.
 
-##### 👉 Practice ⏰💻: Select your variables 
+---
+
+👉 Practice ⏰💻: Select your variables 
 
 1) that ends with letter `p`
 
 2) starts with letter `co`. Try to do this selection using base R.  
 
-##### 😃🙌 Solutions:
+😃🙌 Solutions:
 
 ```{r, echo = TRUE}
 gm_pop_gdp <- select(gapminder, ends_with("p"))
@@ -159,20 +167,24 @@ gm_cc <- gapminder[c("country", "continent")]
 
 but it's less intuitive and often requires more typing. 
 
-#### Create new variables of existing variables: <span style="color:red">`mutate()`</span>
+---
+
+**Create new variables of existing variables:** <span style="color:red">`mutate()`</span>
 
 ```{r, out.width = "400px", echo=FALSE}
 knitr::include_graphics("images/mutate().png")
 ```
 
-It would allow you to add to the data frame `df` a new column, `z`, which is the multiplication of the columns `x` and `y`: `mutate(df, z = x * y)`.
+It will allow you to add to the data frame `df` a new column, `z`, which is the multiplication of the columns `x` and `y`: `mutate(df, z = x * y)`.
 If we would like to observe `lifeExp` measured in months we could create a new column `lifeExp_month`: 
 ```{r, echo = TRUE}
 gapminder2 <- mutate(gapminder, LifeExp_month = lifeExp * 12) 
 head(gapminder2, n = 2)
 ```
 
-#### Pick observations by their values: <span style="color:red">`filter()`</span>
+---
+
+**Pick observations by their values:** <span style="color:red">`filter()`</span>
 ```{r, out.width = "450px", echo=FALSE}
 knitr::include_graphics("images/filter().png")
 ```
@@ -189,7 +201,9 @@ There is a set of logical operators in **R** that you can use inside `filter()`:
 - `is.na(x)`:  Is `NA`
 - `!is.na(x)`: Is not `NA`
 
-##### 👉 Practice ⏰💻: Filter your data
+---
+
+👉 Practice ⏰💻: Filter your data
 
 Use `gapminder2` `df` to filter:
 
@@ -203,7 +217,7 @@ Don't forget to **use `==` instead of `=`**! and
 Don't forget the quotes **`""`**
 
 
-##### 😃🙌 Solutions:
+ 😃🙌 Solutions:
 ```{r, echo = TRUE}
 gapmEU <- filter(gapminder2, continent == "Europe") 
 head(gapmEU, 2)
@@ -218,7 +232,9 @@ head(gapmEU21c, 2)
 filter(gapminder2, lifeExp > 80)
 ```
 
-#### Reorder the rows: <span style="color:red">`arrange()`</span>
+---
+
+**Reorder the rows:** <span style="color:red">`arrange()`</span>
 is used to reorder rows of a **d**ata **f**rame (df) according to one of the variables/columns.
 
 ```{r, out.width = "300px", echo=FALSE}
@@ -229,7 +245,9 @@ knitr::include_graphics("images/arrange().png")
 
 - If you pass a factor variable, **R** will rearrange the rows according to the order of the levels in your factor (running `levels()` on the variable reveals this order).
 
-##### 👉 Practice ⏰💻: Arranging your data
+---
+
+ 👉 Practice ⏰💻: Arranging your data
 1) Arrange countries in `gapmEU21c` `df` by life expectancy in ascending and descending order.
 
 2) Using `gapminder df`
@@ -237,7 +255,7 @@ knitr::include_graphics("images/arrange().png")
   
   - Find the records with the largest life expectancy.
 
-##### 😃🙌 Solution 1):
+ 😃🙌 Solution 1):
 ```{r, echo = TRUE}
 gapmEU21c_h2l <- arrange(gapmEU21c, lifeExp)
 head(gapmEU21c_h2l, 2)
@@ -245,7 +263,7 @@ gapmEU21c_l2h <- arrange(gapmEU21c, desc(lifeExp)) # note the use of desc()
 head(gapmEU21c_l2h, 2)
 ```
 
-##### 😃🙌 Solution 2):
+ 😃🙌 Solution 2):
 ```{r, echo = TRUE}
 arrange(gapminder, pop)
 ```
@@ -254,7 +272,7 @@ arrange(gapminder, pop)
 arrange(gapminder, desc(lifeExp))
 ```
 
-#### Collapse many values down to a single summary: <span style="color:red">`summarise()`</span>
+**Collapse many values down to a single summary:** <span style="color:red">`summarise()`</span>
 
 ```{r, out.width = "450px", echo=FALSE}
 knitr::include_graphics("images/summarise().png")
@@ -279,13 +297,15 @@ The syntax of summarise() is simple and consistent with the other verbs included
 |           | `max(x)`                | Max of vector x                |
 |           | `abs(x)`                | Absolute value of a number x   | 
 
-##### 👉 Practice ⏰💻: Use `summarise()`:
+---
+
+👉 Practice ⏰💻: Use `summarise()`:
 
 1) to print out a summary of gapminder containing two variables: max_lifeExp and max_gdpPercap.
 
 2) to print out a summary of gapminder containing two variables: mean_lifeExp and mean_gdpPercap.
 
-##### 😃🙌 Solution: Summarise your data
+😃🙌 Solution: Summarise your data
 
 ```{r, echo = TRUE}
 summarise(gapminder, max_lifeExp = max(lifeExp), max_gdpPercap = max(gdpPercap))
@@ -295,7 +315,9 @@ summarise(gapminder, max_lifeExp = max(lifeExp), max_gdpPercap = max(gdpPercap))
 summarise(gapminder, mean_lifeExp = mean(lifeExp), mean_gdpPercap = mean(gdpPercap))
 ```
 
-#### Subsetting: <span style="color:red">`group_by()`</span>
+---
+
+**Subsetting:** <span style="color:red">`group_by()`</span>
 
 dplyr's `group_by()` function enables you to group your data. It allows you to create a separate df that splits the original df by a variable.
 
@@ -310,11 +332,13 @@ The function `summarise()` can be combined with `group_by()`.
 |           | n_distinct()	          | Count the number of distinct observations |
 
 
-##### 👉 Practice ⏰💻: Subset your data
+---
+
+👉 Practice ⏰💻: Subset your data
 
 1) Identify how many countries are given in gapminder data for each continent.
 
-##### 😃🙌 Solution: 
+😃🙌 Solution: 
 
 ```{r, echo = TRUE, eval = TRUE,}
 gapminder %>%
@@ -322,17 +346,19 @@ gapminder %>%
      summarise(n_distinct(country))
 ```
 
-#### Let's `%>%` all up!
+---
 
-You can try to get into a habit of using a shortcut for the pipe operator 
+**Let's `%>%` all up!**
+
+You can try to get into the habit of using a shortcut for the pipe operator 
 ```{r, out.width = "450px", echo=FALSE, fig.align = 'center'}
 knitr::include_graphics("images/pipe_short_cut.png")
 ```
 
-##### 🗣👥 Confer with your neighbours: 
+ 🗣👥 Confer with your neighbours: 
 What relationship do you expect to see between population size (`pop`) and life expectancy (`lifeExp`)?
 
-**Look what this code produces**
+*Look what this code produces*
 
 ```{r, echo = TRUE, eval = TRUE, fig.height = 5, fig.width = 6, fig.align = 'center'}
 gapminder_pipe <- gapminder %>%
@@ -341,7 +367,9 @@ gapminder_pipe <- gapminder %>%
 plot(gapminder_pipe$pop_e6, gapminder_pipe$lifeExp, cex = 0.5, col = "red")
 ```
 
-#### `tidyr`
+---
+
+**`tidyr`**
 
 The `tidyr` can help you to create **tidy data**. Tidy data is data where:
 
@@ -355,13 +383,13 @@ knitr::include_graphics("images/tidyr.png")
 
 The `tidyr` package embraces the **principles of tidy data** and provides the standard key functionalities to organise data values within a dataset.
 
-[Hadley Wickham](http://hadley.nz/) the author of the `tidyr` package talks in his paper [Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf) about the importance of data cleaning process and structuring datasets to facilitate data analysis.
+[Hadley Wickham](http://hadley.nz/) the author of the `tidyr` package talks in his paper [Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf) about the importance of the data cleaning process and structuring datasets to facilitate data analysis.
 
 Real datasets, that you are most likely to download from <https://data.gov.rs/> or any other open source data platform, would often violate the three precepts of tidy data in all kinds of different ways:
 
 - Variables would not have their names and column headers are values.
 -	A number of variables are stored in one column
--	A single variable that is stored in several columns 
+-	A single variable is stored in several columns 
 -	Same information stored multiple times as different variables
  
 to name a few.
@@ -418,7 +446,7 @@ Those names look very messy. We could use function from [`stringr`](https://stri
 
 ```{r}
 ## If you don't have stringr installed yet, uncomment and run the line below
-#install.packeges("stringr")
+#install.packages("stringr")
 library(stringr)
 new_no2$place <- new_no2$place %>% 
     str_sub(end = -5)
@@ -428,10 +456,10 @@ new_no2 %>%
     summarise(n())
 ```
 
-It still doesn't look right. 😟 This could be a tedious job. 😥 It is no wonder why many data analysts grumble about time spent on the process of cleaning and preparing the data. It could be a very long and time consuming process, but the more you do it and more experience you gain the easier and less painful it gets.
+It still doesn't look right. 😟 This could be a tedious job. 😥 It is no wonder that many data analysts grumble about time spent on the process of cleaning and preparing the data. It could be a very long and time consuming process, but the more you do it and the more experience you gain the easier and less painful it gets.
 
 
-Perhaps, you can try to explore other available packages in R that could help you with organising your data into your ideal format. To give you an idea we will show you how it could easily be done when using `forcats::fct_recode()` function.
+Perhaps, you can try to explore other available packages in R that could help you with organising your data into your ideal format. To give you an idea we will show you how it can easily be done when using `forcats::fct_recode()` function.
 
 ```{r}
 ## If you don't have forcats installed yet, uncomment and run the line below
@@ -454,13 +482,15 @@ glimpse(new_no2)
 By now, you should have gained enough knowledge in using R to give you the necessary confidence to start exploring other functions of the [`tidyr`](https://tidyr.tidyverse.org/) package. You should not stop there, but go beyond and explore the whole of the [`tidyverse`](https://www.tidyverse.org/) opinionated collection of R packages for data science. 😇🎶
 {{% /notice %}}
 
-To learn more about **tidy data in r** chgeck [Data Tidying](https://garrettgman.ithuthe b.io/tidying/) section from the famous [Data Science with R](https://garrettgman.github.io) by [Garrett Grolemund](https://resources.rstudio.com/authors/garrett-grolemund)
+To learn more about **tidy data in r** check [Data Tidying](https://garrettgman.ithuthe b.io/tidying/) section from the famous [Data Science with R](https://garrettgman.github.io) by [Garrett Grolemund](https://resources.rstudio.com/authors/garrett-grolemund)
 
 {{% notice tip %}}
 Have you tried learning data science by posting your questions and discussing it with other people within the R community? 👥💻📊📈🗣 [RStudio Community](https://community.rstudio.com)
 {{% /notice %}}
 
-## YOUR TURN 👇
+---
+
+**YOUR TURN 👇**
 
 Practise by doing the following set of exercises:
 
@@ -478,11 +508,13 @@ Practise by doing the following set of exercises:
   
   v) Write a short report on what visualisation you think would be interesting to produce for this `weatherAUS` dataset and why?
 
-##### Useful Links
+---
+
+**Useful Links**
 
 [Data Wrangling cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
 [Data Transformation with dplyr cheat sheet](https://4.files.edl.io/b9e2/07/12/19/142839-a23788fb-1d3a-4665-9dc4-33bfd442c296.pdf)
 
 -----------------------------
-© 2019 [Sister Analyst](https://sisteranalyst.org)
+© 2020 Tatjana Kecojevic

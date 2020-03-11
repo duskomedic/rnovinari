@@ -47,11 +47,6 @@
   </url>
   
   <url>
-    <loc>/en/module3/visualisation/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/en/module1/installr/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
@@ -67,6 +62,11 @@
   
   <url>
     <loc>/en/module6/blogdown/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/module3/visualisation/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
