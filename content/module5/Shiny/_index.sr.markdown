@@ -1,0 +1,61 @@
+---
+date: "2016-04-09T16:50:16+02:00"
+title: Shiny
+output: 
+  learnr::tutorial
+weight: 1
+---
+
+## Shiny: Kreiranje web aplikacija 
+
+<img src="images/Shiny.png" width="150px" />
+
+#### Šta je Shiny App?
+
+**Shiny** je paket [RStudija](https://www.rstudio.com) koji se koristi **za kreiranje interaktivnih web aplikacija** u R-u. 
+
+Možete da ih postavite (hostujete) kao samostalne aplikacije na veb stranici ili da ih embedujete u [R Markdown](https://rmarkdown.rstudio.com) dokumente ili da napravite tabele [dashboards](http://rstudio.github.io/shinydashboard/). Takođe, možete da vaše stranice dodatno razvijete upotrebljavajući [CSS themes](http://rstudio.github.io/shinythemes/), [htmlwidgets](http://www.htmlwidgets.org), i [JavaScript actions](https://github.com/daattali/shinyjs/blob/master/README.md).
+
+Shiny kombinuje snagu R-a sa interaktivnošću modernog veb-a.
+
+Shiny aplikacije je lako napraviti. Nije vam potrebno znanje veb pragramera.
+
+### Izgradnja Shiny aplikacije, korak po korak
+
+##### U nastavku ćemo slediti korake date u Xaringan <span style="color:orangered">prezentaciji koja je dostupna [ 👉 ovde](https://tanjakec.github.io/LearnShiny/How_2_Shine.html)</span>
+
+{{% notice note %}}
+Možete preuzeti GitHub repozitorijum kreiran za savladavanje ovog dela kursa koji sadrži i [**xaringan**](https://github.com/yihui/xaringan) prezentaciju i aplikaciju koja se koristi u samoj prezentaciji sa sledeće stranice: <https://github.com/TanjaKec/LearnShiny>
+{{% /notice %}}
+
+#### 💪 Evo ga izazov: 
+
+Sećate li se našeg `dplyr` izazova u kojem smo koristili funkciju `group_by` da izračunamo medijanu životnog veka za 2007. godinu po kontinentima iz `gapminder` podataka i da je trebalo da ih grafički prikažemo?
+
+Možete li da kreirate Shiny aplikaciju za ovu vizuelizaciju?
+
+<img src="images/GapminderShinyApp.png" width="750px" />
+Pogledajte sledeću aplikaciju [this 👉😎](https://tatjana.shinyapps.io/Gapminder/)
+
+
+**Korisni linkovi:** 
+
+[Rstudio Shiny tutorial](https://shiny.rstudio.com/tutorial/)
+
+Look for inspiration at [rstudio shiny gallery](https://shiny.rstudio.com/gallery/)
+
+Getting Started with Shiny by [**CODING CLUB**](https://ourcodingclub.github.io)
+<https://ourcodingclub.github.io/2017/03/07/shiny.html>
+
+Follow Dean's blog: <https://deanattali.com>
+
+An example: [Cancer Research UK Cambridge Institute](https://www.cruk.cam.ac.uk/core-facilities/bioinformatics-core/shiny-apps)
+
+Go further: [Shiny Dashboard](https://rstudio.github.io/shinydashboard/)
+
+### Sretno sa R programiranjem! 📢 
+
+
+
+-----------------------------
+© 2019 [Sister Analyst](https://sisteranalyst.org)
