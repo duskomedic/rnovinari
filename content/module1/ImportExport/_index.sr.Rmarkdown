@@ -1,0 +1,151 @@
+---
+date: "2016-04-09T16:50:16+02:00"
+title: Učitavanje podataka u R
+output: 
+  learnr::tutorial
+weight: 8
+---
+
+Učitavanje podataka je prva velika stvar u upravljanju podacima u R-u. 
+
+Najverovatnije je da već imate iskustvo u pregledanju, organizovanju i istraživanju podataka u Excel-u.
+
+Otvaranje podataka u R-u je prilično jednostavno, ali njihova priprema za analizu  iziskuje više truda i promišljanja. Dobro pretpostavljate da pomoću komandi iz glavnog menija **File | Import Dataset**  u R studiju možete učitati vaše podatke (za više pogledajte [Importing Data with RStudio](https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio)), međutim mi ćemo to uraditi na pravi način upotrebom komande.
+
+U R možete učitati sledeće tipove podataka:
+
+- (Tab, Blank space) Delimited Text
+- CSV fajlove
+- Excel fajlove
+- JSON 
+- SAS
+- STATA
+- MiniTab
+- SPSS...
+
+U ovom poglavlju, pokazaćemo vam kako da pristupite uobičajenim tipovima podataka. Jednom kada počnete da se igrate sa podacima i da ih menjate na način koji vam odgovara za vašu analizu, biće vam takođe zanimljivo da istražite mogućnost da sami kreirate različite tipove podataka. Ovde, ćemo se ipak fokusirati na osnovnu funkcionalnost funkcije `read` u R-u. 
+
+### Osnovne funkcije u R-u (Base R)
+
+Najednostavnija forma podataka je [text file](https://en.wikipedia.org/wiki/Text_file). Text fajl može da pročita bilo koji operativni sistem kao i veliki broj različitih statističkih programa. Čuvanje vaših podataka u tekst fajlu čini vaše podatke lako dostupnim svima. Ukoliko imate tekst fajl sa podacima koje želite da koristite, možete ih jednostavno učitati uz pomoć osnovne funkcije iz **baze R ** - `read.table()`
+
+Sledeća naredba čita fajl u tabelarnom formatu i kreira data frame:
+
+```
+# Read tabular data into R
+df_txt <- read.table(file_name.txt, header = FALSE)
+```
+
+Postoji mnogo paketa koji vam omogućavaju učitavanje podataka u R, a mi ćemo početi od `CSV` fajlova, jer su oni najčešći.
+
+Zarezom odvojeni fajlovi je najčešći način snimanja podataka u tabelama, jer oni nisu zaštićeni i ne traže licencirane programe za njihovo otvaranje. Uvoz `CSV` fajla je deo osnovnih funkcija u R-u  i to je funkcija `read.csv()`. 
+
+
+##### `read.csv()`
+
+Idite na internet stranicu <https://data.gov.rs/> otvorenih podataka Srbije. Obratićemo posebnu pažnju na fajl [Kvalitet vazduha 2017: pm2.5_2017.csv](https://data.gov.rs/sr/datasets/kvalitet-vazduha-2017/) i njega ćemo učitati u R.
+
+Ovaj fajl nećemo snimiti na naše računare, već ćemo ga učitati u R direktno sa interneta koristeći sledeći link.
+
+```{r}
+df_csv <- read.csv("http://data.sepa.gov.rs/dataset/ca463c44-fbfa-4de9-9a75-790995bf2830/resource/62983880-6fcd-4c65-b57c-fd4de5c367c8/download/pm2.5_2017.csv", stringsAsFactors = FALSE)
+head(df_csv, 10)
+```
+Možete uvesti ove podatke i na drugi način, tako što ćete ih snimiti u svoj radni direktorijum.
+
+Preuzećemo fajl ["Kvalitet vazduha 2017-SO2: 2017-SO2.csv"](https://data.gov.rs/sr/datasets/r/f425e6a5-95ae-4e2b-ab73-1d0b293b4522)
+Vodite računa da snimite fajl u radni direktorijum vašeg R projekta pre nego što izvršite sledeći kod:
+
+```
+df_csv <- read.csv("2017-so2.csv", stringsAsFactors = FALSE, fileEncoding = "latin1")
+```
+
+{{% notice info %}}
+Ponovo pokrenite kod prikazan gore, ali ovog puta bez argumenta `stringsAsFactors` tako što ćete ga ukloniti ili staviti posle znaka jednakosti TRUE. Recite nam kakva je razlika pre i posle? Šta mislite zašto koristimo argument `fileEncoding`?
+{{% /notice %}}
+
+Šta mislite o setu podataka koji ste učitali? 🤔
+
+#### Upotreba readr::read_csv()
+
+`readr` je paket koji čita pravougaone podatke znatno brže od `read.csv()` funkcije u base R-u. Druga razlika u odnosu na `read.csv()` funkciju je da učitava karaktere kao stringove, a ne kao faktore.
+
+Da biste videli kako je lako koristiti druge pakete za učitavanje podataka u R-u, ilustrovaćemo to upotrebom read_csv() funkcije.
+
+```
+## If you don't have readr installed yet, uncomment and run the line below
+# install.packages("readr")
+library(readr)
+df_csv <- read_csv("air_quality_by_station.csv")
+df_csv
+```
+
+{{% notice note %}}
+Proverite `readr::read_delim()` funkciju za efikasnije ograđivanje podataka iz fajlova.
+{{% /notice %}}
+
+### Učitavanje excel fajlova sa `readxl`
+
+Učitavanje podataka iz Excel fajlova nije tako jednostavno, s obzirom da ti fajlovi mogu sadržati više šitova (sheets). Fokusiraćemo se na upotrebu readxl paketa s obzirom da se on do sada pokazao kao najefikasniji.
+
+{{% notice warning %}}
+Da biste pristupili podacima iz Excel shita ne možete jednostavno samo kopirati i umetnuti URL tog fajla. Taj fajl morate prethodno snimiti.
+{{% /notice %}}
+
+Sada ćemo snimiti podatke iz Excel fajla sa stranice otvorenih podataka [data.gov.rs](https://data.gov.rs/) o saobraćajnim nesrećama [Подаци о саобраћајним незгодама до 31.08.2019. године за територију свих ПОЛИЦИЈСКИХ УПРАВА и ОПШТИНА](https://data.gov.rs/sr/datasets/r/134b2867-8a35-4f00-ac48-1610dca177ec). 
+
+Ukoliko ne možete da otvorite fajl u Excelu da vidite koliko šitova ima taj fajl, pokušajte pročitati fajl iz R-a tako što ćete pristupiti prvom šitu uz pomoć funkcije `read_excel()`. Pre toga, proverite da li ste snimili taj fajl u radni direktorijum vašeg R projekta, i to pre nego što izvršite sledeći kod:
+
+```
+## If you don't have readxl installed yet, uncomment the line below and run it 
+#install.packages("readxl")
+library(readxl)
+df_xl <- read_excel("nez-opendata-20199-20190925.xlsx", sheet = 1)
+```
+
+Kako vam se čini?
+
+{{% notice warning %}}
+Ljudi obično ulepšavaju i formatiraju svoje excel fajlove, a to može prouzrokovati probleme kada se učitavaju u R.
+{{% /notice %}}
+
+Istražite argumente funkcije `read_excel()` poput `skip` argumenta sa kojim možete da specifikujete minimalni broj redova koje ne želite da učitate iz fajla.
+
+### Učitavanje podataka upotrebom `jsonlite`
+
+Ukoliko želite da učitate JSON fajl u R koristićete `jsonlite` paket. Potrebno je da ovoj funkciji obezbedite lokalnu putanju do fajla, ukoliko se on već nalazi na vašem računaru ili jednostavno koristeći URL ukoliko želite da ga učitate sa interneta. 
+
+```{r}
+## If you don't have readxl installed yet, uncomment the line below and run it 
+#install.packages("jsonlite")
+library(jsonlite)
+my_url <-"https://data.gov.rs/sr/datasets/r/41c2fe91-4ea1-4a64-b33c-183665ea6ab3"
+polen <- fromJSON(my_url)
+```
+
+Pogledajte sad strukturu `polen`! 😰
+
+```{r}
+str(polen)
+names(polen)
+```
+
+Napomena: komanda `polen$results` je data frame koji sadrži listu koncentracija (concentrations) kao svoj element.
+
+Uf! 😳 JSON fajlovi nisu baš uredni 😱 Oni su često ugnježdeni, povezani -> Shvatili ste: Ovo je vrlo neuredno! 😫 Dakle, ostavićemo ih takve kakvi jesu. 😬 IAko vam je potrebno da saznate više o učitavanju JSON fajlova u R to možete dodatno da istražite preko funckionalnosti paketa jsonlite ili da pronađete stranicu [Getting started with JSON and jsonlite](https://cran.r-project.org/web/packages/jsonlite/vignettes/json-aaquickstart.html). Blog post [Working with JSON data in very simple way](https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89) autora [Kan Nishida](https://blog.exploratory.io/@kanaugust) ima odlične primere kako možete da koristite ovaj format u R-u. 
+
+### Drugi formati podataka
+
+Da biste ubrzali proces učitavanja txt, csv fajlova možete da koristite `data.table::fread()` funkciju. Potrebno je da za ovu funkciju samo unesete ime fajla u kome se nalaze podaci koje želite da učitate, a  `fread()` će pokušati da ih učita na odgovarajući način. Pogledajte ovaj blog [Getting Data From An Online Source](https://www.r-bloggers.com/getting-data-from-an-online-source/) da biste videli još neke ideje za učitavanje podataka. 
+
+R zajedno sa odgovarajućim paketima možete koristiti i za učitavanje drugih formata podataka. Paket haven ima funkcije za učitavanje SAS, SPSS i Stata fajlova ili možete da koristite foreign paket za MiniTab fajlove. Pregledajte help sekciju paketa koje smo pominjali da biste više saznali o njima i o drugim opcijama.
+
+
+## ZADACI 👇
+
+1) Pregledajte stranicu otvorenih podataka <https://data.gov.rs/> i pronađite temu koja vas zanima.
+
+2) Pogledajte setove podataka na ovoj stranici koja se nalazi u odeljku: [saobracaj](https://data.gov.rs/sr/datasets/podatsi-o-saobratshajnim-nezgodama-po-politsijskim-upravama-i-opshtinama/). Razmislite koja pitanja možete postaviti na osnovu ovih podataka.
+
+-----------------------------
+© 2019 [Siste Analyst](https://sisteranalyst.org)
