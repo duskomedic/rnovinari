@@ -1,0 +1,357 @@
+---
+date: "2016-04-09T16:50:16+02:00"
+title: Osnovni koncepti statistike
+output: 
+  learnr::tutorial
+weight: 6
+---
+
+
+U ovom odeljku upoznaćemo vas sa nizom važnih koncepata koji vam omogućuju da istražujete svoje podatke sa  **sledećim ciljem** 
+
+* da sumirate i razumete glavne karakteristike varijabli (promenjivih) koje se nalaze u podacima, i, 
+* da istražujete prirodu međusobnih odnosa između varijabli (promenjivih) koje postoje.
+
+Za početak važno je da razumete prirodu podataka, da razumete **šta su podaci**.
+
+* Šta je **populacija**?
+* Šta je **uzorak**?
+
+Znate li koje su definicije populacije i uzorka?  😁
+
+*Populacija je skup svih članova koji imaju određenu, zajedničku karakteristiku; skup svih ljudi ili stvari koji su od interesa u određenom istraživanju.*  
+
+U statistici termin za skup svih podataka naziva se **populacija**. Ovo podrazumeva **“savršenu informaciju”**, tj. da imate informacije o svim članovima skupa koje istražujete, međutim, u stvarnim istraživanjima to gotovo nikad nije slučaj, jer je vrlo teško doći do podataka o celoj populaciji. Zato analitičari uzimaju uzorak iz populacije i istražujući uzorak dolaze do zaključaka (**inferences**) važnih za celu populaciju.
+
+Ukoliko su rezultati bilo koje analize **zasnovani na uzorku populacije**, onda da bi taj uzorak bio validan, neophodno je da se izabere na korektan način i da reflektuje strukturu populacije.
+
+Proces uzorkovanja da bi se došlo do reprezentativnog uzorka je veliko područje stastičkog istraživanja. Najjednostavniji model reprezentativnog uzorka je „slučajno uzorkovanje“ (**"random sample"**):
+
+*Uzorak izabran na način da svaki od elemenata u populaciji ima iste šanse da bude uključen u uzorak.*
+
+Uzorkovanjem, informacije su *“nesavršene”* i zavise od pojedinačno odabranog uzorka. **Glavni problem** upotrebe uzoraka je da se donose validni zaključci o samoj populaciji a da se uzme u obzir i sama '*greška uzorkovanja*'.
+
+Rad sa reprezentativnim uzorcima ne treba da se potcenjuje. Dobar način da se proceni njihov značaj je da se sagledaju posledice upotrebe nereprezentativnih uzoraka. Knjiga autora [Darrell Huff](https://en.wikipedia.org/wiki/Darrell_Huff) [How to Lie with Statistics](https://en.wikipedia.org/wiki/How_to_Lie_with_Statistics), koju je objavio [Penguin](https://www.penguin.co.uk/) sadrži nekoliko anegdota o nereprezentativnim uzorcima i posledicama ako se oni tretiraju kao reprezentativni.
+
+#### Data analiza na uzorku podataka
+
+Podaci se uobičajeno sakupljaju zato što je prethodno uočen nekakav problem, a u nadi da će sakupljeni podaci biti od koristi u analizi tog problema. Podaci se obično  daju analitičarima na ovaj način sa zahtevom da se oni izuče i analiziraju.
+
+Na početku svog rada, ili analize bilo kog podatka, analitičari bi trebalo da:
+
+i)	se uvere da dobro razumeju problem, i da su ciljevi istraživanja jasno postavljeni. 
+
+ii)	se uvere da su pojedinačne promenjive (varijable) jasne, pre bilo kakve analize. 
+
+ <span style="color:red">Analitičar mora  da razume podatke pre nego što pokuša bilo kakvu analizu.</span>
+
+Da sumiramo, kada počinjete sa analizom <span style="color:blue">morate upitati sebe</span>:
+
+i) **Da li razumem problem** koji se istražuje i da li su mi ciljevi istraživanja jasni? 
+*Jedini način da se uverite da li je to tako jeste da sebi postavljate pitanja i to nastavite da radite sve dok ne dođete do zadovoljavajućeg odgovora koje želite da dobijete.*
+
+ii) Da li razumem tačno šta svaka od **varijabli (promenjivih) meri ili beleži?**
+
+
+### Opisivanje promenjivih (varijabli)
+
+Na početku treba da istražite karakteristike svake pojedinačne varijable u setu podataka. 
+
+Nastavak rada zavisi do tipa varijabli (promenjivih) koje želite da istražite.
+
+**Klasifikacija tipova varijabli**
+
+Varijable (promenjive) mogu se podeliti u sledeće dve široke grupe:
+
+-	**Kategoričke varijable (Attribute variables)**: sadrže podatke kategorisane u jasno razgraničene grupe po određenoj karakteristici ili osobini (atributu). 
+  * Pol
+  * Dani u nedelji
+  
+Uobičajeno je da svakoj osobini (atributu) date numerički kod.Zbog toga ih još nazivamo kodirane varijable. S obzirom da ih tako lako možemo upotrebljavati u kodu pripremljenog za njihovo razumevanje. Na primer ukoliko je reč o muškom polu njega ćemo obeležiti na primer sa brojem 1, ženski pol sa brojem 2, itd.
+
+-	**Numeričke varijable (Measured variables)**: sadrže podatke koji su rezultat merenja ili prebrojavanja, i nalaze se na nekoj numeričkoj skali: prikazuju se kao numerički izrazi.  
+  * Težina,
+  * Starost u godinama,…
+
+Postoje dve vrste numeričkih varijabli, kontinuirane promenjive, koje su merene na kontinuiranoj skali, na primer visina neke osobe. Ove varijable zovemo *kontinuirane varijable (continuous variable)*. Drugu vrstu varijabli zovemo *diskretne varijable (discrete variable)*. One su rezultat brojanja, na primer, broj putnika u određenom autobusu. 
+
+
+### Koncept statističke distribucije
+
+**Koncept statističke distribucije ključan je za svaku statističku analizu.**
+
+Ovaj koncept se odnosi na populaciju i pretpostavlja da imamo savršene informacije, zapravo da je tačan sastav populacije poznat. 
+
+Ideje i koncepti istraživanja podataka o populaciji daju nam okvir kako da istražimo podatke koje imamo iz uzorka. Analitičari klasifikuju varijable (promenjive) ili kao kategoričke (attribute) ili kao numeričke (measured) i proveravaju statističku distribuciju pojedinačnih varijabli  u podacima iz uzorka. 
+U slučaju kategoričkih (attribute) varijabli potrebno je da istražimo broj pojedinačnih pojava svakog atributa, dok kod numeričkih varijabli računamo glavne pokazatelje deskriptivne statistike, srednju vrednost, širinu i simetriju distribucije podataka. 
+
+**kategoričke:**
+```{r tidy=FALSE, echo=FALSE}
+barplot(c(5,9),
+	names.arg=c("Category 1","Category 2"),
+	ylim=c(0,10),
+	col=c("#CDB79E","darkolivegreen3"),
+	ylab="Count of items")
+```
+
+**numeričke:**
+```{r tidy=FALSE, echo=FALSE}
+x<-seq(-3,3,length=200)
+s = 1
+mu = 0
+y <- (1/(s * sqrt(2*pi))) * exp(-((x-mu)^2)/(2*s^2))
+plot(x,y, type = "l", lwd = 2, axes = FALSE, xlab = "", ylab = "")
+axis(1, at = -3:3, labels = c("-3", "-2", "-1std", "mean", "1std", "2", "3"))
+abline(v = 0, col="red", lwd=2, lty=2)
+abline(v = c(-1,1), col="blue", lwd=2, lty=3)
+```
+
+#### Šta nam distribucija pokazuje?
+
+Sa kategoričkim varijablama je lako. Posmatramo frekvenciju (učestalost), tj. broj pojavljivanja nekog podatka u svakoj pojedinačnoj varijabli, kao što je prikazano na grafikonu gore.
+
+Kod numeričkih (merljivih) varijabli površina ispod krive od jedne do druge vrednosti meri relativni udeo podataka populacije koji imaju vrednost rezultata u tom rasponu. 
+
+Statistička distribucija (raspodela) za numeričku varijablu može se sumirati sa sledeća tri ključna opisa:
+
+-	<span style="color:red">Centar</span> distribucije;
+-	<span style="color:red">Širina</span> distribucije;
+-	<span style="color:red">Simitrija</span> distribucije
+
+<span style="color:red">**Uobičajene mere sredine (centra) distribucije**</span> su **srednja vrednost (aritmetička vrednost)** i **medijana**. Vrednost medijane varijable definiše posebna vrednost raspodele tako da je polovina vrednosti podataka manja od te srednje vrednosti, a polovina veća.  
+
+<span style="color:red">**Uobičajena mera širine**</span> distribucije su **standardna devijacija (odstupanje)** i **interkvartalna razlika**. Standardna devijacija je koren srednje vrednosti kvadratnih odstupanja od aritmetičke sredine. Konačno, standardno odstupanje je relativna mera raširenja (širine), što je veće standardno odstupanje, to je distribucija šira. Interkvartalna razlika je opseg u kojem varira srednjih 50% vrednosti podataka.
+
+Analogno medijani, moguće je definisati sledeće kvartile. Oni dele set merenja u <span style="color:red">četiri grupe</span>:
+
+* Q1	je vrednost koja deli dati set tako da se ispod nje nalazi 25%, a iznad nje 75% od ukupnog broja pojedinačnih merenja koja pripadaju tom setu.
+* Q2 	je vrednost koja deli dati set tako da se ispod nje nalazi 50%, a iznad nje 50% od ukupnog broja pojedinačnih merenja koja pripadaju tom setu. A to je upravo medijana.
+* Q3 	je vrednost koja deli dati set tako da se ispod nje nalazi 75%, a iznad nje 25% od ukupnog broja pojedinačnih merenja koja pripadaju tom setu.
+* Interkvartalna razlika je područje omeđeno brojevima Q3-Q1.
+
+Dijagram ispod prikazuje to slikovito:
+
+```{r echo=FALSE, tidy=FALSE}
+nf <- layout(mat = matrix(c(1,2),2,1, byrow=TRUE),  height = c(3,1))
+xseq<-seq(-4,4,.01)
+densities<-dnorm(xseq, 0,1)
+par(mar=c(3.1, 3.1, 1.1, 2.1))
+plot(xseq, densities, col="darkgreen",xlab="", ylab="Density", type="l",lwd=2, cex=2, main="PDF of Standard Normal", cex.axis=.8, axes = FALSE)
+axis(1, at = -4:4, labels = c("min", "-3", "Q1", "-1", "median", "1", "Q3", "3", "max"))
+abline(v = 0, col="red", lwd=2, lty=2)
+abline(v = c(-2,2), col="blue", lwd=2, lty=3)
+abline(v = c(-4,4), col="black", lwd=2, lty=3)
+boxplot(xseq, horizontal=TRUE,  outline=TRUE,ylim=c(-4,4), frame=F, col = "darkolivegreen3", width = 10)
+```
+
+🤓💡 Obično su **srednja vrednost i standardna devijacija** date zajedno kao jedan par mera lokacije i širenja, a **medijana i kvartalna razlika** kao drugi par mera.
+
+Postoji niz mera simetrije; najjednostavniji način za <span style="color:red">**merenje simetrije**</span> je poređenje srednje (aritmetičke) vrednosti i medijane. Za savršeno simetričnu distribuciju srednja vrednost i medijana biće potpuno iste. Ova ideja vodi nas definisanju Pearsonovog koeficijenta zakrivljenosti (Skewness) kao:
+
+ `Pearson's coefficient of Skewness = 3(mean - median) / standard deviation`
+
+Alternativna mera zakrivljenosti (Skewness) je kvartalna mera zakrivljenosti definisana kao:
+
+`Quartile Measure of Skewness  = [(Q1 - Q3) - (Q2 - Q1)]/(Q3 - Q1)`
+
+### Važna ključna mesta:
+
+- Šta su podaci?
+- Varijable
+- Dve vrste varijabli:
+	* Kategoričke varijable 
+  * Numeričke varijable
+
+- Koncept statističke distribucije:
+	* Primenjen na kategoričke varijable
+	* Primenjen na numeričke varijable
+- Deskriptivna statistika numeričke varijable:
+	* Mere centra
+		- Srednja (aritmetička) vrednost, medijana
+	* Mere širine:
+		- Standardna devijacija
+		- Interkvartalna razlika
+
+Deskriptivna statistika omogućava da se numerički izraze ključni parametri distribucije numeričke varijable iz uzorka.
+
+### Istraživanje odnosa između varijabli
+
+Jedan od ključnih koraka analize podataka je istraživanje odnosa između varijabli. Da bi to uradili potrebno je da dodatno **klasifikujemo promenjive** sadržane u podacima, da ih klasifikujemo kao <span style="color:red">**odzivne**</span> (response) varijable ili kao <span style="color:red">**eksplanatorne**</span>.  
+
+**Odzivna** varijabla je ona koja meri direktno ili inderektno ciljeve analize.
+
+**Eksplanatorna** varijabla je ona koja može da utiče na odzivnu varijablu.
+
+#### Bivarijatni odnosi
+
+Generalno gledano, postoje četiri različite kombinacije odzivnih i eksplanatornih varijabli. Ove četiri kombinacije su prikazane na slici dole:
+
+![Relationship](/module1/StatsConcepts/images/RelationshipMatrix.png?width=30pc)
+
+Polazna tačka <span style="color:red">istraživanja odnosa</span> između **odzivnih** i **eksplanatornih** varijabli počinje sa istraživanjem samih varijabli, definisanjem odzivne varijable ili odzivnih, i eksplanatornih varijabli.
+
+🤓💡: U velikim empirijskim istraživanjima može da postoji veći broj ciljeva, i samim tim više odzivnih varijabli. 
+
+Metod za istraživanje odnosa između odzivne varijable i eksplanatorne zavisi od tipa varijabli. Metodologija se razlikuje u zavisnosti od kombinacije ovog odnosa kao što smo već videli na prethodnoj slici. Primena neodgovarajuće metode stvara probleme. 💡⚡️😩  
+
+### Metodologija analize podataka
+
+Na početku treba da imate jasnu ideju šta je to odnos između odzivne i eksplanatorne varijable. To će vam pomoći da postavite okvir za definisanje procesa analize podataka koji će istražiti vezu i odnos između ove dve varijable, i primeniti ideje koje ste prethodno razvili. 
+
+Sledeći korak je da <span style="color:red">*upotrebite osnovnu deskriptivnu statistiku kako biste utvrdili prirodu veze između varijabli*</span>. Ovaj jednostavni pristup omogućiće vam da zaključite da li se na osnovu analize uzorka može govoriti o povezanosti, ili o nepovezanosti varijabli, ili da ovaj jednostavni pristup ne daje jasne zaključke pa je potrebna dalja sofisticiranija analiza podataka. Ovaj korak se naziva <span style="color:red">**početna analiza podataka (Initial Data Analysis)**</span> ili ponekad skraćeno <span style="color:red">**IDA**</span>.
+
+Ukoliko Početna analiza podataka potvrdi da je <span style="color:red">**Dalja analiza podataka (Further Data Analysis)**</span> (<span style="color:red">**FDA**</span>) potrebna, onda ovaj korak iziskuje jedan od sledeća dva zaključka:
+
+i) Analiza uzorka pokazuje da ne postoji veza između odzivne i eksplanatorne varijable.
+
+ili
+
+ii)	Analiza uzorka pokazuje da postoji veza između odzivne i eksplanatorne varijable.
+
+Rezultat analize je jedna od dve alternative koje su date gore. Ukoliko je rezultat da ne postoji dokaz o povezanosti, onda dalji nastavak nije potreban, s obzirom da je analiza završena.
+
+Međutim, ukoliko se pokaže suprotno tj. da je rezultat da povezanost ipak postoji, onda priroda te povezanosti između dve varijable treba da bude opisana i objašnjena.
+
+🤓💡 <span style="color:red">**Metodologija analize podataka**</span> opisana gore zahteva odgovor na sledeća ključna pitanja:
+
+Da li postoji veza između odzivne i eksplanatorne varijable na osnovu uzorka?
+ 
+Odgovor može biti jedan od sledeća dva: 
+
+i)	Nema dokaza o povezanosti
+
+ii)	Da, postoji povezanost, a ona treba dalje da se opiše.
+
+Ovaj proces može da se predstavi sledećim dijagramom:
+
+![DA Methodology](/module1/StatsConcepts/images/DAMethodology.png?width=40pc)
+
+Za bilo koju od četiri navedene situacije, analitičar treba da zna šta će sadržati Početna analiza podataka (IDA) i kako će ona da se sprovede i objasni. Ukoliko je potrebna Dalja analiza podataka, onda analitičar treba da zna kako će sprovesti i opisati Dalju analizu podataka.
+
+#### Numeričke Vs kategoričke (dva nivoa)
+
+Postoji povezanost između numeričke odzivne i kategoričke eksplanatorne varijable ukoliko srednja vrednost odzivne je zavisna od nivoa kategoričke eksplanatorne varijable.
+
+Dajemo numeričkoj odzivnoj i kategoričkoj eksplanatornoj varijabli dva nivoa, "<span style="color:red">crveni</span>" i "<span style="color:blue">plavi</span>". Ukoliko su statistička distribucija (raspodela) odzivne varijable obojene crvenom i kategoričke obojene plavom potpuno iste onda nivo kategoričke varijable nama uticaj na vrednosti odzivne, i tada nema povezanosti.
+
+Ovo možemo ilustrovati slikom dole:
+
+![MvA Methodology](/module1/StatsConcepts/images/MvAMethodology.png?width=40pc)
+
+
+#### Numerička Vs Numerička
+
+Prvi korak je da imamo jasnu ideju šta znači povezanost između numeričke vrednosti odzivne varijable i numeričke vrednosti ekplanatorne varijable. Zamislite da je populacija koju istražujemo sastavljena od velikih brojeva članova populacije, i da su na svakom članu populacije obavljena dva merenja, vrednost Y za odzivnu varijablu i vrednost X za eksplanatornu. Napravićemo grafikon za celu populaciju koji će prikazati vrednosti Y na y-osi i vrednosti X na x-osi. 
+
+Ukoliko se na grafikonu prikaže savršena linija, onda je vrlo jasna povezanost između Y i X. Tada ako znamo vrednost X lako možemo naći vrednost Y na grafikonu. Ovo nije mnogo verovatno da će se desiti u kontekstu analize podataka, s obzirom na prirodu povezanosti koja je zapravo *deterministička povezanost*. Deterministička znači da ukoliko je vrednost X poznata, onda se Y može precizno utvrditi iz povezanosti Y i X. Ono što će češće biti slučaj jeste da će i druge varijable, a ne samo X, imati uticaj na Y.
+
+Ukoliko istražujemo prirodu povezanosti između Y i X, onda je možemo predstaviti na sledeći način:
+
+`Y = f(X) + efekt` svih drugih varijabli [efekti svih ostalih varijabli uobičajeno se obeležavaju skraćeno sa e]
+
+Razmatrani model:
+
+`Y = f(X) + e`		[e predstavlja effekat svih ostalih varijabli]
+
+Uticaj na odzivnu varijablu Y može da se predstavi  kroz sledeće dve komponente:
+
+i) komponenta Y koja se moze objasniti promenama vrednosti X, [delom i zbog toga što promene X idu preko f(X)] 
+
+ii)	komponenta Y koja se može objasniti promenama vrednosti drugih faktora [deo koji nije objašnjen promenama u X]
+
+To možemo predstaviti u kraćoj formi kao ‘<span style="color:red">Varijacija u Y koja je objašnjena promenama u X</span>’ ili ‘<span style="color:red">Objašnjena varijacija</span>’ i ‘<span style="color:red">Varijacija u Y koja nije objašnjena promenama u X</span>’ ili ‘<span style="color:red">Neobjašnjena varijacija’</span>. 
+
+Na kraju, Ukupna **varijacija u Y** sastoji se od dve komponente:
+
+- Promene u Y objašnjene promenama u X, i  
+- Promene u Y koje nisu objašnjene promenama u X 
+
+A to se može napasati na sledeći način:
+
+	`'The Total Variation in Y' = 'Explained Variation' + 'Unexplained Variation'`
+
+🤓💡 Diskusija započinjemo sa sledećom idejom:
+
+Y = f(X) + e
+
+Potom da bismo kvantifikovali jačinu uticaja na Y podelili smo uticaj na dve komponente:
+
+	'The Total Variation in Y' = 'Explained Variation' + 'Unexplained Variation'
+
+Moramo postaviti sebi sledeća dva pitanja:
+A:	Da li može da se napravi model povezanosti?
+B.	Da li se „Ukupna varijacija u Y“, „Objašnjenja varijacija“ i „Neobjašnjenja varijacija“ mogu izmeriti?
+
+Šta nam govore ove vrednosti?  
+
+Možda možemo posmatrati proporciju „Objašnjene varijacije u Y“ u „Ukupnoj varijaciji u Y“. Ovaj odnos uvek je na skali od 0 do 1, ali se on uobičajeno iskazuje kao procenat tj. na skali od 0 do 100%. On se naziva „R Squared (R kvadrat)“ i definiše se  na sledeći način:
+
+  R_sq: 0% (ne postoji povezanost) <-------- 50% (statistička povezanost) ------> 100% (savršena povezanost) 
+
+Definicija i objašenjenje `R_sq` je veoma važan alat za analitičare koji prate povezanost između numeričke odzivne i numeričke eksplanatorne varijable.
+
+Ove ideje možemo postaviti u okvir metodologije analize podataka  kako je prikazano dole.
+
+![MvM Methodology](/module1/StatsConcepts/images/MvMMethodology.png?width=40pc)
+
+🤓💡 Napomena: Retko ćete biti u situaciji u kojoj je R_sq toliko blizu nuli da ćete u fazi Početne analize (IDA istraživanja moći da zaključite da, na osnovu uzorka, ne postoji povezanosti ove dve varijable. Ukoliko je R_sq veoma mali (na primer oko 2%) onda to treba dodatno da se testira da bi se zaključilo da li je to statistički značajno na osnovu uzorka uz pomoć Dalje analize podataka (FDA)
+
+#### Dalja analiza podataka (FDA)
+
+Ukoliko <span style="color:red">'**početna analiza podataka**'</span> ne daje jasne <span style="color:red">*zaključke*</span> tada je potrebno uraditi <span style="color:red">'**Dalju analizu podataka**'</span>. 
+
+„Dalja analiza podataka“ je procedura koja vam omogućava da donesete odluku, na osnovu uzorka, o sledeća dva rezultata:  
+- Ne postoji povezanost
+-	Postoji povezanost
+
+Ove statističke procedure nazivaju se <span style="color:red">**testiranje hipoteze**</span>, koje vam u suštini omogućava da se odlučite između sledeća dva rezultata: “Ne postoji povezanost ” ili “Postoji povezanost” na osnovu uzorka.
+
+Svi testovi hipoteze sprovode se u četiri faze:
+
+- Faza 1:		Određivanje hipoteza.
+
+- Faza 2:		Definisanje parametara testa i pravila zaključivanja.
+
+- Faza 3:		Istraživanje uzorka.
+
+- Faza 4:		Zaključci.
+
+##### Statistički modeli koji se upotrebljavaju u FDA
+
+* Numerička odzivna varijabla vs Kategorička eksplanatorna varijabla sa tačno dva nivoa:
+  
+  - t-test
+
+* Numerička odzivna varijabla vs Kategorička eksplanatorna varijabla sa više od dva nivoa:
+  
+  - One-Way ANOVA
+  
+* Numerička odzivna vs Numerička eksplanatorna varijabla
+  
+  - Jednostavni model regresije (Simple Regression Model)
+  
+* Numerička odzivna vs Numeričke eksplanatorne varijable
+  - Multifaktorni model regresije (Multifactor Regression Model)
+
+* Kategorička odzivna varijabla vs Numerička eksplanatorna varijabla
+  - Chi-sqare test nezavisnosti
+
+
+## ZADACI 👇
+
+Proverite vaše znanje tako što ćete odgovoriti na sledeća pitanja:
+
+1)	Koje su osnovne ideje koje omogućavaju da se istraži odnos između dve varijable (promenljive)?
+
+2)	Koja je svrha zbrine statistike?
+
+3)	Koja metodologija i kako se ona koristi za istraživanje povezanosti između:
+
+  i) Numeričke odzivne varijable i kategoričke eksplanatorne varijable?
+  
+  i) Numeričke odzivne varijable i numeričke eksplanatorne varijable?
+
+
+
+-----------------------------
+© 2019 [Sister Analyst](https://sisteranalyst.org)
