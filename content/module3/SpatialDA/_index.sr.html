@@ -1,0 +1,147 @@
+---
+date: "2016-04-09T16:50:16+02:00"
+title: Analiza geo-pozicioniranih podataka
+weight: 3
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/leaflet/leaflet.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet/leaflet.js"></script>
+<link href="/rmarkdown-libs/leafletfix/leafletfix.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js"></script>
+<script src="/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"></script>
+<link href="/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet-binding/leaflet.js"></script>
+
+
+<p>R sadrži spektar paketa koji vam pružaju razne funkcionalnosti kako biste koristili geo-pozicionirane podatke i obavljali kompleksne prostorne analize. Analiza geo-pozicioniranih podataka nije više dostupna samo ekspertima koji rade na skupim kompjuterima i sa skupim softverima. R ima impresivne geografske sposobnosti koje su dostupne svakome ko želi da ih istražuje.</p>
+<p>Pre nego što se upustimo u geo-prostorno mapiranje u R-u, prvo ćemo da se upoznamo sa osnovnim idejama u vezi sa ovakvim vrstama podataka.</p>
+<p>Prostorni podaci sastoje se od:</p>
+<ul>
+<li>Koordinata objekta</li>
+<li>Koordinata koje su u vezi sa fizičkim lokacijama na Zemlji: <strong>koordinatni refentni sistem (coordinate reference system, CRS)</strong></li>
+</ul>
+<p>Postoje dva tipa <strong>CRS-a</strong>:</p>
+<ol style="list-style-type: decimal">
+<li>Geografski</li>
+</ol>
+<ul>
+<li>Posebne lokacije na površini su definisane uz pomoć tridimenzionalnog modela Zemlje.</li>
+<li>Geografska dužina i širina</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Projektovani</li>
+</ol>
+<ul>
+<li>Konverzija trodimenzionalne mreže na dvodimenzionalnu površinu.</li>
+</ul>
+<p>Prema tehnici njihovog čuvanja, prostorni podaci pripadaju jednoj od dve vrste:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Rasterski podaci</strong>: sastavljeni od mreže ćelija koje su indentifikovane redom i kolonom. Celo geografsko područje je podeljeno na grupe individualnih ćelija, koje predstavljaju sliku (satelitske slike)</p></li>
+<li><p><strong>Vektorski podaci</strong> sastavljeni su od tačaka, linija i poligona. Na primer bolnice, kuće itd. predstavljene su tačkama, dok su reke, putevi, itd, predstavljeni linijama. Sela i gradovi su predstavljeni poligonima.</p></li>
+</ol>
+<p>Kada analizirate prostorne podatke takođe ćete raditi i sa kategoričkim podacima koji sadrže relevantne informacija o prostornim podacima. Analize će se zasnivati na kategoričkim podacima koji su povezani sa geo-prostornim. Ovakvi podaci mogu biti:</p>
+<ul>
+<li>nominalni</li>
+<li>redni</li>
+<li>intervali (interval data)</li>
+<li>podaci o odnosu (ratio data),</li>
+</ul>
+<p>tj. kategorički ili merljivi tip podataka.</p>
+<p><strong>Statičke mape: Shape file</strong></p>
+<p>R poseduje impresivne geografske kapacitete i može da obrađuje fajlove različitih vrsta prostornih podataka uključujući geojson i KML. Ilustrovaćemo upotrebu ESRI (shapefile) fajlova formata, koji čuvaju netopološku geometiju i kategoričke informacije za prostorne odlike u setu podataka. Ovi podaci sastavljeni su od glavnog fajla, index fajla i dBASE tabele.</p>
+<ul>
+<li>.shp – lista oblika i verteksa</li>
+<li>.shx – sadrži indeks sa ofsetima</li>
+<li>.dbf – fajl odnosa između geometrije i kategoričkih podataka</li>
+</ul>
+<p>Da biste pravilno uvezli datoteku ESRI oblika u R, sve tri datoteke moraju biti prisutne u direktorijumu i moraju imatu isto ime (osim ekstenzije koja se odnosi na tip fajla).</p>
+<p>Počećemo sa učitavanjem shape file-a regiona Srbije koja je dostupna na <a href="https://gadm.org/download_country_v3.html">GADM maps and data</a>.</p>
+<p>Prvo, preuzmite fajlove koji su nam portrebni sa sledećeg GitHub repozitorija: <a href="https://github.com/TanjaKec/gadm36_SRB_shp" class="uri">https://github.com/TanjaKec/gadm36_SRB_shp</a>. Obavezno sačuvajte fajl u radni direktorijum svoga R-projekta pre nego što zatražite od R da izvrši sledeći kod</p>
+<pre><code>## If you don&#39;t have sf installed yet, uncomment and run the line below
+#install.packeges(&quot;sf&quot;)
+
+library(ggplot2)
+library(sf)
+
+#pointed to the shape file
+serbia_location &lt;- &quot;gadm36_SRB_1.shp&quot;
+
+#used the st_read() function to import it
+serbia_districts &lt;- st_read(serbia_location)
+
+# take a look at the file
+View(serbia_districts)
+
+# plot the disstricts 
+ggplot(serbia_districts) + 
+  geom_sf()</code></pre>
+<p><img src="/day2/SpatialDA/images/serbia.png?width=40pc" /></p>
+<p>Ovo dobro izgleda 😃 Sledeće, što želimo da dodamo su podaci i da ih potom „obojimo“. Dodaćemo podatke o broju stanovnika u Srbiji u 2017. godini koji su nam dostupni preko fajla “Serbian_Pop.csv” file.</p>
+<pre><code>population &lt;- read.csv(&quot;Serbian_Pop.csv&quot;)
+View(population)
+
+library(dplyr)
+
+serbia_pop &lt;- left_join(serbia_districts, population,
+                          by=c(&quot;NAME_1&quot; = &quot;District&quot;))
+
+View(serbia_pop)
+
+
+ncol(serbia_districts)
+
+ncol(population)
+
+ncol(serbia_pop)
+
+names(serbia_pop)
+
+
+ggplot(serbia_pop) +
+  geom_sf(aes(fill=total_pop)) +
+  scale_fill_distiller(direction = 1, name = &quot;Population&quot;) +
+  labs(title=&quot;Population of Serbia for 2017&quot;, caption=&quot;Source: Statisticki Zavod SR&quot;)</code></pre>
+<p><img src="/day2/SpatialDA/images/SR_pop_2017.png?width=40pc" /></p>
+<p>Ponekad biste možda želeli da predstavite regione kao zasebne delove jedan pored drugog. Zapamtite, ovo možete uraditi i upotrebom <code>facet</code> funkcije iz <code>ggplot</code> biblioteke.</p>
+<pre><code>ggplot(serbia_pop) +
+  geom_sf(aes(fill = total_pop)) +
+  scale_fill_distiller(direction = 1, name = &quot;Population&quot;) +
+  labs(title=&quot;Population of Serbia for 2017&quot;, caption=&quot;Source: Statisticki Zavod SR&quot;) +
+  facet_wrap(~NAME_1)</code></pre>
+<p><img src="/day2/SpatialDA/images/facet_sr.png?width=40pc" /></p>
+<p><strong>Interaktivne mape: leaflet</strong></p>
+<p><code>Leaflet</code> je jedan od najpopularnijih JavaScript biblioteka otvorenog koda za interktivne mape koja je integrisana u R, zahvaljući grupi ljudi iz Rstudija. Pokazaćemo kako je jednostavno da se napravi mapa lokacija uz pomoć leaflet paketa, a možete da naučite više o ovom paketu sa stranice <a href="https://rstudio.github.io/leaflet/">Leaflet for R</a> website.</p>
+<pre class="r"><code>## If you don&#39;t have leaflet installed yet, uncomment and run the line below
+#install.packeges(&quot;leaflet&quot;)
+library(leaflet)
+# Initialize and assign us as the leaflet object
+us &lt;- leaflet() %&gt;%
+  # add tiles to the leaflet object
+  addTiles() %&gt;%  
+  # setting the centre of the map and the zoom level
+  setView(lng = 21.43667, lat = 41.99578, zoom = 15) %&gt;% 
+  # add a popup marker 
+  addMarkers(lng = 21.43551, lat = 41.99405, popup = &quot;&lt;b&gt;Ciao!&lt;/b&gt;&lt;br&gt;&lt;a href=&#39;http://balkansmedia.org/innovation-lab/2nd-media-innovation-lab-master-classes-and-presentations&#39;&gt;2nd Media Innovation Lab! 😀&lt;/a&gt;&quot;)
+
+us</code></pre>
+<p>&lt;!iv id="htmlwidget-1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[41.99405,21.43551,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"<b>Ciao!<\/b><br><a href='http://balkansmedia.org/innovation-lab/2nd-media-innovation-lab-master-classes-and-presentations'>2nd Media Innovation Lab! <U+0001F600><\/a>",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[41.99578,21.43667],15,[]],"limits":{"lat":[41.99405,41.99405],"lng":[21.43551,21.43551]}},"evals":[],"jsHooks":[]}</script><!Pogledajte zanimljivu veb stranicu koja vam pokazuje razne mogućnosti da kreirate mapa sa <a href="https://maptimeboston.github.io/leaflet-intro/">‘leaflet’</a>. Dobro pogledajte i nastavite da istražujete sami.</p>
+<p>{{% notice note %}}
+Od svoje orginalne primene kao statističkog programskog jezika, R je prešao dug put i postao vrlo moćan kao podrška za prostorne analize. Svi R paketi uključuju vinjete sa objašnjenjima sintakse funkcija i često sa veoma korisnim mini-tutorijalima koji ilustruju praktičnu upotrebu funkcija na neki zadat problem. <a href="https://cran.r-project.org/web/views/Spatial.html">CRAN Task View for Analysis of Spatial Data</a> vam pruža listu dostupnih biblioteka R-u za geografsko mapiranje koje se često koriste u prostornim analizama i projektima mapiranja u R-u.
+{{% /notice %}}</p>
+<p><strong>ZADACI 👇</strong></p>
+<p>Vežbajte na sledećem setu zadataka:</p>
+<ol style="list-style-type: decimal">
+<li><p>Učitajte shape file regiona u Srbiji na osnovu <a href="https://gadm.org/download_country_v3.html">GADM maps and data</a> i ucrtajte broj stanovnika po kvadratnom kilometru, uz pomoć podataka koji su dostupni u ‘Serbian_Pop.csv’ koje smo već koristili.</p></li>
+<li><p>Napravite mapu koja će obeležiti vaše omiljeno mesto za druženje tako što ćete koristiti paket leaflet.</p></li>
+</ol>
+<p><strong>Korisni linkovi:</strong></p>
+<p><a href="https://www.r-spatial.org/">R for the analysis of spatial or spatio-temporal data (blog)</a></p>
+<p><a href="https://geocompr.robinlovelace.net/">Geocomputation with R</a>: knjiga o analizi geografskih podataka, vizuelizaciji i modelovanju.</p>
+<p><a href="https://gadm.org/download_country_v3.html">GADM maps and data</a></p>
+<p><a href="https://www.earthdatascience.org/courses/earth-analytics/get-data-using-apis/leaflet-r/">Creating Interactive Spatial Maps in R Using Leaflet</a></p>
+<p><a href="https://map-rfun.library.duke.edu/031_thematic_mapping.html">Thematic Mapping with tmap</a></p>
+<hr />
+<p>© 2019 <a href="https://sisteranalyst.org">Sister Analyst</a></p>
